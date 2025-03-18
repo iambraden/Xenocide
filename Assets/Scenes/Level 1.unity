@@ -151,6 +151,37 @@ Transform:
   - {fileID: 994499785}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &331987000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331987001}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &331987001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331987000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1147172569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,9 +522,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 1147172567}
+  bulletPrefab: {fileID: 2810151167607427863, guid: 9b9dd7fc732511d4b89707e8f6203219, type: 3}
+  firePoint: {fileID: 331987001}
+  bulletCooldown: 0.2
   moveSpeed: 5
-  xMin: -3.25
-  xMax: 3.25
+  xMin: -4.6
+  xMax: 4.6
+  playerSpriteRenderer: {fileID: 1147172568}
+  idleSprite: {fileID: 2666003737469576116, guid: be127e9ebc6c33d46b3123ee155caa84, type: 3}
+  leftSprite: {fileID: -835470613495721362, guid: be127e9ebc6c33d46b3123ee155caa84, type: 3}
+  rightSprite: {fileID: 8130489158240038070, guid: be127e9ebc6c33d46b3123ee155caa84, type: 3}
 --- !u!50 &1147172567
 Rigidbody2D:
   serializedVersion: 5
@@ -588,7 +626,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -4.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 331987001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807

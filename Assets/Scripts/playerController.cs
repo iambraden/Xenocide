@@ -4,6 +4,11 @@ public class playerController : MonoBehaviour
 {
     public Rigidbody2D playerRigidbody;
 
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    public float bulletCooldown = 0.2f;
+    private float nextFireTime = 0f;
+
     [Header("Player movement")]
     public float moveSpeed = 5f;
     public float xMin = -4.6f; // Left boundary
@@ -43,5 +48,16 @@ public class playerController : MonoBehaviour
 
         }
         
+    }
+
+    void Update(){
+        if(Input.GetKey(KeyCode.Space) && Time.time> nextFireTime){
+            FireBullet();
+            nextFireTime = Time.time + bulletCooldown;
+        }
+    }
+
+    void FireBullet(){
+        Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
     }
 }
