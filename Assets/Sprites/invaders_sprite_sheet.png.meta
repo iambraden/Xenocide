@@ -1,0 +1,2334 @@
+fileFormatVersion: 2
+guid: be127e9ebc6c33d46b3123ee155caa84
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2666003737469576116
+    second: invaders_sprite_sheet_0
+  - first:
+      213: -835470613495721362
+    second: invaders_sprite_sheet_1
+  - first:
+      213: 8130489158240038070
+    second: invaders_sprite_sheet_2
+  - first:
+      213: -4420626283798986130
+    second: invaders_sprite_sheet_3
+  - first:
+      213: -2209272167383319424
+    second: invaders_sprite_sheet_4
+  - first:
+      213: 4698955800238918994
+    second: invaders_sprite_sheet_5
+  - first:
+      213: -3027343531342449521
+    second: invaders_sprite_sheet_6
+  - first:
+      213: -8861701035267205969
+    second: invaders_sprite_sheet_7
+  - first:
+      213: 3890749205637581952
+    second: invaders_sprite_sheet_8
+  - first:
+      213: 5977858496637427274
+    second: invaders_sprite_sheet_9
+  - first:
+      213: -3213654419977496788
+    second: invaders_sprite_sheet_10
+  - first:
+      213: 3872930441629942897
+    second: invaders_sprite_sheet_11
+  - first:
+      213: 8637375423103268060
+    second: invaders_sprite_sheet_12
+  - first:
+      213: 5943751932367781396
+    second: invaders_sprite_sheet_13
+  - first:
+      213: -6616286047823629122
+    second: invaders_sprite_sheet_14
+  - first:
+      213: -7773036802651584832
+    second: invaders_sprite_sheet_15
+  - first:
+      213: 2423830077616692571
+    second: invaders_sprite_sheet_16
+  - first:
+      213: -7217659503997847106
+    second: invaders_sprite_sheet_17
+  - first:
+      213: 5080431114198546411
+    second: invaders_sprite_sheet_18
+  - first:
+      213: 3244035148356143742
+    second: invaders_sprite_sheet_19
+  - first:
+      213: 989938783762505707
+    second: invaders_sprite_sheet_20
+  - first:
+      213: -8127649739083781391
+    second: invaders_sprite_sheet_21
+  - first:
+      213: -8881988674401198057
+    second: invaders_sprite_sheet_22
+  - first:
+      213: 7235555132518354058
+    second: invaders_sprite_sheet_23
+  - first:
+      213: -4881491810269893178
+    second: invaders_sprite_sheet_24
+  - first:
+      213: 44566664081089025
+    second: invaders_sprite_sheet_25
+  - first:
+      213: 1404151494114368403
+    second: invaders_sprite_sheet_26
+  - first:
+      213: -7489217245267671533
+    second: invaders_sprite_sheet_27
+  - first:
+      213: -323585052495013089
+    second: invaders_sprite_sheet_28
+  - first:
+      213: -5308348845607239605
+    second: invaders_sprite_sheet_29
+  - first:
+      213: -6317202900626739130
+    second: invaders_sprite_sheet_30
+  - first:
+      213: 1163677920915974443
+    second: invaders_sprite_sheet_31
+  - first:
+      213: 6218638338042334391
+    second: invaders_sprite_sheet_32
+  - first:
+      213: 7141851119141071119
+    second: invaders_sprite_sheet_33
+  - first:
+      213: -3532470700375881323
+    second: invaders_sprite_sheet_34
+  - first:
+      213: 8329450547409930130
+    second: invaders_sprite_sheet_35
+  - first:
+      213: -821297775333296319
+    second: invaders_sprite_sheet_36
+  - first:
+      213: 5841496984371761546
+    second: invaders_sprite_sheet_37
+  - first:
+      213: -5534088608177792669
+    second: invaders_sprite_sheet_38
+  - first:
+      213: 7780902256213844843
+    second: invaders_sprite_sheet_39
+  - first:
+      213: -2587113847137103938
+    second: invaders_sprite_sheet_40
+  - first:
+      213: -8847183497607185341
+    second: invaders_sprite_sheet_41
+  - first:
+      213: 3820262374989065781
+    second: invaders_sprite_sheet_42
+  - first:
+      213: 1306937353116953630
+    second: invaders_sprite_sheet_43
+  - first:
+      213: 1479052713924228950
+    second: invaders_sprite_sheet_44
+  - first:
+      213: 3642493261766689603
+    second: invaders_sprite_sheet_45
+  - first:
+      213: 6505739863544344697
+    second: invaders_sprite_sheet_46
+  - first:
+      213: -2529561435582599463
+    second: invaders_sprite_sheet_47
+  - first:
+      213: -2441247689801120400
+    second: invaders_sprite_sheet_48
+  - first:
+      213: 6087485887547890923
+    second: invaders_sprite_sheet_49
+  - first:
+      213: -3470851683831197696
+    second: invaders_sprite_sheet_50
+  - first:
+      213: -7382274039869137183
+    second: invaders_sprite_sheet_51
+  - first:
+      213: -4039647713042474003
+    second: invaders_sprite_sheet_52
+  - first:
+      213: -4914343589087621697
+    second: invaders_sprite_sheet_53
+  - first:
+      213: 567181208492957719
+    second: invaders_sprite_sheet_54
+  - first:
+      213: -4006954304754141471
+    second: invaders_sprite_sheet_55
+  - first:
+      213: -4610929115740623062
+    second: invaders_sprite_sheet_56
+  - first:
+      213: 8985082734530101504
+    second: invaders_sprite_sheet_57
+  - first:
+      213: -3428984670691234696
+    second: invaders_sprite_sheet_58
+  - first:
+      213: 4412865578559807539
+    second: invaders_sprite_sheet_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3ecbd264c8ff420800000000000000
+      internalID: 2666003737469576116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 120
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e625f4e47efc764f0800000000000000
+      internalID: -835470613495721362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 120
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bcef0fefcc45d070800000000000000
+      internalID: 8130489158240038070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 120
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e62086df0d7c6a2c0800000000000000
+      internalID: -4420626283798986130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08cb5f24ba61751e0800000000000000
+      internalID: -2209272167383319424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 122
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d8088776b063140800000000000000
+      internalID: 4698955800238918994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 120
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84b1490917bcf5d0800000000000000
+      internalID: -3027343531342449521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 113
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4df271cd9e40580800000000000000
+      internalID: -8861701035267205969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c4928d9c7bef530800000000000000
+      internalID: 3890749205637581952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 114
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4edf9171ae95f250800000000000000
+      internalID: 5977858496637427274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 116
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27906ae45ec663d0800000000000000
+      internalID: -3213654419977496788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 121
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174462d87b96fb530800000000000000
+      internalID: 3872930441629942897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 112
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd472cd3f2f1ed770800000000000000
+      internalID: 8637375423103268060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 112
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41eb2d124e27c7250800000000000000
+      internalID: 5943751932367781396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 97
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb47913e4ea3e24a0800000000000000
+      internalID: -6616286047823629122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 99
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c60ae71630a02490800000000000000
+      internalID: -7773036802651584832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 97
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5d10441d9c23a120800000000000000
+      internalID: 2423830077616692571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 97
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb97c720ce8b5db90800000000000000
+      internalID: -7217659503997847106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 104
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be775ab5e21518640800000000000000
+      internalID: 5080431114198546411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 112
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a46a0a7c0250d20800000000000000
+      internalID: 3244035148356143742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: befdb833418fcbd00800000000000000
+      internalID: 989938783762505707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 98
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa6d1bdf99c43f80800000000000000
+      internalID: -8127649739083781391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 98
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71026430c56dcb480800000000000000
+      internalID: -8881988674401198057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 77
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8cc282be0bd96460800000000000000
+      internalID: 7235555132518354058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd62e2df05714cb0800000000000000
+      internalID: -4881491810269893178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 89
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102a06515255e9000800000000000000
+      internalID: 44566664081089025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 89
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b5589285c8c7310800000000000000
+      internalID: 1404151494114368403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 90
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31647125894f01890800000000000000
+      internalID: -7489217245267671533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 90
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b9863fb15628bf0800000000000000
+      internalID: -323585052495013089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 89
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40c9b989d4f456b0800000000000000
+      internalID: -5308348845607239605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 66
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640731e8e69c458a0800000000000000
+      internalID: -6317202900626739130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 64
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29692557e6362010800000000000000
+      internalID: 1163677920915974443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 76
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc83a5ee9a0d4650800000000000000
+      internalID: 6218638338042334391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 64
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f092123f0c3fc1360800000000000000
+      internalID: 7141851119141071119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 76
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599ce942d942afec0800000000000000
+      internalID: -3532470700375881323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 64
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2974d8c3427289370800000000000000
+      internalID: 8329450547409930130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 76
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147b076560a2a94f0800000000000000
+      internalID: -821297775333296319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 64
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a819ef5ce8a211150800000000000000
+      internalID: 5841496984371761546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 76
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369d6025bb7f233b0800000000000000
+      internalID: -5534088608177792669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 64
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6369a580615bfb60800000000000000
+      internalID: 7780902256213844843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 76
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf06e3c9a9b81cd0800000000000000
+      internalID: -2587113847137103938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 64
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34cfc6abb7d783580800000000000000
+      internalID: -8847183497607185341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 64
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e6302b36c440530800000000000000
+      internalID: 3820262374989065781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 66
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ca934299c232210800000000000000
+      internalID: 1306937353116953630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 23
+        width: 60
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657f7816b96a68410800000000000000
+      internalID: 1479052713924228950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3438b54a25cbc8230800000000000000
+      internalID: 3642493261766689603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 17
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970b8afdfe7094a50800000000000000
+      internalID: 6505739863544344697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de629ac64135ecd0800000000000000
+      internalID: -2529561435582599463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 17
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07549a01922fe1ed0800000000000000
+      internalID: -2441247689801120400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 23
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: becde7e69281b7450800000000000000
+      internalID: 6087485887547890923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 0
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000dc2d68ce05dfc0800000000000000
+      internalID: -3470851683831197696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 17
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee130bafd4ec8990800000000000000
+      internalID: -7382274039869137183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 15
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb5266dec940f7c0800000000000000
+      internalID: -4039647713042474003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbdc6340b8ebccbb0800000000000000
+      internalID: -4914343589087621697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 8
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 710ef77dd480fd700800000000000000
+      internalID: 567181208492957719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 0
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e638e12a407468c0800000000000000
+      internalID: -4006954304754141471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 8
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f26c32660b200c0800000000000000
+      internalID: -4610929115740623062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 001892d542d61bc70800000000000000
+      internalID: 8985082734530101504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c603b0c9cc960d0800000000000000
+      internalID: -3428984670691234696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3302b930dd5ad3d30800000000000000
+      internalID: 4412865578559807539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 113
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5d1a4f30a8bc84b9e5f9f2a8316aa8
+      internalID: 1384691522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 106
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9262529cb82776f43a7bea07ccfb00fc
+      internalID: -710981459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 106
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d37f67f85406044cba947d58c699cc8
+      internalID: -1581769637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5afe940143e3046857aa9dda9c6974
+      internalID: -1978392262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 82
+        width: 1
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fa0456f8d7fde47b33cfbae2a52fe0
+      internalID: -1278532177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 82
+        width: 1
+        height: 4
+      alignment: 9
+      pivot: {x: 0.47999954, y: 0.50500107}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6a69784b6e352448bbfa7c75e92d83
+      internalID: 2082077404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff005adce5efec42bcb6b1e0cbb25a5
+      internalID: 2082288001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 72
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6826f4db52d6f41b3cf7c38ccaa809
+      internalID: -1847974889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2731f7255081147bb5fbb2bb228b69
+      internalID: 1359187889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d45f29bc24396d4292e156b036aaab2
+      internalID: -1008781441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7013e5e7d02386439aa18c14a4b3d17
+      internalID: 958046143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c54a4e5594122439b09ea9cb4c2929
+      internalID: -2092968415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6002307779a5342aa5246bba75e20d
+      internalID: -2145469030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 112
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fd42786364c7443acbdaf3b9cde95d
+      internalID: -516225515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 112
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30eebf4a640a00f4eae3c0c733d4f62a
+      internalID: 587389652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246f68614ff704c498be9d328d756700
+      internalID: 52476299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 120
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed6228f9c084974d8ff62a3f2108785
+      internalID: 369751273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bef7697c7f62e4eb578550d31295d8
+      internalID: 96523117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0147460c735a564e9494e3771dd08b3
+      internalID: 1334108820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 112
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133336290eb3e0b4eab2418817b61096
+      internalID: -1295535206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 120
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28465e7861159d047977e316b9910b77
+      internalID: -1819383788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 74
+        width: 3
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6843608d5376f0d468ebfc39e2c0bed3
+      internalID: 224552395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_82
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 74
+        width: 3
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092827d3ac0bf1444b8fa97f4a62ae4b
+      internalID: -2127783030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_83
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 105
+        width: 2
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46feda730dc27a94d81cb7bcdb026419
+      internalID: -1427336424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_84
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 97
+        width: 1
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c35e65bfb1da4c46bfc9e32b3bed3f6
+      internalID: 326875383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_85
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 97
+        width: 1
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9563362b719474d4e8fe08cdd1a3626e
+      internalID: -1370387447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_86
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 89
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3722b0edb0aa49f4e8b6782c441917b1
+      internalID: 1417850622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: invaders_sprite_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 88
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54388e3b64b82394c865eb71da4116e0
+      internalID: 1251909510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a88309451e8df5f48b922c6e3f7c8f42
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      invaders_sprite_sheet_0: 2666003737469576116
+      invaders_sprite_sheet_1: -835470613495721362
+      invaders_sprite_sheet_10: -3213654419977496788
+      invaders_sprite_sheet_11: 3872930441629942897
+      invaders_sprite_sheet_12: 8637375423103268060
+      invaders_sprite_sheet_13: 5943751932367781396
+      invaders_sprite_sheet_14: -6616286047823629122
+      invaders_sprite_sheet_15: -7773036802651584832
+      invaders_sprite_sheet_16: 2423830077616692571
+      invaders_sprite_sheet_17: -7217659503997847106
+      invaders_sprite_sheet_18: 5080431114198546411
+      invaders_sprite_sheet_19: 3244035148356143742
+      invaders_sprite_sheet_2: 8130489158240038070
+      invaders_sprite_sheet_20: 989938783762505707
+      invaders_sprite_sheet_21: -8127649739083781391
+      invaders_sprite_sheet_22: -8881988674401198057
+      invaders_sprite_sheet_23: 7235555132518354058
+      invaders_sprite_sheet_24: -4881491810269893178
+      invaders_sprite_sheet_25: 44566664081089025
+      invaders_sprite_sheet_26: 1404151494114368403
+      invaders_sprite_sheet_27: -7489217245267671533
+      invaders_sprite_sheet_28: -323585052495013089
+      invaders_sprite_sheet_29: -5308348845607239605
+      invaders_sprite_sheet_3: -4420626283798986130
+      invaders_sprite_sheet_30: -6317202900626739130
+      invaders_sprite_sheet_31: 1163677920915974443
+      invaders_sprite_sheet_32: 6218638338042334391
+      invaders_sprite_sheet_33: 7141851119141071119
+      invaders_sprite_sheet_34: -3532470700375881323
+      invaders_sprite_sheet_35: 8329450547409930130
+      invaders_sprite_sheet_36: -821297775333296319
+      invaders_sprite_sheet_37: 5841496984371761546
+      invaders_sprite_sheet_38: -5534088608177792669
+      invaders_sprite_sheet_39: 7780902256213844843
+      invaders_sprite_sheet_4: -2209272167383319424
+      invaders_sprite_sheet_40: -2587113847137103938
+      invaders_sprite_sheet_41: -8847183497607185341
+      invaders_sprite_sheet_42: 3820262374989065781
+      invaders_sprite_sheet_43: 1306937353116953630
+      invaders_sprite_sheet_44: 1479052713924228950
+      invaders_sprite_sheet_45: 3642493261766689603
+      invaders_sprite_sheet_46: 6505739863544344697
+      invaders_sprite_sheet_47: -2529561435582599463
+      invaders_sprite_sheet_48: -2441247689801120400
+      invaders_sprite_sheet_49: 6087485887547890923
+      invaders_sprite_sheet_5: 4698955800238918994
+      invaders_sprite_sheet_50: -3470851683831197696
+      invaders_sprite_sheet_51: -7382274039869137183
+      invaders_sprite_sheet_52: -4039647713042474003
+      invaders_sprite_sheet_53: -4914343589087621697
+      invaders_sprite_sheet_54: 567181208492957719
+      invaders_sprite_sheet_55: -4006954304754141471
+      invaders_sprite_sheet_56: -4610929115740623062
+      invaders_sprite_sheet_57: 8985082734530101504
+      invaders_sprite_sheet_58: -3428984670691234696
+      invaders_sprite_sheet_59: 4412865578559807539
+      invaders_sprite_sheet_6: -3027343531342449521
+      invaders_sprite_sheet_60: 1384691522
+      invaders_sprite_sheet_61: -710981459
+      invaders_sprite_sheet_62: -1581769637
+      invaders_sprite_sheet_63: -1978392262
+      invaders_sprite_sheet_64: -1278532177
+      invaders_sprite_sheet_65: 2082077404
+      invaders_sprite_sheet_66: 2082288001
+      invaders_sprite_sheet_67: -1847974889
+      invaders_sprite_sheet_68: 1359187889
+      invaders_sprite_sheet_69: -1008781441
+      invaders_sprite_sheet_7: -8861701035267205969
+      invaders_sprite_sheet_70: 958046143
+      invaders_sprite_sheet_71: -2092968415
+      invaders_sprite_sheet_72: -2145469030
+      invaders_sprite_sheet_73: -516225515
+      invaders_sprite_sheet_74: 587389652
+      invaders_sprite_sheet_75: 52476299
+      invaders_sprite_sheet_76: 369751273
+      invaders_sprite_sheet_77: 96523117
+      invaders_sprite_sheet_78: 1334108820
+      invaders_sprite_sheet_79: -1295535206
+      invaders_sprite_sheet_8: 3890749205637581952
+      invaders_sprite_sheet_80: -1819383788
+      invaders_sprite_sheet_81: 224552395
+      invaders_sprite_sheet_82: -2127783030
+      invaders_sprite_sheet_83: -1427336424
+      invaders_sprite_sheet_84: 326875383
+      invaders_sprite_sheet_85: -1370387447
+      invaders_sprite_sheet_86: 1417850622
+      invaders_sprite_sheet_87: 1251909510
+      invaders_sprite_sheet_9: 5977858496637427274
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

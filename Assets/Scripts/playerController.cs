@@ -1,27 +1,23 @@
 using UnityEngine;
+
 public class playerController : MonoBehaviour
 {
-
     public Rigidbody2D playerRigidbody;
-    
-    void Start()
-    {
-        
-    }
+    public float moveSpeed = 5f;
+    public float xMin = -3.25f; // Left boundary
+    public float xMax = 3.25f;  // Right boundary
 
-    
-    void Update()
+    void FixedUpdate()
     {
-        Vector2 inputVector = Vector2.zero;
-        if(Input.GetKey(KeyCode.A))
-        {
-            inputVector.x = -1;
-        }
-        if(Input.GetKey(KeyCode.D))
-        {
-            inputVector.x = 1;
-        }
+        float horizontalInput = Input.GetAxis("Horizontal");
 
-        playerRigidbody.linearVelocity = inputVector * 5;
+        Vector2 velocity = new Vector2(horizontalInput * moveSpeed, 0);
+
+        playerRigidbody.linearVelocity = velocity;
+
+        // Ensure player's position stays within screen bounds
+        Vector2 clampedPosition = playerRigidbody.position;
+        clampedPosition.x = Mathf.Clamp(clampedPosition.x, xMin, xMax);
+        playerRigidbody.position = clampedPosition;
     }
 }

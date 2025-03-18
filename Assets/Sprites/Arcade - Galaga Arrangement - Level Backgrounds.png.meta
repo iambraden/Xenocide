@@ -1,0 +1,1378 @@
+fileFormatVersion: 2
+guid: e536b47cd4662054ab35da142c7c30d0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5947777732443974811
+    second: Arcade - Galaga Arrangement - Level Backgrounds_0
+  - first:
+      213: 2098832478569188562
+    second: Arcade - Galaga Arrangement - Level Backgrounds_1
+  - first:
+      213: 4536332859763033032
+    second: Arcade - Galaga Arrangement - Level Backgrounds_2
+  - first:
+      213: 6563369588054289497
+    second: Arcade - Galaga Arrangement - Level Backgrounds_3
+  - first:
+      213: 4711400029036815215
+    second: Arcade - Galaga Arrangement - Level Backgrounds_4
+  - first:
+      213: 4345466478837737466
+    second: Arcade - Galaga Arrangement - Level Backgrounds_5
+  - first:
+      213: 405711478966411681
+    second: Arcade - Galaga Arrangement - Level Backgrounds_6
+  - first:
+      213: -9120669710181904438
+    second: Arcade - Galaga Arrangement - Level Backgrounds_7
+  - first:
+      213: -589533048711621143
+    second: Arcade - Galaga Arrangement - Level Backgrounds_8
+  - first:
+      213: -3579771707601471161
+    second: Arcade - Galaga Arrangement - Level Backgrounds_9
+  - first:
+      213: -8273481151164104513
+    second: Arcade - Galaga Arrangement - Level Backgrounds_10
+  - first:
+      213: -5747085195587852008
+    second: Arcade - Galaga Arrangement - Level Backgrounds_11
+  - first:
+      213: 8528466896541462705
+    second: Arcade - Galaga Arrangement - Level Backgrounds_12
+  - first:
+      213: -1623404391678328946
+    second: Arcade - Galaga Arrangement - Level Backgrounds_13
+  - first:
+      213: -2772225492736946148
+    second: Arcade - Galaga Arrangement - Level Backgrounds_14
+  - first:
+      213: -273803121333702956
+    second: Arcade - Galaga Arrangement - Level Backgrounds_15
+  - first:
+      213: -7727356116315507029
+    second: Arcade - Galaga Arrangement - Level Backgrounds_16
+  - first:
+      213: 2059417012996419902
+    second: Arcade - Galaga Arrangement - Level Backgrounds_17
+  - first:
+      213: -519822082788917075
+    second: Arcade - Galaga Arrangement - Level Backgrounds_18
+  - first:
+      213: 3214775004410052764
+    second: Arcade - Galaga Arrangement - Level Backgrounds_19
+  - first:
+      213: 7153552858132042874
+    second: Arcade - Galaga Arrangement - Level Backgrounds_20
+  - first:
+      213: 7363108073662459340
+    second: Arcade - Galaga Arrangement - Level Backgrounds_21
+  - first:
+      213: 6996885043650229385
+    second: Arcade - Galaga Arrangement - Level Backgrounds_22
+  - first:
+      213: -44540494087106274
+    second: Arcade - Galaga Arrangement - Level Backgrounds_23
+  - first:
+      213: -2590881196589498311
+    second: Arcade - Galaga Arrangement - Level Backgrounds_24
+  - first:
+      213: -5275783804421086798
+    second: Arcade - Galaga Arrangement - Level Backgrounds_25
+  - first:
+      213: 9010684826904791901
+    second: Arcade - Galaga Arrangement - Level Backgrounds_26
+  - first:
+      213: 822928450417572660
+    second: Arcade - Galaga Arrangement - Level Backgrounds_27
+  - first:
+      213: 4426961363660558618
+    second: Arcade - Galaga Arrangement - Level Backgrounds_28
+  - first:
+      213: -7069339884741137012
+    second: Arcade - Galaga Arrangement - Level Backgrounds_29
+  - first:
+      213: -1285695451436570203
+    second: Arcade - Galaga Arrangement - Level Backgrounds_30
+  - first:
+      213: 4292051682595929710
+    second: Arcade - Galaga Arrangement - Level Backgrounds_31
+  - first:
+      213: 5547126944803830413
+    second: Arcade - Galaga Arrangement - Level Backgrounds_32
+  - first:
+      213: -7202697697624726355
+    second: Arcade - Galaga Arrangement - Level Backgrounds_33
+  - first:
+      213: 6032105625490517639
+    second: Arcade - Galaga Arrangement - Level Backgrounds_34
+  - first:
+      213: -4222208851803556044
+    second: Arcade - Galaga Arrangement - Level Backgrounds_35
+  - first:
+      213: 8216712377528619749
+    second: Arcade - Galaga Arrangement - Level Backgrounds_36
+  - first:
+      213: -4640613747187598318
+    second: Arcade - Galaga Arrangement - Level Backgrounds_37
+  - first:
+      213: 7095260288856898183
+    second: Arcade - Galaga Arrangement - Level Backgrounds_38
+  - first:
+      213: 9108645104797787286
+    second: Arcade - Galaga Arrangement - Level Backgrounds_39
+  - first:
+      213: -6518261974199680328
+    second: Arcade - Galaga Arrangement - Level Backgrounds_40
+  - first:
+      213: -9189048958822916514
+    second: Arcade - Galaga Arrangement - Level Backgrounds_41
+  - first:
+      213: -6481376722420434417
+    second: Arcade - Galaga Arrangement - Level Backgrounds_42
+  - first:
+      213: 502201810688103978
+    second: Arcade - Galaga Arrangement - Level Backgrounds_43
+  - first:
+      213: 1866416502322845239
+    second: Arcade - Galaga Arrangement - Level Backgrounds_44
+  - first:
+      213: 8143126429953173299
+    second: Arcade - Galaga Arrangement - Level Backgrounds_45
+  - first:
+      213: -3878196413997424994
+    second: Arcade - Galaga Arrangement - Level Backgrounds_46
+  - first:
+      213: 5984742090169829464
+    second: Arcade - Galaga Arrangement - Level Backgrounds_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1192
+        width: 224
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd4a815f0267a244bb1a51aa7598890
+      internalID: 198220328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1192
+        width: 224
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5047022a280d8044acc8754590f4302
+      internalID: -619443580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_2
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1192
+        width: 224
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f27bec7a4cef6c4c9f206a04d1caa6f
+      internalID: 621453139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_3
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 1196
+        width: 224
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f9a87db89e83745b1307671376fc90
+      internalID: 1770228533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_4
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1140
+        width: 224
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab52ca6ee066e346a4180b67057d224
+      internalID: -140327839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_5
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 862
+        width: 256
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4bbf0fc453bce4cb98851b38361337
+      internalID: -161050528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_6
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 862
+        width: 256
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b809651e47dba47ac634a5e46e4eca
+      internalID: -868697334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_7
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 862
+        width: 256
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87746431e37dc1e45b2b5ec9cdf93745
+      internalID: -46095165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_8
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 862
+        width: 256
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d104085ab9cf3e40bdd70a69980088b
+      internalID: -119104185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_9
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 837
+        width: 256
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d912eb81db95540ad29555e40fb167
+      internalID: 334427562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_10
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 561
+        width: 256
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df90e0d7eaa50654f9bbb5fb818cb347
+      internalID: -815957348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_11
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 598
+        width: 256
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e553c71c037d448bed47f27a59921e
+      internalID: 1119169808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_12
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 598
+        width: 256
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fe2eba33615d84392f0cf10a0d2ef9
+      internalID: -1936615280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_13
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 598
+        width: 256
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2f85cca137ddc4bb6989b6df09452b
+      internalID: 572014879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_14
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 559
+        width: 256
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40071fd23995e15439975e8fdf762562
+      internalID: 235776693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_15
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 761
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9af410d55d4384d825267711825b34
+      internalID: 272298973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_16
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 779
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29dadb010fa7a714da24216e66fd2271
+      internalID: -214784363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_17
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 761
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21e55d189f5f56468d1cecc77bb18c9
+      internalID: -107656686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_18
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 762
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e505f4c3b274f694c826e624aa3dc88e
+      internalID: 338700651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_19
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 761
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44c43e60abc0e6459526f8fe675fb31
+      internalID: -1009719088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_20
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 756
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0781ca8f07fc842b443d0fb2256d76
+      internalID: 632753546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_21
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 756
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85cd1f2748920c24c8145a3b32240209
+      internalID: -1299821725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_22
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 761
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff395487a1e4cb4e8585f2838cef301
+      internalID: -489129958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_23
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 756
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ba2a92646ad1e4a99566bd4d2b9039
+      internalID: 1130083560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_24
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 720
+        width: 242
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a35c178699fa39468773909d6839106
+      internalID: 1472326066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_25
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 659
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb92196748aecf941bfb48c36e0fa13a
+      internalID: -1295625516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_26
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 659
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce82f745f79153c4797e27d94f5e4f17
+      internalID: 574805252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_27
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 659
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ff0a1c680659146b90f69f358347ed
+      internalID: 1616312021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_28
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 659
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f348a7446795d4ba2b0fee7cdc938d
+      internalID: 1912630171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_29
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 660
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a1cff767ab4e04c8e74d754ee65611
+      internalID: -1037313887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_30
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 660
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce00e2ef6f8e7f4c920812a099a4f45
+      internalID: 1398467592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_31
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 659
+        width: 5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa536ce51b84584cb2dc0da21393b78
+      internalID: -1791061792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_32
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 659
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7328f71e2bd51e74497bec417d307ede
+      internalID: -1992584534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_33
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 600
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c3812e09f836948bd0a09600911307
+      internalID: 418375313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_34
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 601
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fbca6309333a84abd5619532492e8f
+      internalID: 1279609506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_35
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 600
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86a559ef2aaff843a9a026672ae7275
+      internalID: 87473920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_36
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 601
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e43f4f07ad2474e885be856d72175b
+      internalID: 1439677318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_37
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 600
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefdb00bbd5e52e48bb61ee44ba2d7ab
+      internalID: 231317545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_38
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 600
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725eb4fd313f0324a8d20443df288868
+      internalID: 115096615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_39
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 600
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad47a924c285e446a8790db2919d5f6
+      internalID: 873575290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_40
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 600
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60ae13ace87f15458dc96b48ab96131
+      internalID: 1054377721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_41
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 600
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1795f49d66069449e5c4768ab3024f
+      internalID: 320572477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_42
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 38
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f37fb488c3bfd445b4af1c5ad365845
+      internalID: 1789840458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_43
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 38
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e000a30ecc6025c49baa6a7218d58931
+      internalID: 1899331598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_44
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 39
+        width: 253
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ab7b98b81412144a2f6b0305765e2b
+      internalID: 1438445104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_45
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 38
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f1f0de9d109ae429b35c15ab5aa35d
+      internalID: 620608807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_46
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 38
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a2cd3dc0213ac44b90d4892d4a9808
+      internalID: 1871653267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Galaga Arrangement - Level Backgrounds_47
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 38
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6924a24589c1b2847af218febd75f413
+      internalID: -1303273842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a62d671faa30f5a48b89fd9cc38ab8d4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Arcade - Galaga Arrangement - Level Backgrounds_0: 198220328
+      Arcade - Galaga Arrangement - Level Backgrounds_1: -619443580
+      Arcade - Galaga Arrangement - Level Backgrounds_10: -815957348
+      Arcade - Galaga Arrangement - Level Backgrounds_11: 1119169808
+      Arcade - Galaga Arrangement - Level Backgrounds_12: -1936615280
+      Arcade - Galaga Arrangement - Level Backgrounds_13: 572014879
+      Arcade - Galaga Arrangement - Level Backgrounds_14: 235776693
+      Arcade - Galaga Arrangement - Level Backgrounds_15: 272298973
+      Arcade - Galaga Arrangement - Level Backgrounds_16: -214784363
+      Arcade - Galaga Arrangement - Level Backgrounds_17: -107656686
+      Arcade - Galaga Arrangement - Level Backgrounds_18: 338700651
+      Arcade - Galaga Arrangement - Level Backgrounds_19: -1009719088
+      Arcade - Galaga Arrangement - Level Backgrounds_2: 621453139
+      Arcade - Galaga Arrangement - Level Backgrounds_20: 632753546
+      Arcade - Galaga Arrangement - Level Backgrounds_21: -1299821725
+      Arcade - Galaga Arrangement - Level Backgrounds_22: -489129958
+      Arcade - Galaga Arrangement - Level Backgrounds_23: 1130083560
+      Arcade - Galaga Arrangement - Level Backgrounds_24: 1472326066
+      Arcade - Galaga Arrangement - Level Backgrounds_25: -1295625516
+      Arcade - Galaga Arrangement - Level Backgrounds_26: 574805252
+      Arcade - Galaga Arrangement - Level Backgrounds_27: 1616312021
+      Arcade - Galaga Arrangement - Level Backgrounds_28: 1912630171
+      Arcade - Galaga Arrangement - Level Backgrounds_29: -1037313887
+      Arcade - Galaga Arrangement - Level Backgrounds_3: 1770228533
+      Arcade - Galaga Arrangement - Level Backgrounds_30: 1398467592
+      Arcade - Galaga Arrangement - Level Backgrounds_31: -1791061792
+      Arcade - Galaga Arrangement - Level Backgrounds_32: -1992584534
+      Arcade - Galaga Arrangement - Level Backgrounds_33: 418375313
+      Arcade - Galaga Arrangement - Level Backgrounds_34: 1279609506
+      Arcade - Galaga Arrangement - Level Backgrounds_35: 87473920
+      Arcade - Galaga Arrangement - Level Backgrounds_36: 1439677318
+      Arcade - Galaga Arrangement - Level Backgrounds_37: 231317545
+      Arcade - Galaga Arrangement - Level Backgrounds_38: 115096615
+      Arcade - Galaga Arrangement - Level Backgrounds_39: 873575290
+      Arcade - Galaga Arrangement - Level Backgrounds_4: -140327839
+      Arcade - Galaga Arrangement - Level Backgrounds_40: 1054377721
+      Arcade - Galaga Arrangement - Level Backgrounds_41: 320572477
+      Arcade - Galaga Arrangement - Level Backgrounds_42: 1789840458
+      Arcade - Galaga Arrangement - Level Backgrounds_43: 1899331598
+      Arcade - Galaga Arrangement - Level Backgrounds_44: 1438445104
+      Arcade - Galaga Arrangement - Level Backgrounds_45: 620608807
+      Arcade - Galaga Arrangement - Level Backgrounds_46: 1871653267
+      Arcade - Galaga Arrangement - Level Backgrounds_47: -1303273842
+      Arcade - Galaga Arrangement - Level Backgrounds_5: -161050528
+      Arcade - Galaga Arrangement - Level Backgrounds_6: -868697334
+      Arcade - Galaga Arrangement - Level Backgrounds_7: -46095165
+      Arcade - Galaga Arrangement - Level Backgrounds_8: -119104185
+      Arcade - Galaga Arrangement - Level Backgrounds_9: 334427562
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
