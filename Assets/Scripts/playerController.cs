@@ -4,8 +4,8 @@ public class playerController : MonoBehaviour
 {
     public Rigidbody2D playerRigidbody;
     public float moveSpeed = 5f;
-    public float xMin = -3.25f; // Left boundary
-    public float xMax = 3.25f;  // Right boundary
+    public float xMin = -4.6f; // Left boundary
+    public float xMax = 4.6f;  // Right boundary
 
     void FixedUpdate()
     {
