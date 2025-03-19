@@ -5,14 +5,32 @@ public class Bullet : MonoBehaviour
     public float speed = 10f; 
     [SerializeField] private float enemySpeed = 4f;
     public float lifetime = 2f;
+    public float enemyLifetime = 8f;
 
     void Start()
     {
-        Destroy(gameObject, lifetime);
+        //different lifetimes for player and enemy bullets
+        if(gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject, lifetime);
+        }
+        else if(gameObject.CompareTag("EnemyBullet"))
+        {
+            Destroy(gameObject, enemyLifetime);
+        }
+        
     }
 
     void Update()
     {
+        //move bullet
+        Move();
+    }
+
+
+    void Move()
+    {
+        //different speeds for player and enemy bullets
         if(gameObject.CompareTag("Bullet"))
         {
             transform.Translate(Vector2.up * speed * Time.deltaTime);
@@ -23,6 +41,7 @@ public class Bullet : MonoBehaviour
             transform.Translate(Vector2.down * enemySpeed * Time.deltaTime);
         }
     }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {

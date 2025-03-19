@@ -4,22 +4,20 @@ public class EnemyController : MonoBehaviour
 {
     public float speed = 2f;
     private Vector2 startPos;
-
     public float maxDistance = 5f;
     public float frequency = 2f;
     public float phaseOffset;
-
     public int health = 3;
     public GameObject bulletPrefab;
-     public Transform firePoint;
-     private float firetimer;
-     private float fireTimerLow;
-     private float fireTimerHigh;
+    public Transform firePoint;
+    private float fireTimerLow = .5f;
+    private float fireTimerHigh = .6f;
+    private float firetimer;
+    private float minFireHeight = -3.0f;
+
 
     void Start()
     {
-        fireTimerLow = 2f;
-        fireTimerHigh = 4f;
         firetimer = Random.Range(fireTimerLow, fireTimerHigh);
         startPos = transform.position;
         phaseOffset = Random.Range(0f, 2f * Mathf.PI); // Random phase offset for variation
@@ -28,9 +26,12 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //move the enemy
         Move();
+
+        //fire bullets on a varied timer when the enemy is high enough in the screen
         firetimer -= Time.deltaTime;
-        if(firetimer <= 0)
+        if(firetimer <= 0 && transform.position.y > minFireHeight)
         {
             firetimer = Random.Range(fireTimerLow, fireTimerHigh);
             FireBullet();
