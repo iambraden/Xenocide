@@ -10,16 +10,35 @@ public class EnemyController : MonoBehaviour
     public float phaseOffset;
 
     public int health = 3;
+    public GameObject bulletPrefab;
+     public Transform firePoint;
+     private float firetimer;
+     private float fireTimerLow;
+     private float fireTimerHigh;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        fireTimerLow = 2f;
+        fireTimerHigh = 4f;
+        firetimer = Random.Range(fireTimerLow, fireTimerHigh);
         startPos = transform.position;
         phaseOffset = Random.Range(0f, 2f * Mathf.PI); // Random phase offset for variation
     }
 
     // Update is called once per frame
     void Update()
+    {
+        Move();
+        firetimer -= Time.deltaTime;
+        if(firetimer <= 0)
+        {
+            firetimer = Random.Range(fireTimerLow, fireTimerHigh);
+            FireBullet();
+        }
+    }
+
+
+    void Move()
     {
         Vector2 pos = transform.position;
 
@@ -32,6 +51,13 @@ public class EnemyController : MonoBehaviour
         // Calculate sine wave motion around the initial x-position
         pos.x = startPos.x + Mathf.Sin((pos.y * frequency) + phaseOffset) * 2;
         transform.position = pos;
+    }
+
+
+    void FireBullet()
+    {
+        GameObject newBulletPrefab = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        newBulletPrefab.transform.SetParent(GameObject.Find("EnemyBullets").transform);
     }
 
 

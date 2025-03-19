@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject enemy;
-    public float enemySpawnInterval = 10f;
+    public float enemySpawnInterval = 4f;
     private float enemySpawnTimer;
 
     void Update()
