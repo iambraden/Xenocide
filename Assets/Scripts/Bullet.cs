@@ -52,18 +52,26 @@ public class Bullet : MonoBehaviour
         if(this.CompareTag("Bullet"))
         {
             if(other.CompareTag("Enemy"))
+            {
                 Destroy(this.gameObject);
+            }
             else if(other.CompareTag("EnemyBullet"))
+            {
                 Destroy(this.gameObject);
+            }
         }
 
         //enemy bullet destroyed when colliding with player or player bullet
         else if(this.CompareTag("EnemyBullet"))
         {
             if(other.CompareTag("Player"))
+            {
                 Destroy(this.gameObject);
+            }
             else if(other.CompareTag("Bullet"))
+            {
                 Destroy(this.gameObject);
+            }
         }
     }
 

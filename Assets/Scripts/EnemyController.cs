@@ -32,7 +32,6 @@ public class EnemyController : MonoBehaviour
         phaseOffset = Random.Range(0f, 2f * Mathf.PI); // Random phase offset for variation
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Move the enemy based on its type
@@ -55,6 +54,7 @@ public class EnemyController : MonoBehaviour
     {
         Vector2 pos = transform.position;
 
+        //wrap enemy back up to top of the screen
         if (pos.y < -5.5f)
         {
             pos.y = 5.5f;
