@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    //Bullet speed
     public float speed = 10f; 
     [SerializeField] private float enemySpeed = 4f;
+
+    //Bullet liftetime
     public float lifetime = 2f;
     public float enemyLifetime = 8f;
 

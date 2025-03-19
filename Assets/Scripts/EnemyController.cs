@@ -2,16 +2,25 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    // Movement
     public float speed = 2f;
     private Vector2 startPos;
     public float maxDistance = 5f;
     public float frequency = 2f;
     public float phaseOffset;
+
+    // Enemy Type
+    public enum EnemyType { Wave, Sway }
+    public EnemyType enemyType;
+
+    // Health
     public int health = 3;
+
+    // Shooting
     public GameObject bulletPrefab;
     public Transform firePoint;
-    private float fireTimerLow = .5f;
-    private float fireTimerHigh = .6f;
+    private float fireTimerLow = 2f;
+    private float fireTimerHigh = 4f;
     private float firetimer;
     private float minFireHeight = -3.0f;
 
@@ -26,10 +35,13 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //move the enemy
-        Move();
+        // Move the enemy based on its type
+        if (enemyType == EnemyType.Wave)
+            WaveMove();
+        else if (enemyType == EnemyType.Sway)
+            SwayMove();
 
-        //fire bullets on a varied timer when the enemy is high enough in the screen
+        //fire bullets on a varied timer if the enemy is high enough in the screen
         firetimer -= Time.deltaTime;
         if(firetimer <= 0 && transform.position.y > minFireHeight)
         {
@@ -39,7 +51,7 @@ public class EnemyController : MonoBehaviour
     }
 
 
-    void Move()
+    void WaveMove()
     {
         Vector2 pos = transform.position;
 
@@ -52,6 +64,13 @@ public class EnemyController : MonoBehaviour
         // Calculate sine wave motion around the initial x-position
         pos.x = startPos.x + Mathf.Sin((pos.y * frequency) + phaseOffset) * 2;
         transform.position = pos;
+    }
+
+
+    void SwayMove()
+    {
+        /*TODO: Implement Movement for the enemies that sit 
+        near the top of the screen and move in the grid pattern*/
     }
 
 
