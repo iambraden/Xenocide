@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour
     public float frequency = 2f;
     public float phaseOffset;
 
+    public int health = 3;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,4 +33,20 @@ public class EnemyController : MonoBehaviour
         pos.x = startPos.x + Mathf.Sin((pos.y * frequency) + phaseOffset) * 2;
         transform.position = pos;
     }
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //bullets damage enemy, destroyed when health = 0
+        if(other.CompareTag("Bullet"))
+        {
+            this.health--;
+            if(this.health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
+
 }
