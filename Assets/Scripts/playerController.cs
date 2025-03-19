@@ -58,6 +58,7 @@ public class playerController : MonoBehaviour
     }
 
     void FireBullet(){
-        Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        GameObject newBulletPrefab = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        newBulletPrefab.transform.SetParent(GameObject.Find("Bullets").transform);
     }
 }
