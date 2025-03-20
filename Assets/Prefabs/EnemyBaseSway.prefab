@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5977672327150421405}
   - component: {fileID: 8188216803256441776}
   - component: {fileID: 6401829269968108647}
+  - component: {fileID: 5938197933714426977}
   m_Layer: 0
-  m_Name: EnemyBase
-  m_TagString: Untagged
+  m_Name: EnemyBaseSway
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,3 +135,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5938197933714426977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2631750093759513644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2389408187979524998add3943efbaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 1
+  animationSprites: []
+  animationTime: 1
+  speed: 2
+  maxDistance: 5
+  frequency: 2
+  phaseOffset: 0
+  health: 3
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
