@@ -13,25 +13,31 @@ public class FormationManager : MonoBehaviour
     public float horizontalSpeed = 2f;
     public float xMin = -4.6f;
     public float xMax = 4.6f;
+    public float respawnDelay = 3f;
 
     private bool isMovingDown = true;
     private bool movingRight = true;
     private Vector2 targetPosition;
+    private bool isRespawning = false;
 
-    void Start()
-    {
-        targetPosition = transform.position; // Store initial position (0, 2.5, 0)
-        transform.position = new Vector2(targetPosition.x, 7f); // Start above screen
+    void Start(){
+        targetPosition = transform.position; // store inital position
+        StartNewWave();
+    }
+    void StartNewWave(){
+        // Reset position create new
+        transform.position = new Vector2(targetPosition.x, 7f);
         GenerateFormation();
         StartCoroutine(MoveDownCoroutine());
     }
+    void GenerateFormation(){
+        // Clear remaining enemies
+        foreach (Transform child in transform){
+            Destroy(child.gameObject);
+        }
 
-    void GenerateFormation()
-    {
-        for (int row = 0; row < rows; row++)
-        {
-            for (int col = 0; col < columns; col++)
-            {
+        for (int row = 0; row < rows; row++){
+            for (int col = 0; col < columns; col++){
                 // centered grid positions
                 float xOffset = (col - (columns - 1) / 2f) * xSpacing;
                 float yOffset = (row - (rows - 1) / 2f) * ySpacing;
@@ -42,18 +48,15 @@ public class FormationManager : MonoBehaviour
 
                 // Set enemy type Sway
                 EnemyController enemyController = enemy.GetComponent<EnemyController>();
-                if (enemyController != null)
-                {
+                if (enemyController != null){
                     enemyController.enemyType = EnemyController.EnemyType.Sway;
                 }
             }
         }
     }
 
-    IEnumerator MoveDownCoroutine()
-    {
-        while (Vector2.Distance(transform.position, targetPosition) > 0.01f)
-        {
+    IEnumerator MoveDownCoroutine(){
+        while (Vector2.Distance(transform.position, targetPosition) > 0.01f){
             transform.position = Vector2.MoveTowards(
                 transform.position,
                 targetPosition,
@@ -64,43 +67,49 @@ public class FormationManager : MonoBehaviour
         isMovingDown = false;
     }
 
-    void Update()
-    {
-        if (!isMovingDown)
-        {
+    void Update(){
+        if (!isMovingDown){
             HandleHorizontalMovement();
         }
+
+        if (transform.childCount == 0 && !isRespawning){
+            StartCoroutine(RespawnWave());
+        }
+    }
+    IEnumerator RespawnWave(){
+        isRespawning = true;
+        yield return new WaitForSeconds(respawnDelay);
+        
+        isMovingDown = true;
+        movingRight = true;
+        
+        StartNewWave();
+        isRespawning = false;
     }
 
-    void HandleHorizontalMovement()
-    {
+    void HandleHorizontalMovement(){
         // Move formation
         float direction = movingRight ? 1 : -1;
         transform.Translate(Vector2.right * direction * horizontalSpeed * Time.deltaTime);
 
         // Check screen edges
         bool hitEdge = false;
-        foreach (Transform enemy in transform)
-        {
+        foreach (Transform enemy in transform){
             Vector2 enemyPos = enemy.position;
-            if (movingRight && enemyPos.x >= xMax)
-            {
+            if (movingRight && enemyPos.x >= xMax){
                 hitEdge = true;
                 break;
             }
-            else if (!movingRight && enemyPos.x <= xMin)
-            {
+            else if (!movingRight && enemyPos.x <= xMin){
                 hitEdge = true;
                 break;
             }
         }
 
         // Reverse direction if edge hit
-        if (hitEdge)
-        {
+        if (hitEdge){
             movingRight = !movingRight;
-            // Optional: Add slight downward movement here for classic behavior
-            transform.Translate(Vector2.down * 0.5f);
+            transform.Translate(Vector2.down * 0.25f);
         }
     }
 }
