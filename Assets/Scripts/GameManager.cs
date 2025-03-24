@@ -10,10 +10,14 @@ public GameObject boss; // Reference to the boss prefab
     private float duoWaveSpawnChance = 25f;
 
     private bool isBossActive = false; // Flag to track if the boss is active
+    void Start()
+    {
+        SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
+    }
 
     void Update()
     {
-// Skip enemy spawning if the boss is active
+        // Skip enemy spawning if the boss is active
         if (isBossActive)
         {
             return;

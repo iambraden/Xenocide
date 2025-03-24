@@ -93,6 +93,7 @@ public class EnemyController : MonoBehaviour
     {
         GameObject newBulletPrefab = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBulletPrefab.transform.SetParent(GameObject.Find("EnemyBullets").transform);
+        SoundManager.PlaySound(SoundType.EnemyShoot);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -103,7 +104,10 @@ public class EnemyController : MonoBehaviour
             this.health--;
             if(this.health <= 0)
             {
+                SoundManager.PlaySound(SoundType.EnemyDeath, 0.3f);
                 Destroy(gameObject);
+            }else{
+                SoundManager.PlaySound(SoundType.EnemyHit, 0.5f);
             }
         }
 
