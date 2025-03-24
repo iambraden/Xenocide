@@ -4,7 +4,7 @@ using System.Collections;
 public class FormationManager : MonoBehaviour
 {
     [Header("Formation Settings")]
-    public GameObject[] enemyPrefabs; // Possible enemy types
+    public GameObject enemyPrefab;
     public int rows = 3;
     public int columns = 5;
     public float xSpacing = 0.8f;
@@ -13,72 +13,47 @@ public class FormationManager : MonoBehaviour
     public float horizontalSpeed = 2f;
     public float xMin = -4.6f;
     public float xMax = 4.6f;
-    public float respawnDelay = 3f;
-
-    [Header("Spawn Settings")]
-    public float spawnChance = 0.5f; // spawn rate
 
     private bool isMovingDown = true;
     private bool movingRight = true;
     private Vector2 targetPosition;
-    private bool isRespawning = false;
 
-    void Start(){
-        targetPosition = transform.position; // store inital position
-        StartNewWave();
-    }
-    void StartNewWave(){
-        // Reset position create new
-        transform.position = new Vector2(targetPosition.x, 7f);
+    void Start()
+    {
+        targetPosition = transform.position; // Store initial position (0, 2.5, 0)
+        transform.position = new Vector2(targetPosition.x, 7f); // Start above screen
         GenerateFormation();
         StartCoroutine(MoveDownCoroutine());
     }
-    void GenerateFormation(){
-        foreach (Transform child in transform){
-            Destroy(child.gameObject);
-        }
 
-        for (int row = 0; row < rows; row++){
-            for (int col = 0; col < columns; col++){
-                if (Random.value > spawnChance) continue;
-
-                // Get random enemy prefab from array
-                GameObject randomPrefab = GetRandomEnemyPrefab();
-                if (randomPrefab == null){
-                    Debug.LogError("No enemy prefab");
-                    continue;
-                }
-                
-                // Centered grid positions
+    void GenerateFormation()
+    {
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < columns; col++)
+            {
+                // centered grid positions
                 float xOffset = (col - (columns - 1) / 2f) * xSpacing;
                 float yOffset = (row - (rows - 1) / 2f) * ySpacing;
                 Vector2 localPosition = new Vector2(xOffset, yOffset);
 
-                GameObject enemy = Instantiate(randomPrefab, transform);
+                GameObject enemy = Instantiate(enemyPrefab, transform);
                 enemy.transform.localPosition = localPosition;
 
                 // Set enemy type Sway
                 EnemyController enemyController = enemy.GetComponent<EnemyController>();
-                if (enemyController != null){
+                if (enemyController != null)
+                {
                     enemyController.enemyType = EnemyController.EnemyType.Sway;
                 }
             }
         }
     }
-    GameObject GetRandomEnemyPrefab()
+
+    IEnumerator MoveDownCoroutine()
     {
-        if (enemyPrefabs == null || enemyPrefabs.Length == 0)
+        while (Vector2.Distance(transform.position, targetPosition) > 0.01f)
         {
-            Debug.LogError("No enemy prefab");
-            return null;
-        }
-
-        // random enemy
-        return enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-    }
-
-    IEnumerator MoveDownCoroutine(){
-        while (Vector2.Distance(transform.position, targetPosition) > 0.01f){
             transform.position = Vector2.MoveTowards(
                 transform.position,
                 targetPosition,
@@ -89,49 +64,43 @@ public class FormationManager : MonoBehaviour
         isMovingDown = false;
     }
 
-    void Update(){
-        if (!isMovingDown){
+    void Update()
+    {
+        if (!isMovingDown)
+        {
             HandleHorizontalMovement();
         }
-
-        if (transform.childCount == 0 && !isRespawning){
-            StartCoroutine(RespawnWave());
-        }
-    }
-    IEnumerator RespawnWave(){
-        isRespawning = true;
-        yield return new WaitForSeconds(respawnDelay);
-        
-        isMovingDown = true;
-        movingRight = true;
-        
-        StartNewWave();
-        isRespawning = false;
     }
 
-    void HandleHorizontalMovement(){
+    void HandleHorizontalMovement()
+    {
         // Move formation
         float direction = movingRight ? 1 : -1;
         transform.Translate(Vector2.right * direction * horizontalSpeed * Time.deltaTime);
 
         // Check screen edges
         bool hitEdge = false;
-        foreach (Transform enemy in transform){
+        foreach (Transform enemy in transform)
+        {
             Vector2 enemyPos = enemy.position;
-            if (movingRight && enemyPos.x >= xMax){
+            if (movingRight && enemyPos.x >= xMax)
+            {
                 hitEdge = true;
                 break;
             }
-            else if (!movingRight && enemyPos.x <= xMin){
+            else if (!movingRight && enemyPos.x <= xMin)
+            {
                 hitEdge = true;
                 break;
             }
         }
 
         // Reverse direction if edge hit
-        if (hitEdge){
+        if (hitEdge)
+        {
             movingRight = !movingRight;
-            transform.Translate(Vector2.down * 0.25f);
+            // Optional: Add slight downward movement here for classic behavior
+            transform.Translate(Vector2.down * 0.5f);
         }
     }
 }
