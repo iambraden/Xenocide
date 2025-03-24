@@ -13,7 +13,7 @@ public class BossController : MonoBehaviour
     void Start()
     {
         // Start the boss above the screen
-        transform.position = new Vector2(transform.position.x, 7f);
+        transform.position = new Vector2(transform.position.x, transform.position.y);
     
         // Find the player and disable their shooting
         playerController = FindObjectOfType<PlayerController>();

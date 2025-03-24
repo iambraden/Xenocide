@@ -4,24 +4,39 @@ public class GameManager : MonoBehaviour
 {
     //Enemy Spawn
     public GameObject enemy;
+public GameObject boss; // Reference to the boss prefab
     public float enemySpawnInterval = 4f;
     private float enemySpawnTimer;
     private float duoWaveSpawnChance = 25f;
 
+    private bool isBossActive = false; // Flag to track if the boss is active
+
     void Update()
     {
+// Skip enemy spawning if the boss is active
+        if (isBossActive)
+        {
+            return;
+        }
+
         enemySpawnTimer += Time.deltaTime;
         if (enemySpawnTimer >= enemySpawnInterval)
         {
-            if(Random.Range(0, 100) < duoWaveSpawnChance)
+            if (Random.Range(0, 100) < duoWaveSpawnChance)
             {
-                // 25% chance to spawn two enemy side-by-side
+                // 25% chance to spawn two enemies side-by-side
                 spawnDuoEnemy();
                 enemySpawnTimer = 0f; // Reset timer on enemy spawn
                 return;
             }
             SpawnEnemy();
             enemySpawnTimer = 0f; // Reset timer on enemy spawn
+        }
+
+        //TODO: forced boss spawn for now
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            SpawnBoss();
         }
     }
 
@@ -80,6 +95,19 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("Spawned duo enemies moving in sync");
+    }
+
+    public void SpawnBoss()
+    {
+        // Stop enemy spawning
+        isBossActive = true;
+
+        // Spawn the boss at the top of the screen
+        Vector2 bossSpawnPosition = new Vector2(0, 7f); // Centered at the top
+        GameObject newBoss = Instantiate(boss, bossSpawnPosition, Quaternion.identity);
+        newBoss.transform.SetParent(GameObject.Find("Enemies").transform);
+
+        Debug.Log("Boss spawned. Enemy spawning stopped.");
     }
 
 
