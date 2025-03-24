@@ -15,7 +15,7 @@ public class EnemyController : MonoBehaviour
     public float speed = 2f;
     public Vector2 startPos;
     public float maxDistance = 5f;
-    public float frequency = 2f;
+    public float frequency = 1f;
     public float phaseOffset;
 
     [Header("Health")]
@@ -105,6 +105,12 @@ public class EnemyController : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+
+        if(other.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            //TODO: Implement player health loss
         }
     }
 
