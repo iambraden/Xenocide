@@ -854,7 +854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5090083986206504613, guid: 0bd43766417fb694387b7f6f91fb4ffe, type: 3}
-  boss: {fileID: 0}
+  boss: {fileID: 3769694710535574654, guid: 080adb708095c7d45acbb43c6f224044, type: 3}
   enemySpawnInterval: 4
 --- !u!4 &1600002578
 Transform:

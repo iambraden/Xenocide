@@ -5,10 +5,17 @@ public class BossController : MonoBehaviour
 {
     [Header("Boss Spawn")]
     private PlayerController playerController; // Reference to PlayerController
-    public float moveDownSpeed = 1f;
-
-    [Header("Shooting")]
     public Vector2 startPosition;
+    private bool isMovingDown = true;
+    private float moveDownSpeed = 1f;
+
+    [Header("Movement")]
+    private bool movingRight = true;
+    public float horizontalSpeed = 2f;
+    public float xMin = -4.0f;
+    public float xMax = 4.0f;
+
+    
 
     void Start()
     {
@@ -25,7 +32,31 @@ public class BossController : MonoBehaviour
 
     void Update()
     {
-        // Boss behavior logic here
+        if(!isMovingDown)
+        {
+            Move();
+        }
+    }
+
+    void Move()
+    {
+        float direction = movingRight ? 1 : -1;
+        transform.Translate(Vector2.right * direction * horizontalSpeed * Time.deltaTime);
+
+        bool hitEdge = false;
+        if (transform.position.x >= xMax)
+        {
+            hitEdge = true;
+        }
+        else if (transform.position.x <= xMin)
+        {
+            hitEdge = true;
+        }
+
+        if(hitEdge)
+        {
+            movingRight = !movingRight;
+        }
     }
 
 
@@ -41,5 +72,6 @@ public class BossController : MonoBehaviour
             yield return null;
         }
         playerController.canShoot = true; // Enable shooting
+        isMovingDown = false;
     }
 }

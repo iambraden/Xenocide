@@ -181,8 +181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea502c1bc5764942b1467c7e836d63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 1
   startPosition: {x: 0, y: 0}
+  horizontalSpeed: 2
+  xMin: -4
+  xMax: 4
 --- !u!1 &4690317719893492496
 GameObject:
   m_ObjectHideFlags: 0
