@@ -61,5 +61,6 @@ public class PlayerController : MonoBehaviour
     void FireBullet(){
         GameObject newBulletPrefab = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBulletPrefab.transform.SetParent(GameObject.Find("Bullets").transform);
+        SoundManager.PlaySound(SoundType.PlayerShoot, 0.5f);
     }
 }
