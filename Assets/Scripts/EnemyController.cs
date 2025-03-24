@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour
 
     [Header("Movement")]
     public float speed = 2f;
-    private Vector2 startPos;
+    public Vector2 startPos;
     public float maxDistance = 5f;
     public float frequency = 2f;
     public float phaseOffset;
@@ -38,7 +38,10 @@ public class EnemyController : MonoBehaviour
     {
         firetimer = Random.Range(fireTimerLow, fireTimerHigh);
         startPos = transform.position;
+        if (Mathf.Abs(phaseOffset) < 0.0001f)
+    {
         phaseOffset = Random.Range(0f, 2f * Mathf.PI); // Random phase offset for variation
+    }
         //animate the enemy
         InvokeRepeating(nameof(animateSprite), this.animationTime, this.animationTime);
     }

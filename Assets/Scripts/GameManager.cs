@@ -6,12 +6,20 @@ public class GameManager : MonoBehaviour
     public GameObject enemy;
     public float enemySpawnInterval = 4f;
     private float enemySpawnTimer;
+    private float duoWaveSpawnChance = 25f;
 
     void Update()
     {
         enemySpawnTimer += Time.deltaTime;
         if (enemySpawnTimer >= enemySpawnInterval)
         {
+            if(Random.Range(0, 100) < duoWaveSpawnChance)
+            {
+                // 25% chance to spawn two enemy side-by-side
+                spawnDuoEnemy();
+                enemySpawnTimer = 0f; // Reset timer on enemy spawn
+                return;
+            }
             SpawnEnemy();
             enemySpawnTimer = 0f; // Reset timer on enemy spawn
         }
@@ -35,4 +43,44 @@ public class GameManager : MonoBehaviour
             enemyController.enemyType = EnemyController.EnemyType.Wave;
         }
     }
+
+    void spawnDuoEnemy()
+    {
+        float spacing = 1f;
+        float randomX = Random.Range(-4f, 4f);
+        Vector2 spawnPosition = new Vector2(randomX, 7f);
+
+        // Instantiate the first enemy
+        GameObject newEnemy1 = Instantiate(enemy, spawnPosition, Quaternion.identity);
+        newEnemy1.transform.SetParent(GameObject.Find("Enemies").transform);
+
+        // Instantiate the second enemy with spacing
+        GameObject newEnemy2 = Instantiate(enemy, spawnPosition + new Vector2(spacing, 0), Quaternion.identity);
+        newEnemy2.transform.SetParent(GameObject.Find("Enemies").transform);
+
+        // Assign the same startPos and phaseOffset to both enemies
+        EnemyController enemyController1 = newEnemy1.GetComponent<EnemyController>();
+        EnemyController enemyController2 = newEnemy2.GetComponent<EnemyController>();
+
+        if (enemyController1 != null && enemyController2 != null)
+        {
+            // Set both enemies to Wave type
+            enemyController1.enemyType = EnemyController.EnemyType.Wave;
+            enemyController2.enemyType = EnemyController.EnemyType.Wave;
+
+            // Synchronize their movement by sharing startPos and phaseOffset
+            Vector2 sharedStartPos = spawnPosition;
+            float sharedPhaseOffset = Random.Range(0f, 2f * Mathf.PI);
+
+            enemyController1.startPos = sharedStartPos;
+            enemyController1.phaseOffset = sharedPhaseOffset;
+
+            enemyController2.startPos = sharedStartPos;
+            enemyController2.phaseOffset = sharedPhaseOffset;
+        }
+
+        Debug.Log("Spawned duo enemies moving in sync");
+    }
+
+
 }
