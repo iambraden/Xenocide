@@ -4,7 +4,7 @@ using System.Collections;
 public class FormationManager : MonoBehaviour
 {
     [Header("Formation Settings")]
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefabs; // Possible enemy types
     public int rows = 3;
     public int columns = 5;
     public float xSpacing = 0.8f;
@@ -14,6 +14,9 @@ public class FormationManager : MonoBehaviour
     public float xMin = -4.6f;
     public float xMax = 4.6f;
     public float respawnDelay = 3f;
+
+    [Header("Spawn Settings")]
+    public float spawnChance = 0.5f; // spawn rate
 
     private bool isMovingDown = true;
     private bool movingRight = true;
@@ -31,19 +34,27 @@ public class FormationManager : MonoBehaviour
         StartCoroutine(MoveDownCoroutine());
     }
     void GenerateFormation(){
-        // Clear remaining enemies
         foreach (Transform child in transform){
             Destroy(child.gameObject);
         }
 
         for (int row = 0; row < rows; row++){
             for (int col = 0; col < columns; col++){
-                // centered grid positions
+                if (Random.value > spawnChance) continue;
+
+                // Get random enemy prefab from array
+                GameObject randomPrefab = GetRandomEnemyPrefab();
+                if (randomPrefab == null){
+                    Debug.LogError("No enemy prefab");
+                    continue;
+                }
+                
+                // Centered grid positions
                 float xOffset = (col - (columns - 1) / 2f) * xSpacing;
                 float yOffset = (row - (rows - 1) / 2f) * ySpacing;
                 Vector2 localPosition = new Vector2(xOffset, yOffset);
 
-                GameObject enemy = Instantiate(enemyPrefab, transform);
+                GameObject enemy = Instantiate(randomPrefab, transform);
                 enemy.transform.localPosition = localPosition;
 
                 // Set enemy type Sway
@@ -53,6 +64,17 @@ public class FormationManager : MonoBehaviour
                 }
             }
         }
+    }
+    GameObject GetRandomEnemyPrefab()
+    {
+        if (enemyPrefabs == null || enemyPrefabs.Length == 0)
+        {
+            Debug.LogError("No enemy prefab");
+            return null;
+        }
+
+        // random enemy
+        return enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
     }
 
     IEnumerator MoveDownCoroutine(){
