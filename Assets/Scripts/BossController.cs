@@ -11,9 +11,16 @@ public class BossController : MonoBehaviour
 
     [Header("Movement")]
     private bool movingRight = true;
-    public float horizontalSpeed = 2f;
+    public float horizontalSpeed = 3f;
     public float xMin = -4.0f;
     public float xMax = 4.0f;
+    public float turnTimerLow = 2f;
+    public float turnTimerHigh = 4f;
+    private float turnTimer;
+    public float turnThreshold = 1.5f;
+
+    [Header("Health")]
+    public int health = 50;
 
     
 
@@ -53,10 +60,41 @@ public class BossController : MonoBehaviour
             hitEdge = true;
         }
 
-        if(hitEdge)
+        if(hitEdge) // Reverse direction if edge hit
         {
             movingRight = !movingRight;
+            Debug.Log("Hit Edge");
+        } 
+        else // If not at edge, check for a random turn
+        {
+            if(Abs(transform.position.x - xMax) > turnThreshold && Abs(transform.position.x - xMin) > turnThreshold)
+            {
+                turnTimer -= Time.deltaTime;
+                if(turnTimer <= 0)
+                {
+                    
+                    movingRight = !movingRight;
+                    turnTimer = Random.Range(turnTimerLow, turnTimerHigh);
+                    Debug.Log("Turn");
+                }
+            }
         }
+    }
+
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //bullets damage enemy, destroyed when health = 0
+        if(other.CompareTag("Bullet"))
+        {
+            this.health--;
+            if(this.health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+
     }
 
 
@@ -73,5 +111,6 @@ public class BossController : MonoBehaviour
         }
         playerController.canShoot = true; // Enable shooting
         isMovingDown = false;
+        turnTimer = Random.Range(turnTimerLow, turnTimerHigh); //Enable turning
     }
 }
