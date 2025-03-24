@@ -1,13 +1,14 @@
 using UnityEngine;
 
-public class playerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D playerRigidbody;
-
+    [Header("Shooting")]
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float bulletCooldown = 0.2f;
     private float nextFireTime = 0f;
+    public bool  canShoot = true;
 
     [Header("Player movement")]
     public float moveSpeed = 5f;
@@ -51,7 +52,7 @@ public class playerController : MonoBehaviour
     }
 
     void Update(){
-        if(Input.GetKey(KeyCode.Space) && Time.time> nextFireTime){
+        if(canShoot && Input.GetKey(KeyCode.Space) && Time.time> nextFireTime){
             FireBullet();
             nextFireTime = Time.time + bulletCooldown;
         }

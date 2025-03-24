@@ -107,6 +107,7 @@ public class EnemyController : MonoBehaviour
             }
         }
 
+        //enemy collides with player, destroy enemy and player takes damage
         if(other.CompareTag("Player"))
         {
             Destroy(gameObject);
