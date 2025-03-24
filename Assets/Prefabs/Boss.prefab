@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: -7802487468526379338}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,9 +185,6 @@ MonoBehaviour:
   horizontalSpeed: 2
   xMin: -4
   xMax: 4
-  turnTimerLow: 2
-  turnTimerHigh: 4
-  health: 50
 --- !u!1 &4690317719893492496
 GameObject:
   m_ObjectHideFlags: 0
