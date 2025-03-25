@@ -13,51 +13,43 @@ public class FormationManager : MonoBehaviour
     public float horizontalSpeed = 2f;
     public float xMin = -4.6f;
     public float xMax = 4.6f;
-    public float respawnDelay = 3f;
 
     [Header("Spawn Settings")]
-    public float spawnChance = 0.5f; // spawn rate
+    public float spawnChance = 0.5f; // Spawn rate
 
     private bool isMovingDown = true;
     private bool movingRight = true;
     private Vector2 targetPosition;
-    private bool isRespawning = false;
 
-    void Start(){
-        targetPosition = transform.position; // store inital position
-        StartNewWave();
-    }
-    void StartNewWave(){
-        // Reset position create new
-        transform.position = new Vector2(targetPosition.x, 7f);
+    // New wave movement and formation
+    public void StartNewWave(){
+        targetPosition = new Vector2(transform.position.x, 2.5f);
         GenerateFormation();
         StartCoroutine(MoveDownCoroutine());
     }
-    void GenerateFormation(){
-        foreach (Transform child in transform){
-            Destroy(child.gameObject);
-        }
 
+    // Create enemy grid with random empty spaces
+    void GenerateFormation(){
         for (int row = 0; row < rows; row++){
             for (int col = 0; col < columns; col++){
+                // Random skip based on spawn chance
                 if (Random.value > spawnChance) continue;
 
-                // Get random enemy prefab from array
                 GameObject randomPrefab = GetRandomEnemyPrefab();
                 if (randomPrefab == null){
                     Debug.LogError("No enemy prefab");
                     continue;
                 }
-                
-                // Centered grid positions
+
+                // Calculate grid position with center offset
                 float xOffset = (col - (columns - 1) / 2f) * xSpacing;
                 float yOffset = (row - (rows - 1) / 2f) * ySpacing;
                 Vector2 localPosition = new Vector2(xOffset, yOffset);
 
+                // Create enemy and set position
                 GameObject enemy = Instantiate(randomPrefab, transform);
                 enemy.transform.localPosition = localPosition;
 
-                // Set enemy type Sway
                 EnemyController enemyController = enemy.GetComponent<EnemyController>();
                 if (enemyController != null){
                     enemyController.enemyType = EnemyController.EnemyType.Sway;
@@ -65,15 +57,13 @@ public class FormationManager : MonoBehaviour
             }
         }
     }
-    GameObject GetRandomEnemyPrefab()
-    {
-        if (enemyPrefabs == null || enemyPrefabs.Length == 0)
-        {
+
+    // Random enemy prefab from array
+    GameObject GetRandomEnemyPrefab(){
+        if (enemyPrefabs == null || enemyPrefabs.Length == 0){
             Debug.LogError("No enemy prefab");
             return null;
         }
-
-        // random enemy
         return enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
     }
 
@@ -86,52 +76,32 @@ public class FormationManager : MonoBehaviour
             );
             yield return null;
         }
-        isMovingDown = false;
+        isMovingDown = false; // Enable horizontal movement
     }
 
     void Update(){
-        if (!isMovingDown){
-            HandleHorizontalMovement();
-        }
-
-        if (transform.childCount == 0 && !isRespawning){
-            StartCoroutine(RespawnWave());
-        }
-    }
-    IEnumerator RespawnWave(){
-        isRespawning = true;
-        yield return new WaitForSeconds(respawnDelay);
-        
-        isMovingDown = true;
-        movingRight = true;
-        
-        StartNewWave();
-        isRespawning = false;
+        if (!isMovingDown) HandleHorizontalMovement();
     }
 
     void HandleHorizontalMovement(){
-        // Move formation
+        // Set movement direction
         float direction = movingRight ? 1 : -1;
         transform.Translate(Vector2.right * direction * horizontalSpeed * Time.deltaTime);
 
-        // Check screen edges
+        // Check if any enemy reaches screen edge
         bool hitEdge = false;
         foreach (Transform enemy in transform){
             Vector2 enemyPos = enemy.position;
-            if (movingRight && enemyPos.x >= xMax){
-                hitEdge = true;
-                break;
-            }
-            else if (!movingRight && enemyPos.x <= xMin){
+            if ((movingRight && enemyPos.x >= xMax) || (!movingRight && enemyPos.x <= xMin)){
                 hitEdge = true;
                 break;
             }
         }
 
-        // Reverse direction if edge hit
+        // Reverse direction and move down slightly on edge hit
         if (hitEdge){
             movingRight = !movingRight;
-            transform.Translate(Vector2.down * 0.25f);
+            transform.Translate(Vector2.down * 0.5f);
         }
     }
 }

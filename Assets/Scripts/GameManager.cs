@@ -2,33 +2,54 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //Enemy Spawn
-    public GameObject enemy;
-public GameObject boss; // Reference to the boss prefab
+
+     [Header("Wave Settings")]
+    public float waveInterval = 22f;
+    private float waveTimer;
+    public FormationManager formationPrefab; // Reference to formation prefab
+
+    public GameObject enemy; // Reference to the wave enemy prefab
+    public GameObject boss; // Reference to the boss prefab
     public float enemySpawnInterval = 4f;
     private float enemySpawnTimer;
     private float duoWaveSpawnChance = 25f;
-
     private bool isBossActive = false; // Flag to track if the boss is active
-    void Start()
-    {
+        void Start(){
         SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
+        waveTimer = waveInterval; // Start first wave after full interval
     }
 
-    void Update()
-    {
+    void Update(){
         // Skip enemy spawning if the boss is active
-        if (isBossActive)
+        if (isBossActive) return;
+
+        // Enemy spawning
+        HandleRandomEnemySpawns();
+        
+        // Wave timing
+        waveTimer -= Time.deltaTime;
+        if (waveTimer <= 0f)
         {
-            return;
+            SpawnFormationWave();
+            waveTimer = waveInterval;
         }
 
+        // Forced boss spawn for now
+        if (Input.GetKeyDown(KeyCode.B)) SpawnBoss();
+    }
+
+    void SpawnFormationWave(){
+        // Create new formation instance
+        FormationManager newFormation = Instantiate(formationPrefab, new Vector3(0, 7f, 0), Quaternion.identity);
+        newFormation.transform.SetParent(GameObject.Find("Enemies").transform);
+        newFormation.StartNewWave();
+    }
+
+    void HandleRandomEnemySpawns(){
         enemySpawnTimer += Time.deltaTime;
-        if (enemySpawnTimer >= enemySpawnInterval)
-        {
-            if (Random.Range(0, 100) < duoWaveSpawnChance)
-            {
-                // 25% chance to spawn two enemies side-by-side
+        if (enemySpawnTimer >= enemySpawnInterval){
+            // 25% chance to spawn two enemies side-by-side
+            if (Random.Range(0, 100) < duoWaveSpawnChance){
                 spawnDuoEnemy();
                 enemySpawnTimer = 0f; // Reset timer on enemy spawn
                 return;
@@ -36,16 +57,9 @@ public GameObject boss; // Reference to the boss prefab
             SpawnEnemy();
             enemySpawnTimer = 0f; // Reset timer on enemy spawn
         }
-
-        //TODO: forced boss spawn for now
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            SpawnBoss();
-        }
     }
 
-    void SpawnEnemy()
-    {
+    void SpawnEnemy(){
         //spawn enemies at a random x-position just above the screen
         float randomX = Random.Range(-4f, 4f);
         Vector2 spawnPosition = new Vector2(randomX, 7f);
@@ -54,8 +68,7 @@ public GameObject boss; // Reference to the boss prefab
 
         // Randomly assign enemy type
         EnemyController enemyController = newEnemy.GetComponent<EnemyController>();
-        if (enemyController != null)
-        {
+        if (enemyController != null){
             enemyController.enemyType = (EnemyController.EnemyType)Random.Range(0, 2);
             //TODO: implement sway enemy type
                 //only make wave enemies for now
@@ -63,8 +76,7 @@ public GameObject boss; // Reference to the boss prefab
         }
     }
 
-    void spawnDuoEnemy()
-    {
+    void spawnDuoEnemy(){
         float spacing = 1f;
         float randomX = Random.Range(-4f, 4f);
         Vector2 spawnPosition = new Vector2(randomX, 7f);
@@ -81,8 +93,7 @@ public GameObject boss; // Reference to the boss prefab
         EnemyController enemyController1 = newEnemy1.GetComponent<EnemyController>();
         EnemyController enemyController2 = newEnemy2.GetComponent<EnemyController>();
 
-        if (enemyController1 != null && enemyController2 != null)
-        {
+        if (enemyController1 != null && enemyController2 != null){
             // Set both enemies to Wave type
             enemyController1.enemyType = EnemyController.EnemyType.Wave;
             enemyController2.enemyType = EnemyController.EnemyType.Wave;
@@ -101,8 +112,7 @@ public GameObject boss; // Reference to the boss prefab
         Debug.Log("Spawned duo enemies moving in sync");
     }
 
-    public void SpawnBoss()
-    {
+    public void SpawnBoss(){
         // Stop enemy spawning
         isBossActive = true;
 
