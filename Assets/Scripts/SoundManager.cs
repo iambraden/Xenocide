@@ -11,7 +11,9 @@ public enum SoundType{
     EnemyShoot, //In EnemyController.cs and BossController.cs
     EnemyHit, //In EnemyController.cs and BossController.cs
     EnemyDeath, //In EnemyController.cs and BossController.cs
-    GameOver
+    GameOver,
+    Hover,
+    Click
 }
 
 [RequireComponent(typeof(AudioSource))]
