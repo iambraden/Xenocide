@@ -150,7 +150,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.11
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -406,7 +406,6 @@ MonoBehaviour:
   horizontalSpeed: 2
   xMin: -4.6
   xMax: 4.6
-  respawnDelay: 3
   spawnChance: 0.5
 --- !u!4 &497146384
 Transform:
@@ -1010,6 +1009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da227ad939958aa4f9e893b21a05501c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveInterval: 22
+  formationPrefab: {fileID: 0}
   enemy: {fileID: 5090083986206504613, guid: 0bd43766417fb694387b7f6f91fb4ffe, type: 3}
   boss: {fileID: 3769694710535574654, guid: 080adb708095c7d45acbb43c6f224044, type: 3}
   enemySpawnInterval: 4

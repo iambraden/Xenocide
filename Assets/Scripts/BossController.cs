@@ -11,9 +11,26 @@ public class BossController : MonoBehaviour
 
     [Header("Movement")]
     private bool movingRight = true;
-    public float horizontalSpeed = 2f;
+    public float horizontalSpeed = 3f;
     public float xMin = -4.0f;
     public float xMax = 4.0f;
+    public float turnTimerLow = 2f;
+    public float turnTimerHigh = 4f;
+    private float turnTimer;
+    public float turnThreshold = 1.5f;
+
+    [Header("Health")]
+    public int health = 50;
+
+    [Header("Shooting")]
+    public GameObject bulletPrefabCenter;
+    public Transform firePointCenter;
+    public float fireTimerCenterLow = 0.8f;
+    public float fireTimerCenterHigh = 1.5f;
+    private float firetimerCenter;
+    public GameObject bulletPrefabSide;
+    public Transform firePointLeft;
+    public Transform firePointRight;
 
     
 
@@ -23,7 +40,7 @@ public class BossController : MonoBehaviour
         transform.position = new Vector2(transform.position.x, transform.position.y);
     
         // Find the player and disable their shooting
-        playerController = FindObjectOfType<PlayerController>();
+        playerController = FindFirstObjectByType<PlayerController>();
         playerController.canShoot = false; // Disable shooting
 
         startPosition = new Vector2(transform.position.x, 3.5f);
@@ -32,10 +49,21 @@ public class BossController : MonoBehaviour
 
     void Update()
     {
-        if(!isMovingDown)
+        if(isMovingDown)
         {
-            Move();
+            return;
         }
+
+        Move();
+
+        firetimerCenter -= Time.deltaTime;
+            if (firetimerCenter <= 0)
+            {
+                firetimerCenter = Random.Range(fireTimerCenterLow, fireTimerCenterHigh);
+                FireBulletCenter();
+                //TODO: put a different timer on side bullets
+                FireBulletSide();
+            }
     }
 
     void Move()
@@ -53,10 +81,57 @@ public class BossController : MonoBehaviour
             hitEdge = true;
         }
 
-        if(hitEdge)
+        if(hitEdge) // Reverse direction if edge hit
         {
             movingRight = !movingRight;
+        } 
+        else // If not at edge, check for a random turn
+        {
+            if(Mathf.Abs(transform.position.x - xMax) > turnThreshold && Mathf.Abs(transform.position.x - xMin) > turnThreshold)
+            {
+                turnTimer -= Time.deltaTime;
+                if(turnTimer <= 0)
+                {
+                    
+                    movingRight = !movingRight;
+                    turnTimer = Random.Range(turnTimerLow, turnTimerHigh);
+                }
+            }
         }
+    }
+
+
+    void FireBulletCenter()
+    {
+        GameObject newBulletPrefab = Instantiate(bulletPrefabCenter, firePointCenter.position, Quaternion.identity);
+        newBulletPrefab.transform.SetParent(GameObject.Find("EnemyBullets").transform);
+        SoundManager.PlaySound(SoundType.EnemyShoot);
+    }
+
+    void FireBulletSide()
+    {
+        GameObject newBulletPrefab = Instantiate(bulletPrefabSide, firePointLeft.position, Quaternion.identity);
+        newBulletPrefab.transform.SetParent(GameObject.Find("EnemyBullets").transform);
+        
+        newBulletPrefab = Instantiate(bulletPrefabSide, firePointRight.position, Quaternion.identity);
+        newBulletPrefab.transform.SetParent(GameObject.Find("EnemyBullets").transform);
+        SoundManager.PlaySound(SoundType.EnemyShoot);
+    }
+
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //bullets damage enemy, destroyed when health = 0
+        if(other.CompareTag("Bullet"))
+        {
+            this.health--;
+            if(this.health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+
     }
 
 
@@ -73,5 +148,7 @@ public class BossController : MonoBehaviour
         }
         playerController.canShoot = true; // Enable shooting
         isMovingDown = false;
+        turnTimer = Random.Range(turnTimerLow, turnTimerHigh); //Enable turning
+        firetimerCenter = Random.Range(fireTimerCenterLow, fireTimerCenterHigh); //Enable firing
     }
 }
