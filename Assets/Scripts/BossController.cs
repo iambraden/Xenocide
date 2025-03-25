@@ -32,12 +32,17 @@ public class BossController : MonoBehaviour
     public Transform firePointLeft;
     public Transform firePointRight;
 
+    private GameManager gameManager;
+
     
 
     void Start()
     {
         // Start the boss above the screen
         transform.position = new Vector2(transform.position.x, transform.position.y);
+
+        //Find game manager
+        gameManager = FindFirstObjectByType<GameManager>();
     
         // Find the player and disable their shooting
         playerController = FindFirstObjectByType<PlayerController>();
@@ -122,13 +127,24 @@ public class BossController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //bullets damage enemy, destroyed when health = 0
+        //player bullets damage enemy, destroyed when health = 0
         if(other.CompareTag("Bullet"))
         {
             this.health--;
-            if(this.health <= 0)
+            if (this.health <= 0)
             {
+                SoundManager.PlaySound(SoundType.EnemyDeath, 0.3f);
                 Destroy(gameObject);
+
+                // Notify the GameManager that the boss is dead
+                if (gameManager != null)
+                {
+                    gameManager.OnBossDefeated();
+                }
+            }
+            else
+            {
+                SoundManager.PlaySound(SoundType.EnemyHit, 0.5f);
             }
         }
 

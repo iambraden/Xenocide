@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: -7802487468526379338}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,6 +196,7 @@ MonoBehaviour:
   bulletPrefabSide: {fileID: 5942482787057587179, guid: 5cf22959a91c9d0438546305b816d51d, type: 3}
   firePointLeft: {fileID: 7588579478923619010}
   firePointRight: {fileID: 2032615103905643235}
+  gameManager: {fileID: 0}
 --- !u!1 &4690317719893492496
 GameObject:
   m_ObjectHideFlags: 0

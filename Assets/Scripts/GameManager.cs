@@ -8,46 +8,69 @@ public class GameManager : MonoBehaviour
     private float waveTimer;
     public FormationManager formationPrefab; // Reference to formation prefab
 
+    [Header("Enemy Spawning")]
     public GameObject enemy; // Reference to the wave enemy prefab
-    public GameObject boss; // Reference to the boss prefab
+    private bool canSpawnEnemies = true; // Controls whether enemies can spawn
     public float enemySpawnInterval = 4f;
     private float enemySpawnTimer;
     private float duoWaveSpawnChance = 25f;
+    private float bossActiveSpawnAdjustment = 2f; // Decreases enemy spawn rate when boss is active
+
+    [Header("Boss")]
+    public GameObject boss; // Reference to the boss prefab
     private bool isBossActive = false; // Flag to track if the boss is active
-        void Start(){
+    private float bossSpawnCooldown = 5f; // Time to wait before resuming enemy spawning
+    
+    void Start(){
         SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
         waveTimer = waveInterval; // Start first wave after full interval
     }
 
     void Update(){
-        // Skip enemy spawning if the boss is active
-        if (isBossActive) return;
+        // Enemy spawning is delayed for 5 seconds after the boss spawns
+        if (isBossActive && !canSpawnEnemies)
+        {
+            bossSpawnCooldown -= Time.deltaTime;
+            if (bossSpawnCooldown <= 0f)
+            {
+                canSpawnEnemies = true; // Allow enemies to spawn again
+                bossSpawnCooldown = 5f; // Reset cooldown for future boss spawns
+            }
+        }
 
-        // Enemy spawning
-        HandleRandomEnemySpawns();
+        // Handle enemy spawning if allowed
+        if (canSpawnEnemies)
+        {
+            HandleRandomEnemySpawns();
+        }
         
         // Wave timing
         waveTimer -= Time.deltaTime;
         if (waveTimer <= 0f)
         {
             SpawnFormationWave();
-            waveTimer = waveInterval;
+            float adjustedWaveInterval = isBossActive ? waveInterval * bossActiveSpawnAdjustment : waveInterval;
+            waveTimer = adjustedWaveInterval; // Reset wave timer
         }
 
-        // Forced boss spawn for now
+        //TODO: Forced boss spawn for now
         if (Input.GetKeyDown(KeyCode.B)) SpawnBoss();
     }
 
     void SpawnFormationWave(){
         // Create new formation instance
-        FormationManager newFormation = Instantiate(formationPrefab, new Vector3(0, 7f, 0), Quaternion.identity);
+        FormationManager newFormation = Instantiate(formationPrefab, new Vector2(0, 7f), Quaternion.identity);
         newFormation.transform.SetParent(GameObject.Find("Enemies").transform);
         newFormation.StartNewWave();
     }
 
     void HandleRandomEnemySpawns(){
         enemySpawnTimer += Time.deltaTime;
-        if (enemySpawnTimer >= enemySpawnInterval){
+
+        // Halve the spawn rate if the boss is active
+        float adjustedSpawnInterval = isBossActive ? enemySpawnInterval * bossActiveSpawnAdjustment : enemySpawnInterval;
+
+        if (enemySpawnTimer >= adjustedSpawnInterval){
             // 25% chance to spawn two enemies side-by-side
             if (Random.Range(0, 100) < duoWaveSpawnChance){
                 spawnDuoEnemy();
@@ -66,12 +89,9 @@ public class GameManager : MonoBehaviour
         GameObject newEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity);
         newEnemy.transform.SetParent(GameObject.Find("Enemies").transform);
 
-        // Randomly assign enemy type
+        //spawn Wave enemy
         EnemyController enemyController = newEnemy.GetComponent<EnemyController>();
         if (enemyController != null){
-            enemyController.enemyType = (EnemyController.EnemyType)Random.Range(0, 2);
-            //TODO: implement sway enemy type
-                //only make wave enemies for now
             enemyController.enemyType = EnemyController.EnemyType.Wave;
         }
     }
@@ -113,15 +133,23 @@ public class GameManager : MonoBehaviour
     }
 
     public void SpawnBoss(){
-        // Stop enemy spawning
+        // Stop enemy spawning temporarily
         isBossActive = true;
+        canSpawnEnemies = false; // Disable enemy spawning for 5 seconds
 
         // Spawn the boss at the top of the screen
         Vector2 bossSpawnPosition = new Vector2(0, 7f); // Centered at the top
         GameObject newBoss = Instantiate(boss, bossSpawnPosition, Quaternion.identity);
         newBoss.transform.SetParent(GameObject.Find("Enemies").transform);
 
-        Debug.Log("Boss spawned. Enemy spawning stopped.");
+        Debug.Log("Boss spawned. Enemy spawning halved and delayed.");
+    }
+
+
+    public void OnBossDefeated()
+    {
+        isBossActive = false; // Reset the boss active flag
+        Debug.Log("Boss defeated. Enemy spawning resumed at normal rate.");
     }
 
 

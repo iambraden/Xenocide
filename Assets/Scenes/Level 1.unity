@@ -1010,10 +1010,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveInterval: 22
-  formationPrefab: {fileID: 0}
+  formationPrefab: {fileID: 6993968700255719666, guid: 6bec8cc2712f05e41ab9dd27f4b62272, type: 3}
   enemy: {fileID: 5090083986206504613, guid: 0bd43766417fb694387b7f6f91fb4ffe, type: 3}
-  boss: {fileID: 3769694710535574654, guid: 080adb708095c7d45acbb43c6f224044, type: 3}
   enemySpawnInterval: 4
+  boss: {fileID: 3769694710535574654, guid: 080adb708095c7d45acbb43c6f224044, type: 3}
 --- !u!4 &1600002578
 Transform:
   m_ObjectHideFlags: 0
