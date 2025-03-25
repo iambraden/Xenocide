@@ -137,6 +137,10 @@ public class GameManager : MonoBehaviour
         isBossActive = true;
         canSpawnEnemies = false; // Disable enemy spawning for 5 seconds
 
+        // Stop normal game music and start boss music
+        SoundManager.StopMusic();
+        SoundManager.PlaySound(SoundType.BossMusic, 0.7f);
+
         // Spawn the boss at the top of the screen
         Vector2 bossSpawnPosition = new Vector2(0, 7f); // Centered at the top
         GameObject newBoss = Instantiate(boss, bossSpawnPosition, Quaternion.identity);

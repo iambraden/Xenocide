@@ -5,7 +5,7 @@ using UnityEngine;
 public enum SoundType{
     MenuMusic,
     GameMusic, // In GameManager.cs
-    BossMusic,
+    BossMusic, // In GameManager.cs
     PlayerShoot, //In playerController.cs
     PlayerHit, 
     EnemyShoot, //In EnemyController.cs and BossController.cs
@@ -30,5 +30,9 @@ public class SoundManager : MonoBehaviour{
 
     public static void PlaySound(SoundType sound, float volume = 1){
         instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume);
+    }
+
+    public static void StopMusic(){
+        instance.audioSource.Stop();
     }
 }
