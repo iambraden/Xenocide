@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
 
         // Stop normal game music and start boss music
         SoundManager.StopMusic();
-        SoundManager.PlaySound(SoundType.BossMusic, 0.7f);
+        SoundManager.PlaySound(SoundType.BossMusic);
 
         // Spawn the boss at the top of the screen
         Vector2 bossSpawnPosition = new Vector2(0, 7f); // Centered at the top

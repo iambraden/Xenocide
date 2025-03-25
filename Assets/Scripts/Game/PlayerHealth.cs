@@ -28,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
         //bullets damage player, game lost when health = 0
         if(other.CompareTag("EnemyBullet") || other.CompareTag("Enemy"))
         {
+            SoundManager.PlaySound(SoundType.PlayerHit, 2f);
             this.health--;
             // Debug line to make sure collision is working
             // Debug.Log("Player hit by enemy bullet! Current health: " + this.health);
