@@ -1014,9 +1014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d174607ef660eb41b14800d9af48aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicFadeDuration: 1
-  sceneTransitionDelay: 0.5
-  black: {fileID: 1028800073}
+  Black: {fileID: 1028800073}
   anim: {fileID: 1028800072}
 --- !u!4 &568856517
 Transform:
