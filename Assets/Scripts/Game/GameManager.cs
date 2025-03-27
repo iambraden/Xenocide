@@ -23,7 +23,10 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Over")]
     public GameOverScreen gameOverScreen;
-    public int currentScore = 1020; // track score, set to 1020 for now to test
+
+    [Header("Score")]
+    public int currentScore = 0;
+    public TMPro.TextMeshProUGUI inGameScore;
 
     void Start(){
         SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
@@ -56,6 +59,8 @@ public class GameManager : MonoBehaviour
             float adjustedWaveInterval = isBossActive ? waveInterval * bossActiveSpawnAdjustment : waveInterval;
             waveTimer = adjustedWaveInterval; // Reset wave timer
         }
+
+        inGameScore.text = "Score: " + currentScore.ToString();
 
         //TODO: Forced boss spawn for now
         if (Input.GetKeyDown(KeyCode.B)) SpawnBoss();
