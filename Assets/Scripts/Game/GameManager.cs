@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-     [Header("Wave Settings")]
+    [Header("Wave Settings")]
     public float waveInterval = 22f;
     private float waveTimer;
     public FormationManager formationPrefab; // Reference to formation prefab
@@ -20,7 +20,11 @@ public class GameManager : MonoBehaviour
     public GameObject boss; // Reference to the boss prefab
     private bool isBossActive = false; // Flag to track if the boss is active
     private float bossSpawnCooldown = 5f; // Time to wait before resuming enemy spawning
-    
+
+    [Header("Game Over")]
+    public GameOverScreen gameOverScreen;
+    public int currentScore = 1020; // track score, set to 1020 for now to test
+
     void Start(){
         SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
         waveTimer = waveInterval; // Start first wave after full interval
@@ -149,12 +153,27 @@ public class GameManager : MonoBehaviour
         Debug.Log("Boss spawned. Enemy spawning halved and delayed.");
     }
 
-
     public void OnBossDefeated()
     {
         isBossActive = false; // Reset the boss active flag
         Debug.Log("Boss defeated. Enemy spawning resumed at normal rate.");
     }
 
+    public void OnPlayerDeath()
+    {
+        // Stop gameplay
+        canSpawnEnemies = false;
+        
+        // Show game over screen
+        if(gameOverScreen != null) {
+            gameOverScreen.Setup(currentScore);
+        }
+        
+        // Optional: Play game over sound
+        // SoundManager.StopMusic();
+        // EXAMPLE: SoundManager.PlaySound(SoundType.GameOver, 1f);
+        
+        Debug.Log("Game Over - Player died with score: " + currentScore);
+    }
 
 }
