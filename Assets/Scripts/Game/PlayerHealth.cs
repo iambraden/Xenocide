@@ -7,12 +7,14 @@ public class PlayerHealth : MonoBehaviour
     public int damage = 1;
     
     private HealthDisplay healthDisplay; //Reference to Health Display
+    private GameManager gameManager;
 
     void Start()
     {
         health = maxHealth;
         // Find the health display once at start
         healthDisplay = FindFirstObjectByType<HealthDisplay>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     // Update is called once per frame
@@ -29,24 +31,17 @@ public class PlayerHealth : MonoBehaviour
         if(other.CompareTag("EnemyBullet") || other.CompareTag("Enemy"))
         {
             SoundManager.PlaySound(SoundType.PlayerHit, 2f);
-            this.health--;
-            // Debug line to make sure collision is working
-            // Debug.Log("Player hit by enemy bullet! Current health: " + this.health);
+            
+            // Call TakeDamage (allows for variable damage)
+            TakeDamage(1);
             
             // Destroy enemy bullet on contact
             Destroy(other.gameObject);
-            
-            if(this.health <= 0)
-            {
-                healthDisplay.health = this.health;
-                healthDisplay.UpdateHeartDisplay();
-                Debug.Log("Player destroyed - Game Over!");
-                Destroy(gameObject);
-            }
         }
     }
 
     public void TakeDamage(int amount){
+        Debug.Log("PLAYER TOOK DAMAGE");
         health -= amount;
         
         // Force UI to update
@@ -57,6 +52,13 @@ public class PlayerHealth : MonoBehaviour
         }
         
         if(health <= 0){
+            Debug.Log("PLAYER DEAD");
+            // Game Over Screen
+            if(gameManager != null) {
+                gameManager.OnPlayerDeath();
+            }
+            
+            Debug.Log("Player destroyed - Game Over!");
             Destroy(gameObject);
         }
     }
