@@ -60,8 +60,6 @@ public class GameManager : MonoBehaviour
             waveTimer = adjustedWaveInterval; // Reset wave timer
         }
 
-        inGameScore.text = "Score: " + currentScore.ToString();
-
         //TODO: Forced boss spawn for now
         if (Input.GetKeyDown(KeyCode.B)) SpawnBoss();
     }
@@ -179,6 +177,12 @@ public class GameManager : MonoBehaviour
         // EXAMPLE: SoundManager.PlaySound(SoundType.GameOver, 1f);
         
         Debug.Log("Game Over - Player died with score: " + currentScore);
+    }
+
+    public void AddScore(int amount)
+    {
+        currentScore += amount;
+        inGameScore.text = "Score: " + currentScore.ToString();
     }
 
 }

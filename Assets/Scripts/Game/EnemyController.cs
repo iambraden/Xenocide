@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private int animationFrame;
+    private GameManager gameManager;
 
     [Header("Movement")]
     public float speed = 2f;
@@ -36,6 +37,7 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
         firetimer = Random.Range(fireTimerLow, fireTimerHigh);
         startPos = transform.position;
         if (Mathf.Abs(phaseOffset) < 0.0001f)
@@ -106,6 +108,7 @@ public class EnemyController : MonoBehaviour
             {
                 SoundManager.PlaySound(SoundType.EnemyDeath, 0.3f);
                 Destroy(gameObject);
+                gameManager.AddScore(100);
             }else{
                 SoundManager.PlaySound(SoundType.EnemyHit, 0.5f);
             }
