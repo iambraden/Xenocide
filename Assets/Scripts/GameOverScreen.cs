@@ -5,14 +5,14 @@ using System.Collections;
 
 public class GameOverScreen : MonoBehaviour
 {
-    public Text pointsText;
+    public TMPro.TextMeshProUGUI pointsText;
     public Animator fadeAnimator;
     public Image fadeImage;
     
     public void Setup(int score){
         Time.timeScale = 0f;
         gameObject.SetActive(true);
-        pointsText.text = score.ToString() + " POINTS";
+        pointsText.text = "Points: " + score.ToString();
     }
     
     public void RestartGame()
