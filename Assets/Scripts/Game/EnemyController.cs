@@ -84,6 +84,17 @@ public class EnemyController : MonoBehaviour
                     FireBullet();
                 }
             }
+            else if(enemyVariant == 2)
+            {
+                // fire enemy variant 2 bullets
+                firetimer -= Time.deltaTime;
+                if (firetimer <= 0 && transform.position.y > minFireHeight)
+                {
+                    firetimer = Random.Range(fireTimerLow, fireTimerHigh);
+                    Debug.Log("Ima firin ma lazar!");
+                    FireBullet();
+                }
+            }
         }
     }
 
