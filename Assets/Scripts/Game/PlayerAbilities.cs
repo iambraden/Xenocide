@@ -11,25 +11,42 @@ public class PlayerAbilities : MonoBehaviour
         "FireRate"
     };
 
+    private PlayerController playerController;
+    private PlayerHealth playerHealth;
+
+    void Start()
+    {
+        playerController = GetComponent<PlayerController>();
+        if (playerController == null)
+        {
+            Debug.LogError("PlayerController component not found.");
+        }
+        playerHealth = GetComponent<PlayerHealth>();
+        if (playerHealth == null)
+        {
+            Debug.LogError("PlayerHealth component not found.");
+        }
+    }
+
     public void ActivateAbility(string ability){
         switch(ability){
         case "Dash":
-            // Implement dash ability logic here
+            playerController.setCanDash();
             break;
         case "Twinshot":
-            // Implement twinshot ability logic here
+            playerController.setTwinShot();
             break;
         case "HealthIncrease":
-            // Implement health increase ability logic here
+            playerHealth.HealPlayer();
             break;
         case "PlayerSpeed":
-            // Implement player speed increase logic here
+            playerController.IncreaseMoveSpeed();
             break;
         case "BulletSpeed":
-            // Implement bullet speed increase logic here
+            playerController.IncreaseBulletSpeed();
             break;
         case "FireRate":
-            // Implement fire rate increase logic here
+            playerController.IncreaseFireRate();
             break;
         }
     }

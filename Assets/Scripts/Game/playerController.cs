@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float bulletCooldown = 0.2f;
     private float nextFireTime = 0f;
     public bool  canShoot = true;
-    public bool twinshot = true;
+    public bool twinshot = false;
     private int twinShotIndex = 0;
 
     [Header("Player movement")]
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     public float dashSpeedMultiplier = 3f;
     public float dashDuration = 0.2f;      
     public float dashCooldown = 1f;       
-    private bool canDash = true;
+    private bool canDash = false;
     private float originalSpeed;  
 
     void Start(){
@@ -125,11 +125,30 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
+    public void setCanDash(){
+        canDash = true;
+    }
+
     public void IncreaseMoveSpeed(){
         moveSpeed += moveSpeed * 0.3f;
     }
 
     public void IncreaseFireRate(){
         bulletCooldown -= bulletCooldown * 0.3f;
+    }
+
+    public void setTwinShot(){
+        twinshot = true;
+    }
+    public void IncreaseBulletSpeed()
+    {
+        Bullet bullet = bulletPrefab.GetComponent<Bullet>();
+        if (bullet != null){
+            bullet.speed += bullet.speed * 0.3f;
+            Debug.Log("Bullet speed increased to: " + bullet.speed);
+        }
+        else{
+            Debug.LogError("Bullet prefab does not have a Bullet component!");
+        }
     }
 }

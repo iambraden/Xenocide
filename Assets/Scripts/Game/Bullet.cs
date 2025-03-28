@@ -83,8 +83,4 @@ public class Bullet : MonoBehaviour
             }
         }
     }
-
-    public void increaseBulletSpeed(){
-        speed += speed * 0.3f;
-    }
 }
