@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D playerRigidbody;
@@ -20,6 +20,16 @@ public class PlayerController : MonoBehaviour
     public Sprite idleSprite;
     public Sprite leftSprite;
     public Sprite rightSprite;
+    [Header("Dashing")]
+    public float dashSpeedMultiplier = 3f;
+    public float dashDuration = 0.2f;      
+    public float dashCooldown = 1f;       
+    private bool canDash = true;
+    private float originalSpeed;  
+
+    void Start(){
+        originalSpeed = moveSpeed;
+    }
 
     void FixedUpdate()
     {
@@ -56,11 +66,41 @@ public class PlayerController : MonoBehaviour
             FireBullet();
             nextFireTime = Time.time + bulletCooldown;
         }
+
+        if(Input.GetKeyDown(KeyCode.LeftShift)){
+            Debug.Log("Dash");
+            dash();
+        }
     }
 
     void FireBullet(){
         GameObject newBulletPrefab = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBulletPrefab.transform.SetParent(GameObject.Find("Bullets").transform);
         SoundManager.PlaySound(SoundType.PlayerShoot, 0.5f);
+    }
+
+    void dash(){
+        if(canDash){
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float dashDirection = Mathf.Sign(horizontalInput);
+
+            if(horizontalInput == 0) return;
+
+            StartCoroutine(DashRoutine(dashDirection));
+        }
+        
+    }
+
+    IEnumerator DashRoutine(float dashDirection){
+        canDash = false;
+        canShoot = false;
+
+        moveSpeed = originalSpeed * dashSpeedMultiplier;
+        SoundManager.PlaySound(SoundType.Dash, 0.5f);
+        yield return new WaitForSeconds(dashDuration);
+        moveSpeed = originalSpeed;
+        canShoot = true;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 }
