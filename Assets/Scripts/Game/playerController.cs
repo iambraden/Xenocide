@@ -1,14 +1,18 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Rendering.Universal;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D playerRigidbody;
     [Header("Shooting")]
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public Transform[] firePointAr;
     public float bulletCooldown = 0.2f;
     private float nextFireTime = 0f;
     public bool  canShoot = true;
+    public bool twinshot = true;
+    private int twinShotIndex = 0;
 
     [Header("Player movement")]
     public float moveSpeed = 5f;
@@ -74,9 +78,26 @@ public class PlayerController : MonoBehaviour
     }
 
     void FireBullet(){
+        if (twinshot){
+        // Alternate between fire points in firePointAr
+        Transform selectedFirePoint = firePointAr[twinShotIndex];
+        twinShotIndex = (twinShotIndex + 1) % firePointAr.Length;
+
+        GameObject newBulletPrefab = Instantiate(bulletPrefab, selectedFirePoint.position, Quaternion.identity);
+        newBulletPrefab.transform.SetParent(GameObject.Find("Bullets").transform);
+        SoundManager.PlaySound(SoundType.PlayerShoot, 0.5f);
+
+        // Adjust cooldown for twin-shot
+        nextFireTime = Time.time + bulletCooldown / 2f; // Faster cooldown for twin-shot
+        }else{
+        // Default single-shot behavior
         GameObject newBulletPrefab = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBulletPrefab.transform.SetParent(GameObject.Find("Bullets").transform);
         SoundManager.PlaySound(SoundType.PlayerShoot, 0.5f);
+
+        // Default cooldown
+        nextFireTime = Time.time + bulletCooldown;
+        }
     }
 
     void dash(){
