@@ -4,18 +4,9 @@ public class EnemyController : MonoBehaviour
 {
     private GameManager gameManager;
 
-    
     public enum EnemyType { Wave, Sway };
     public EnemyType enemyType;
     public int enemyVariant;
-
-    [Header("Sprite Animation")]
-    public Sprite[] animationSprites;
-    public float animationTime = 1.0f;
-
-    private SpriteRenderer spriteRenderer;
-    private int animationFrame;
-
 
     [Header("Movement")]
     public float speed = 2f;
@@ -36,11 +27,6 @@ public class EnemyController : MonoBehaviour
     private float firetimer;
     private float minFireHeight = -3.0f;
 
-    void Awake()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
     void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
@@ -50,8 +36,6 @@ public class EnemyController : MonoBehaviour
         {
             phaseOffset = Random.Range(0f, 2f * Mathf.PI); // Random phase offset for variation
         }
-        //animate the enemy
-        InvokeRepeating(nameof(animateSprite), this.animationTime, this.animationTime);
     }
 
     void Update()
@@ -119,18 +103,4 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void animateSprite()
-    {
-        //todo fix index out of bounds
-        if(animationFrame == 0)
-        {
-            animationFrame = 1;
-        }
-        else
-        {
-            animationFrame = 0;
-        }
-
-        spriteRenderer.sprite = this.animationSprites[animationFrame];
-    }
 }
