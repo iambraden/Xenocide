@@ -43,6 +43,9 @@ public class BossController : MonoBehaviour
 
         //Find game manager
         gameManager = FindFirstObjectByType<GameManager>();
+
+        //handle difficulty scaling
+        HandleDifficulty();
     
         // Find the player and disable their shooting
         playerController = FindFirstObjectByType<PlayerController>();
@@ -50,6 +53,21 @@ public class BossController : MonoBehaviour
 
         startPosition = new Vector2(transform.position.x, 3.5f);
         StartCoroutine(MoveBossDownCoroutine());
+    }
+
+    public void HandleDifficulty()
+    {
+        int difficulty = gameManager.difficulty;
+        Debug.Log($"[HandleDifficulty] Difficulty: {difficulty}");
+        if(difficulty == 0)
+        {
+            return;
+        }
+        
+        //increase stats based on difficulty
+        health = Mathf.RoundToInt(health * Mathf.Pow(1.5f, difficulty));
+        fireTimerCenterLow *= Mathf.Pow(0.9f, difficulty);
+        fireTimerCenterHigh *= Mathf.Pow(0.9f, difficulty);
     }
 
     void Update()
@@ -134,6 +152,7 @@ public class BossController : MonoBehaviour
             if (this.health <= 0)
             {
                 SoundManager.PlaySound(SoundType.EnemyDeath, 0.3f);
+                gameManager.AddScore(500);
                 gameManager.OnBossDefeated();  // Notify the GameManager that the boss is dead
                 Destroy(gameObject);
             }
@@ -162,4 +181,5 @@ public class BossController : MonoBehaviour
         turnTimer = Random.Range(turnTimerLow, turnTimerHigh); //Enable turning
         firetimerCenter = Random.Range(fireTimerCenterLow, fireTimerCenterHigh); //Enable firing
     }
+
 }

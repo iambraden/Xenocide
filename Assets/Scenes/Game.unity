@@ -2236,6 +2236,8 @@ MonoBehaviour:
   health: 0
   maxHealth: 3
   damage: 1
+  healKey: 104
+  healCooldown: 2
 --- !u!114 &1147172572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,6 +2563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da227ad939958aa4f9e893b21a05501c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficulty: 0
   waveInterval: 22
   formationPrefab: {fileID: 6993968700255719666, guid: 6bec8cc2712f05e41ab9dd27f4b62272, type: 3}
   enemy: {fileID: 5090083986206504613, guid: 0bd43766417fb694387b7f6f91fb4ffe, type: 3}

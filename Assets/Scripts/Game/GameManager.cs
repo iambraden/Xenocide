@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Game State")]
+    public int difficulty = 0; 
 
     [Header("Wave Settings")]
     public float waveInterval = 22f;
@@ -165,6 +167,18 @@ public class GameManager : MonoBehaviour
         //update score requirement, double increment for next boss spawn
         spawnBossScore = currentScore + nextBossScoreIncrement;
         nextBossScoreIncrement *= 2;
+
+        UpdateDifficulty();
+    }
+
+    public void UpdateDifficulty()
+    {
+        difficulty++;
+        //enemy spawn increases
+        waveInterval *= 0.9f;
+        enemySpawnInterval *= 0.9f;
+        duoWaveSpawnChance *= 1.2f;
+        bossActiveSpawnAdjustment = Mathf.Max(1f, bossActiveSpawnAdjustment * 0.9f); //boss shouldn't increase spawn rate
     }
 
     public void OnPlayerDeath()
