@@ -162,6 +162,7 @@ MonoBehaviour:
   health: 3
   bulletPrefab: {fileID: 5694180348540954621, guid: 58f7527d77c391542a481f3c0c83ac91, type: 3}
   firePoint: {fileID: 2292716435993940776}
+  shoots: 1
   fireTimerLow: 2
   fireTimerHigh: 4
 --- !u!1 &8137533186560579312

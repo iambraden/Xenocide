@@ -44,6 +44,10 @@ PrefabInstance:
       value: Enemy2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5938197933714426977, guid: 52570dda0b84b2b479211625f2e57182, type: 3}
+      propertyPath: shoots
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938197933714426977, guid: 52570dda0b84b2b479211625f2e57182, type: 3}
       propertyPath: variant
       value: 2
       objectReference: {fileID: 0}
@@ -61,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5938197933714426977, guid: 52570dda0b84b2b479211625f2e57182, type: 3}
       propertyPath: fireTimerLow
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5938197933714426977, guid: 52570dda0b84b2b479211625f2e57182, type: 3}
       propertyPath: fireTimerHigh

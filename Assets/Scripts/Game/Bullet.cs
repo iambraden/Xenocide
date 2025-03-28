@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
 
     //Bullet liftetime
     public float lifetime = 2f;
+    public int health = 1;
 
     void Start()
     {
@@ -45,7 +46,11 @@ public class Bullet : MonoBehaviour
             }
             else if (other.CompareTag("EnemyBullet"))
             {
-                Destroy(this.gameObject);
+                this.health--;
+                if (this.health <= 0)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
         // Enemy bullet destroyed when colliding with player or player bullet
@@ -57,7 +62,11 @@ public class Bullet : MonoBehaviour
             }
             else if (other.CompareTag("Bullet"))
             {
-                Destroy(this.gameObject);
+                this.health--;
+                if (this.health <= 0)
+                {
+                    Destroy(gameObject);
+                }
             }
             else if (other.CompareTag("EnemyBullet"))
             {

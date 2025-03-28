@@ -30,6 +30,7 @@ public class EnemyController : MonoBehaviour
     [Header("Shooting")]
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public bool shoots;
     public float fireTimerLow;
     public float fireTimerHigh;
     private float firetimer;
@@ -58,42 +59,15 @@ public class EnemyController : MonoBehaviour
         // Move the enemy based on its type
         if (enemyType == EnemyType.Wave)
             WaveMove();
-        else if (enemyType == EnemyType.Sway)
-            SwayMove();
 
-        // Only fire bullets if the enemy type is Wave
-        if (enemyType == EnemyType.Wave)
+        if(shoots)
         {
-             // fire bullets on a varied timer if the enemy is high enough in the screen
+            // fire bullets on a varied timer if the enemy is high enough in the screen
             firetimer -= Time.deltaTime;
             if (firetimer <= 0 && transform.position.y > minFireHeight)
             {
                 firetimer = Random.Range(fireTimerLow, fireTimerHigh);
                 FireBullet();
-            }
-        }
-        else if (enemyType == EnemyType.Sway)
-        {
-            if(enemyVariant == 1)
-            {
-                // same as wave
-                firetimer -= Time.deltaTime;
-                if (firetimer <= 0 && transform.position.y > minFireHeight)
-                {
-                    firetimer = Random.Range(fireTimerLow, fireTimerHigh);
-                    FireBullet();
-                }
-            }
-            else if(enemyVariant == 2)
-            {
-                // fire enemy variant 2 bullets
-                firetimer -= Time.deltaTime;
-                if (firetimer <= 0 && transform.position.y > minFireHeight)
-                {
-                    firetimer = Random.Range(fireTimerLow, fireTimerHigh);
-                    Debug.Log("Ima firin ma lazar!");
-                    FireBullet();
-                }
             }
         }
     }
@@ -112,12 +86,6 @@ public class EnemyController : MonoBehaviour
         // Calculate sine wave motion around the initial x-position
         pos.x = startPos.x + Mathf.Sin((pos.y * frequency) + phaseOffset) * 2;
         transform.position = pos;
-    }
-
-    void SwayMove()
-    {
-        /*TODO: Implement Movement for the enemies that sit 
-        near the top of the screen and move in the grid pattern*/
     }
 
     void FireBullet()
