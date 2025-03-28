@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
+  enemyVariant: 0
   animationSprites:
   - {fileID: 3890749205637581952, guid: be127e9ebc6c33d46b3123ee155caa84, type: 3}
   - {fileID: 1334108820, guid: be127e9ebc6c33d46b3123ee155caa84, type: 3}
@@ -161,6 +162,8 @@ MonoBehaviour:
   health: 3
   bulletPrefab: {fileID: 5694180348540954621, guid: 58f7527d77c391542a481f3c0c83ac91, type: 3}
   firePoint: {fileID: 2292716435993940776}
+  fireTimerLow: 2
+  fireTimerHigh: 4
 --- !u!1 &8137533186560579312
 GameObject:
   m_ObjectHideFlags: 0

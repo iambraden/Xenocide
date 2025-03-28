@@ -13,6 +13,14 @@ PrefabInstance:
       value: Enemy3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5938197933714426977, guid: 52570dda0b84b2b479211625f2e57182, type: 3}
+      propertyPath: variant
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938197933714426977, guid: 52570dda0b84b2b479211625f2e57182, type: 3}
+      propertyPath: enemyVariant
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938197933714426977, guid: 52570dda0b84b2b479211625f2e57182, type: 3}
       propertyPath: animationSprites.Array.size
       value: 2
       objectReference: {fileID: 0}

@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    private GameManager gameManager;
+
+    
     public enum EnemyType { Wave, Sway };
     public EnemyType enemyType;
+    public int enemyVariant;
 
+    [Header("Sprite Animation")]
     public Sprite[] animationSprites;
     public float animationTime = 1.0f;
 
     private SpriteRenderer spriteRenderer;
     private int animationFrame;
-    private GameManager gameManager;
+
 
     [Header("Movement")]
     public float speed = 2f;
@@ -25,8 +30,8 @@ public class EnemyController : MonoBehaviour
     [Header("Shooting")]
     public GameObject bulletPrefab;
     public Transform firePoint;
-    private float fireTimerLow = 2f;
-    private float fireTimerHigh = 4f;
+    public float fireTimerLow;
+    public float fireTimerHigh;
     private float firetimer;
     private float minFireHeight = -3.0f;
 
@@ -41,9 +46,9 @@ public class EnemyController : MonoBehaviour
         firetimer = Random.Range(fireTimerLow, fireTimerHigh);
         startPos = transform.position;
         if (Mathf.Abs(phaseOffset) < 0.0001f)
-    {
-        phaseOffset = Random.Range(0f, 2f * Mathf.PI); // Random phase offset for variation
-    }
+        {
+            phaseOffset = Random.Range(0f, 2f * Mathf.PI); // Random phase offset for variation
+        }
         //animate the enemy
         InvokeRepeating(nameof(animateSprite), this.animationTime, this.animationTime);
     }
@@ -65,6 +70,19 @@ public class EnemyController : MonoBehaviour
             {
                 firetimer = Random.Range(fireTimerLow, fireTimerHigh);
                 FireBullet();
+            }
+        }
+        else if (enemyType == EnemyType.Sway)
+        {
+            if(enemyVariant == 1)
+            {
+                // same as wave
+                firetimer -= Time.deltaTime;
+                if (firetimer <= 0 && transform.position.y > minFireHeight)
+                {
+                    firetimer = Random.Range(fireTimerLow, fireTimerHigh);
+                    FireBullet();
+                }
             }
         }
     }
