@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
@@ -9,27 +9,29 @@ public class PlayerHealth : MonoBehaviour
     private HealthDisplay healthDisplay; //Reference to Health Display
     private GameManager gameManager;
 
-    void Start()
-    {
+    [Header("Healing")]
+    public KeyCode healKey = KeyCode.H;
+    public float healCooldown = 2f;
+    private bool canHeal = true;
+
+    void Start(){
         health = maxHealth;
         // Find the health display once at start
         healthDisplay = FindFirstObjectByType<HealthDisplay>();
         gameManager = FindFirstObjectByType<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         if (health > maxHealth){
             health = maxHealth;
         }
+
+        HandleHealingInput();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
+    void OnTriggerEnter2D(Collider2D other){
         //bullets damage player, game lost when health = 0
-        if(other.CompareTag("EnemyBullet") || other.CompareTag("Enemy"))
-        {
+        if(other.CompareTag("EnemyBullet") || other.CompareTag("Enemy")){
             SoundManager.PlaySound(SoundType.PlayerHit, 2f);
             
             // Call TakeDamage (allows for variable damage)
@@ -54,12 +56,38 @@ public class PlayerHealth : MonoBehaviour
         if(health <= 0){
             Debug.Log("PLAYER DEAD");
             // Game Over Screen
-            if(gameManager != null) {
+            if(gameManager != null){
                 gameManager.OnPlayerDeath();
             }
             
             Debug.Log("Player destroyed - Game Over!");
             Destroy(gameObject);
         }
+    }
+
+    void HandleHealingInput(){
+        if(Input.GetKeyDown(healKey) && canHeal){
+            HealPlayer();
+            StartCoroutine(HealCooldown());
+        }
+    }
+
+    public void HealPlayer(){
+        if(maxHealth < 5){
+            maxHealth++; // Increase max health first
+           
+        }
+         health = maxHealth; // Fill to new max
+        if(healthDisplay != null){
+            healthDisplay.health = this.health;
+            healthDisplay.maxHealth = this.maxHealth;
+            healthDisplay.UpdateHeartDisplay();
+        }
+    }
+
+    IEnumerator HealCooldown(){
+        canHeal = false;
+        yield return new WaitForSeconds(healCooldown);
+        canHeal = true;
     }
 }
