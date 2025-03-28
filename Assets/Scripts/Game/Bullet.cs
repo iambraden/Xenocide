@@ -4,6 +4,7 @@ public class Bullet : MonoBehaviour
 {
     //Bullet speed
     public float speed = 10f; 
+    public float enemySpeed = 10f;
 
     //Bullet liftetime
     public float lifetime = 2f;
@@ -30,7 +31,7 @@ public class Bullet : MonoBehaviour
         else if(this.CompareTag("EnemyBullet"))
         {
             // Move upwards for player bullets
-            transform.Translate(Vector2.down * speed * Time.deltaTime);
+            transform.Translate(Vector2.down * enemySpeed * Time.deltaTime);
         }
     }
 
@@ -81,5 +82,9 @@ public class Bullet : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void increaseBulletSpeed(){
+        speed += speed * 0.3f;
     }
 }

@@ -124,4 +124,12 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
+
+    public void IncreaseMoveSpeed(){
+        moveSpeed += moveSpeed * 0.3f;
+    }
+
+    public void IncreaseFireRate(){
+        bulletCooldown -= bulletCooldown * 0.3f;
+    }
 }
