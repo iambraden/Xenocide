@@ -7,7 +7,7 @@ public enum SoundType{
     GameMusic, // In GameManager.cs
     BossMusic, // In GameManager.cs
     PlayerShoot, //In playerController.cs
-    PlayerHit, 
+    PlayerHit, //IN PlayerHealth.cs
     EnemyShoot, //In EnemyController.cs and BossController.cs
     EnemyHit, //In EnemyController.cs and BossController.cs
     EnemyDeath, //In EnemyController.cs and BossController.cs

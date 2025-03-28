@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         //bullets damage player, game lost when health = 0
         if(other.CompareTag("EnemyBullet") || other.CompareTag("Enemy")){
-            SoundManager.PlaySound(SoundType.PlayerHit, 2f);
+            SoundManager.PlaySound(SoundType.PlayerHit, 3f);
             
             // Call TakeDamage (allows for variable damage)
             TakeDamage(1);

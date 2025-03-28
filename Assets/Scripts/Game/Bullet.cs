@@ -25,12 +25,12 @@ public class Bullet : MonoBehaviour
     {
         if(this.CompareTag("Bullet"))
         {
-            // Move downwards for enemy bullets
+            // Move up for player bullets
             transform.Translate(Vector2.up * speed * Time.deltaTime);
         }
         else if(this.CompareTag("EnemyBullet"))
         {
-            // Move upwards for player bullets
+            // Move down for enemy bullets
             transform.Translate(Vector2.down * enemySpeed * Time.deltaTime);
         }
     }
