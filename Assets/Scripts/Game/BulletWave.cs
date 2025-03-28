@@ -17,7 +17,7 @@ public class BulletWave : MonoBehaviour
         timeSinceSpawn = 0f;    //ensures sin pattern starts at the firepoint on bullet creation
         startPos = transform.position;
         pos = startPos;
-        if (gameObject.name.Contains("EnemyBulletWave"))
+        if (gameObject.name.Contains("EnemyBulletFireball"))
         {
             waveDirection = Random.value > 0.5f ? 1 : -1; // Randomly choose the direction of the bullet, does not apply to boss
         }
