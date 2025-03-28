@@ -52,7 +52,6 @@ public class BulletWave : MonoBehaviour
             this.health--;
             if (this.health <= 0)
             {
-                Debug.Log("Bullet destroyed");
                 Destroy(gameObject);
             }
         }

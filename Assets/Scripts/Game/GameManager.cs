@@ -17,8 +17,11 @@ public class GameManager : MonoBehaviour
     private float bossActiveSpawnAdjustment = 2f; // Decreases enemy spawn rate when boss is active
 
     [Header("Boss")]
-    public GameObject boss; // Reference to the boss prefab
-    private bool isBossActive = false; // Flag to track if the boss is active
+    public GameObject boss;
+    private bool isBossActive = false;
+    private int spawnBossScore = 1000; // Initial score required to spawn the first boss
+    private int nextBossScoreIncrement = 2000; // Incremental score for the second boss
+
     private float bossSpawnCooldown = 5f; // Time to wait before resuming enemy spawning
 
     [Header("Game Over")]
@@ -135,8 +138,6 @@ public class GameManager : MonoBehaviour
             enemyController2.startPos = sharedStartPos;
             enemyController2.phaseOffset = sharedPhaseOffset;
         }
-
-        Debug.Log("Spawned duo enemies moving in sync");
     }
 
     public void SpawnBoss(){
@@ -152,14 +153,18 @@ public class GameManager : MonoBehaviour
         Vector2 bossSpawnPosition = new Vector2(0, 7f); // Centered at the top
         GameObject newBoss = Instantiate(boss, bossSpawnPosition, Quaternion.identity);
         newBoss.transform.SetParent(GameObject.Find("Enemies").transform);
-
-        Debug.Log("Boss spawned. Enemy spawning halved and delayed.");
     }
 
     public void OnBossDefeated()
     {
         isBossActive = false; // Reset the boss active flag
-        Debug.Log("Boss defeated. Enemy spawning resumed at normal rate.");
+
+        SoundManager.StopMusic();
+        SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
+
+        //update score requirement, double increment for next boss spawn
+        spawnBossScore = currentScore + nextBossScoreIncrement;
+        nextBossScoreIncrement *= 2;
     }
 
     public void OnPlayerDeath()
@@ -183,6 +188,11 @@ public class GameManager : MonoBehaviour
     {
         currentScore += amount;
         inGameScore.text = "Score: " + currentScore.ToString();
+        if(!isBossActive && currentScore >= spawnBossScore)
+        {
+            SpawnBoss();
+        }
+        
     }
 
 }

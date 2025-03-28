@@ -188,7 +188,7 @@ MonoBehaviour:
   turnTimerLow: 2
   turnTimerHigh: 4
   turnThreshold: 1.5
-  health: 50
+  health: 20
   bulletPrefabCenter: {fileID: 3902618402821291913, guid: d012bc97f8e3ccc449ccd4d2ae3068db, type: 3}
   firePointCenter: {fileID: 856174860079564398}
   fireTimerCenterLow: 0.8
@@ -196,7 +196,6 @@ MonoBehaviour:
   bulletPrefabSide: {fileID: 5942482787057587179, guid: 5cf22959a91c9d0438546305b816d51d, type: 3}
   firePointLeft: {fileID: 7588579478923619010}
   firePointRight: {fileID: 2032615103905643235}
-  gameManager: {fileID: 0}
 --- !u!1 &4690317719893492496
 GameObject:
   m_ObjectHideFlags: 0
