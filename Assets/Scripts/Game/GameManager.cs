@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,7 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("Boss")]
     public GameObject boss;
     private bool isBossActive = false;
-    private int spawnBossScore = 1000; // Initial score required to spawn the first boss
+    private int spawnBossScore = 3100; // Initial score required to spawn the first boss
     private int nextBossScoreIncrement = 2000; // Incremental score for the second boss
 
     private float bossSpawnCooldown = 5f; // Time to wait before resuming enemy spawning
@@ -34,9 +36,26 @@ public class GameManager : MonoBehaviour
     public int currentScore = 0;
     public TMPro.TextMeshProUGUI inGameScore;
 
+    [Header("Upgrade System")]
+    public GameObject upgradePrompt; // Reference to the UpgradePrompt GameObject
+    public Button[] upgradeButtons; // Array of the 3 upgrade buttons
+    public TMPro.TextMeshProUGUI[] upgradeButtonTexts; // Text components for the buttons
+    private PlayerAbilities playerAbilities; // Reference to PlayerAbilities
+    private bool isUpgradeActive = false;
+    private int nextUpgradeScore = 1000; // Score threshold for the next upgrade
+    private HashSet<string> selectedAbilities = new HashSet<string>(); // Track selected abilities
+
     void Start(){
         SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
         waveTimer = waveInterval; // Start first wave after full interval
+
+        playerAbilities = FindFirstObjectByType<PlayerAbilities>();
+        if (playerAbilities == null)
+        {
+            Debug.LogError("PlayerAbilities component not found in the scene.");
+        }
+
+        upgradePrompt.SetActive(false); // Ensure the upgrade prompt is hidden at the start
     }
 
     void Update(){
@@ -68,6 +87,13 @@ public class GameManager : MonoBehaviour
 
         //TODO: Forced boss spawn for now
         if (Input.GetKeyDown(KeyCode.B)) SpawnBoss();
+
+        // Check if the player has reached the score threshold for an upgrade
+        if (!isUpgradeActive && currentScore >= nextUpgradeScore)
+        {
+            StartCoroutine(ShowUpgradePrompt());
+            nextUpgradeScore += 1000; // Increment the threshold for the next upgrade
+        }
     }
 
     void SpawnFormationWave(){
@@ -211,4 +237,67 @@ public class GameManager : MonoBehaviour
         
     }
 
+    private IEnumerator ShowUpgradePrompt()
+    {
+        isUpgradeActive = true;
+
+        Time.timeScale = 0f;
+
+        upgradePrompt.SetActive(true);
+
+        // Randomly select 3 unique abilities
+        string[] abilities = playerAbilities.Abilities;
+        List<string> availableAbilities = new List<string>(abilities);
+
+        // Remove already-selected abilities from the pool
+        availableAbilities.RemoveAll(ability => selectedAbilities.Contains(ability));
+
+        string[] selectedAbilitiesArray = new string[3];
+
+        for (int i = 0; i < 3; i++)
+        {
+            // Randomly pick an ability from the available list
+            int randomIndex = Random.Range(0, availableAbilities.Count);
+            selectedAbilitiesArray[i] = availableAbilities[randomIndex];
+
+            // Remove the selected ability to prevent duplicates
+            availableAbilities.RemoveAt(randomIndex);
+        }
+
+        // Update button texts and assign abilities
+        for (int i = 0; i < upgradeButtons.Length; i++)
+        {
+            int index = i; 
+            upgradeButtonTexts[i].text = selectedAbilitiesArray[i]; 
+            upgradeButtons[i].onClick.RemoveAllListeners(); 
+            upgradeButtons[i].onClick.AddListener(() =>
+            {
+                ActivateUpgrade(selectedAbilitiesArray[index]);
+            });
+        }
+
+        // Wait for the player to select an upgrade
+        while (isUpgradeActive)
+        {
+            yield return null;
+        }
+       
+        Time.timeScale = 1f;
+    }
+
+    private void ActivateUpgrade(string ability)
+    {
+        // Activate the selected ability
+        playerAbilities.ActivateAbility(ability);
+
+        // If the selected ability is TwinShot or Dash, remove
+        if (ability == "Twinshot" || ability == "Dash (Left Shift)")
+        {
+            selectedAbilities.Add(ability); // Add to the set of  removed abilities
+        }
+
+        upgradePrompt.SetActive(false);
+
+        isUpgradeActive = false;
+    }
 }

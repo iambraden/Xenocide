@@ -3,15 +3,15 @@ public class PlayerAbilities : MonoBehaviour
 {
     public string[] Abilities =
     {
-        "Dash",
+        "Dash (Left Shift)",
         "Twinshot",
-        "HealthIncrease",
-        "PlayerSpeed",
-        "BulletSpeed",
-        "FireRate"
+        "Health Increase",
+        "+Player Speed",
+        "+Bullet Speed",
+        "+FireRate"
     };
 
-    private PlayerController playerController;
+    public PlayerController playerController;
     private PlayerHealth playerHealth;
 
     void Start()
@@ -30,22 +30,22 @@ public class PlayerAbilities : MonoBehaviour
 
     public void ActivateAbility(string ability){
         switch(ability){
-        case "Dash":
+        case "Dash (Left Shift)":
             playerController.setCanDash();
             break;
         case "Twinshot":
             playerController.setTwinShot();
             break;
-        case "HealthIncrease":
+        case "Heal + Health Increase (Max 5)":
             playerHealth.HealPlayer();
             break;
-        case "PlayerSpeed":
+        case "+Player Speed":
             playerController.IncreaseMoveSpeed();
             break;
-        case "BulletSpeed":
+        case "+Bullet Speed":
             playerController.IncreaseBulletSpeed();
             break;
-        case "FireRate":
+        case "+Fire Rate":
             playerController.IncreaseFireRate();
             break;
         }
