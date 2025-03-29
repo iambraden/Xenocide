@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 332540941149216805, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10
+      value: -11.08291
       objectReference: {fileID: 0}
     - target: {fileID: 332540941149216805, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -2.555791
       objectReference: {fileID: 0}
     - target: {fileID: 332540941149216805, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
       propertyPath: m_LocalPosition.z
@@ -58,15 +58,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6207385870543797375, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.8
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207385870543797375, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6207385870543797375, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
       propertyPath: InitialModule.startSize.minScalar
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207385870543797375, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207385870543797375, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207385870543797375, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
       value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6399256885906266999, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
       propertyPath: m_Name
-      value: Boss_Explosion Variant
+      value: Boss_Explosion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

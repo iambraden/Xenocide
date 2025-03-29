@@ -3,6 +3,8 @@ using System.Collections;
 
 public class BossController : MonoBehaviour
 {
+     private GameManager gameManager;
+
     [Header("Boss Spawn")]
     private PlayerController playerController; // Reference to PlayerController
     public Vector2 startPosition;
@@ -32,10 +34,9 @@ public class BossController : MonoBehaviour
     public Transform firePointLeft;
     public Transform firePointRight;
 
-    private GameManager gameManager;
-
+    [Header("Effects")]
+    public GameObject explosionPrefab;
     
-
     void Start()
     {
         // Start the boss above the screen
@@ -149,8 +150,11 @@ public class BossController : MonoBehaviour
         if(other.CompareTag("Bullet"))
         {
             this.health--;
-            if (this.health <= 0)
+            if (this.health <= 0)   //play death sound, play death particle, increment score
             {
+                GameObject particle = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                particle.transform.SetParent(GameObject.Find("Particles").transform);
+                Destroy(particle, 1);
                 SoundManager.PlaySound(SoundType.EnemyDeath, 0.3f);
                 gameManager.AddScore(500);
                 
