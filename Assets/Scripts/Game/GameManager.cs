@@ -166,7 +166,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public IEnumerator SpawnBoss(){
+    public IEnumerator SpawnBossCoroutine(){
         // Stop enemy spawning temporarily
         isBossActive = true;
         canSpawnEnemies = false; // Disable enemy spawning for 5 seconds
@@ -184,15 +184,17 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator OnBossDefeatedCoroutine()
     {
-        isBossActive = false; // Reset the boss active flag
-
         SoundManager.FadeOutMusic(1f);
         yield return new WaitForSeconds(1f);
         SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
         //update score requirement, double increment for next boss spawn
+        Debug.Log($"Current boss spawn score: {spawnBossScore}");
         spawnBossScore = currentScore + nextBossScoreIncrement;
+        Debug.Log($"New boss spawn score: {spawnBossScore}");
         nextBossScoreIncrement *= 2;
+        Debug.Log($"Next increment: {nextBossScoreIncrement}");
 
+        isBossActive = false; // Reset the boss active flag
         UpdateDifficulty();
     }
 
@@ -229,7 +231,7 @@ public class GameManager : MonoBehaviour
         inGameScore.text = "Score: " + currentScore.ToString();
         if(!isBossActive && currentScore >= spawnBossScore)
         {
-            StartCoroutine(SpawnBoss());
+            StartCoroutine(SpawnBossCoroutine());
         }
         
     }

@@ -152,7 +152,6 @@ public class BossController : MonoBehaviour
             this.health--;
             if (this.health <= 0 && !isDying)   //play death sound, play death particle, increment score
             {
-                Debug.Log($"Starting dying coroutine");
                 StartCoroutine(HandleBossDeathSequence());
             }
             else
