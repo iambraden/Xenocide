@@ -839,6 +839,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420036245}
   m_CullTransparentMesh: 1
+--- !u!1 &453911827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 453911828}
+  m_Layer: 0
+  m_Name: Particles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &453911828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453911827}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1849662, y: -0.37322852, z: 0.0006014416}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &497146382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,8 +2096,10 @@ MonoBehaviour:
   playerRigidbody: {fileID: 1147172567}
   bulletPrefab: {fileID: 2810151167607427863, guid: 9b9dd7fc732511d4b89707e8f6203219, type: 3}
   firePoint: {fileID: 331987001}
+  firePointAr: []
   bulletCooldown: 0.2
   canShoot: 1
+  twinshot: 0
   moveSpeed: 5
   xMin: -4.6
   xMax: 4.6
@@ -2236,8 +2269,6 @@ MonoBehaviour:
   health: 0
   maxHealth: 3
   damage: 1
-  healKey: 104
-  healCooldown: 2
 --- !u!114 &1147172572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2913,6 +2944,7 @@ SceneRoots:
   - {fileID: 1600002578}
   - {fileID: 286578901}
   - {fileID: 1374039579}
+  - {fileID: 453911828}
   - {fileID: 1419357026}
   - {fileID: 497146384}
   - {fileID: 1815789133}
