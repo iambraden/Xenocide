@@ -153,7 +153,8 @@ public class BossController : MonoBehaviour
             {
                 SoundManager.PlaySound(SoundType.EnemyDeath, 0.3f);
                 gameManager.AddScore(500);
-                gameManager.OnBossDefeated();  // Notify the GameManager that the boss is dead
+                
+                gameManager.StartCoroutine(gameManager. OnBossDefeated());  // Notify the GameManager that the boss is dead
                 Destroy(gameObject);
             }
             else

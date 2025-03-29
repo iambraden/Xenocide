@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -142,14 +143,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SpawnBoss(){
+    public IEnumerator SpawnBoss(){
         // Stop enemy spawning temporarily
         isBossActive = true;
         canSpawnEnemies = false; // Disable enemy spawning for 5 seconds
 
-        // Stop normal game music and start boss music
-        SoundManager.StopMusic();
-        SoundManager.PlaySound(SoundType.BossMusic);
+        // start boss music
+        SoundManager.FadeOutMusic(1f);
+        yield return new WaitForSeconds(1f);
+        SoundManager.PlaySound(SoundType.BossMusic, 1.2f);
 
         // Spawn the boss at the top of the screen
         Vector2 bossSpawnPosition = new Vector2(0, 7f); // Centered at the top
@@ -157,12 +159,13 @@ public class GameManager : MonoBehaviour
         newBoss.transform.SetParent(GameObject.Find("Enemies").transform);
     }
 
-    public void OnBossDefeated()
+    public IEnumerator OnBossDefeated()
     {
         isBossActive = false; // Reset the boss active flag
 
-        SoundManager.StopMusic();
-        SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
+        SoundManager.FadeOutMusic(1f);
+        yield return new WaitForSeconds(1f);
+       SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
 
         //update score requirement, double increment for next boss spawn
         spawnBossScore = currentScore + nextBossScoreIncrement;
@@ -204,7 +207,7 @@ public class GameManager : MonoBehaviour
         inGameScore.text = "Score: " + currentScore.ToString();
         if(!isBossActive && currentScore >= spawnBossScore)
         {
-            SpawnBoss();
+            StartCoroutine(SpawnBoss());
         }
         
     }

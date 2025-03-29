@@ -87,7 +87,7 @@ public class EnemyController : MonoBehaviour
             this.health--;
             if(this.health <= 0)
             {
-                SoundManager.PlaySound(SoundType.EnemyDeath, 0.3f);
+                SoundManager.PlaySound(SoundType.EnemyDeath, 0.5f);
                 Destroy(gameObject);
                 gameManager.AddScore(100);
             }else{
