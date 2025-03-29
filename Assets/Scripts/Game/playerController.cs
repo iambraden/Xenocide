@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public Transform[] firePointAr;
     public float bulletCooldown = 0.2f;
     private float nextFireTime = 0f;
-    public bool  canShoot = true;
+    public bool canShoot = true;
     public bool twinshot = false;
     private int twinShotIndex = 0;
 
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         }
 
         if(Input.GetKeyDown(KeyCode.LeftShift)){
-            Debug.Log("Dash");
+            Debug.Log("Dash " + canDash);
             dash();
         }
     }
