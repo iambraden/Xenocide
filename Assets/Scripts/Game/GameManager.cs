@@ -159,14 +159,13 @@ public class GameManager : MonoBehaviour
         newBoss.transform.SetParent(GameObject.Find("Enemies").transform);
     }
 
-    public IEnumerator OnBossDefeated()
+    public IEnumerator OnBossDefeatedCoroutine()
     {
         isBossActive = false; // Reset the boss active flag
 
         SoundManager.FadeOutMusic(1f);
         yield return new WaitForSeconds(1f);
-       SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
-
+        SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
         //update score requirement, double increment for next boss spawn
         spawnBossScore = currentScore + nextBossScoreIncrement;
         nextBossScoreIncrement *= 2;

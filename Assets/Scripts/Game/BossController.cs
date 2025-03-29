@@ -4,6 +4,7 @@ using System.Collections;
 public class BossController : MonoBehaviour
 {
      private GameManager gameManager;
+     private bool isDying = false;
 
     [Header("Boss Spawn")]
     private PlayerController playerController; // Reference to PlayerController
@@ -73,7 +74,7 @@ public class BossController : MonoBehaviour
 
     void Update()
     {
-        if(isMovingDown)
+        if(isMovingDown || isDying)
         {
             return;
         }
@@ -116,7 +117,6 @@ public class BossController : MonoBehaviour
                 turnTimer -= Time.deltaTime;
                 if(turnTimer <= 0)
                 {
-                    
                     movingRight = !movingRight;
                     turnTimer = Random.Range(turnTimerLow, turnTimerHigh);
                 }
@@ -150,16 +150,10 @@ public class BossController : MonoBehaviour
         if(other.CompareTag("Bullet"))
         {
             this.health--;
-            if (this.health <= 0)   //play death sound, play death particle, increment score
+            if (this.health <= 0 && !isDying)   //play death sound, play death particle, increment score
             {
-                GameObject particle = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-                particle.transform.SetParent(GameObject.Find("Particles").transform);
-                Destroy(particle, 1);
-                SoundManager.PlaySound(SoundType.EnemyDeath, 0.3f);
-                gameManager.AddScore(500);
-                
-                gameManager.StartCoroutine(gameManager. OnBossDefeated());  // Notify the GameManager that the boss is dead
-                Destroy(gameObject);
+                Debug.Log($"Starting dying coroutine");
+                StartCoroutine(HandleBossDeathSequence());
             }
             else
             {
@@ -185,6 +179,41 @@ public class BossController : MonoBehaviour
         isMovingDown = false;
         turnTimer = Random.Range(turnTimerLow, turnTimerHigh); //Enable turning
         firetimerCenter = Random.Range(fireTimerCenterLow, fireTimerCenterHigh); //Enable firing
+    }
+
+    IEnumerator BossDyingCoroutine()
+    {
+        float duration = 1f;
+        float interval = 0.2f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            Vector2 randomOffset = new Vector2(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f));
+            
+            GameObject particle = Instantiate(explosionPrefab, (Vector2)transform.position + randomOffset, Quaternion.identity);
+            particle.transform.SetParent(GameObject.Find("Particles").transform);
+            Destroy(particle, 1);
+            SoundManager.PlaySound(SoundType.EnemyDeath, 0.3f);
+
+            yield return new WaitForSeconds(interval);
+            elapsedTime += interval;
+        }
+    }
+
+    IEnumerator HandleBossDeathSequence()
+    {
+        isDying = true;
+        yield return StartCoroutine(BossDyingCoroutine()); // Run the BossDyingCoroutine
+
+        // Increment the score
+        gameManager.AddScore(500);
+
+        // Notify the GameManager that the boss is defeated
+        yield return StartCoroutine(gameManager.OnBossDefeatedCoroutine());
+
+        // Destroy the boss object
+        Destroy(gameObject);
     }
 
 }
