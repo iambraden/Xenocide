@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("Boss")]
     public GameObject boss;
     private bool isBossActive = false;
-    private int spawnBossScore = 3100; // Initial score required to spawn the first boss
+    private int spawnBossScore = 1200; // Initial score required to spawn the first boss
     private int nextBossScoreIncrement = 2000; // Incremental score for the second boss
 
     private float bossSpawnCooldown = 5f; // Time to wait before resuming enemy spawning
@@ -84,9 +84,6 @@ public class GameManager : MonoBehaviour
             float adjustedWaveInterval = isBossActive ? waveInterval * bossActiveSpawnAdjustment : waveInterval;
             waveTimer = adjustedWaveInterval; // Reset wave timer
         }
-
-        //TODO: Forced boss spawn for now
-        if (Input.GetKeyDown(KeyCode.B)) SpawnBoss();
 
         // Check if the player has reached the score threshold for an upgrade
         if (!isUpgradeActive && currentScore >= nextUpgradeScore)
