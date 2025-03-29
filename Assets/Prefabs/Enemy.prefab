@@ -151,10 +151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 0
   enemyVariant: 0
-  animationSprites:
-  - {fileID: 3890749205637581952, guid: be127e9ebc6c33d46b3123ee155caa84, type: 3}
-  - {fileID: 1334108820, guid: be127e9ebc6c33d46b3123ee155caa84, type: 3}
-  animationTime: 1
   speed: 2
   startPos: {x: 0, y: 0}
   maxDistance: 5
@@ -166,6 +162,7 @@ MonoBehaviour:
   shoots: 1
   fireTimerLow: 2
   fireTimerHigh: 4
+  explosionPrefab: {fileID: 6399256885906266999, guid: 380e5d7454b9c9d4ebcd663fa9b4c276, type: 3}
 --- !u!114 &-7107861669123534385
 MonoBehaviour:
   m_ObjectHideFlags: 0
