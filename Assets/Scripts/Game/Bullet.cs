@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
         // Player bullet destroyed when colliding with enemy or enemy bullet
         if (this.CompareTag("Bullet"))
         {
-            if (other.CompareTag("Enemy"))
+            if (other.CompareTag("Enemy") || other.CompareTag("BulletBorder"))
             {
                 Destroy(this.gameObject);
             }
