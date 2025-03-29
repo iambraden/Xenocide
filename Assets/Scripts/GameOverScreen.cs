@@ -22,22 +22,20 @@ public class GameOverScreen : MonoBehaviour
     
     private IEnumerator RestartGameScene()
     {
-        // Reset time scale to unpause game
+        // unpause game
         Time.timeScale = 1f;
         
-        // Fade animation
+        // fade animation
         if (fadeAnimator != null)
             fadeAnimator.SetTrigger("Fade");
         
         yield return new WaitForSecondsRealtime(1f);
         
-        // Reload the game
         SceneManager.LoadScene("Game");
     }
     
     public void QuitGame()
     {
-        // Quit the game
         Application.Quit();
         
         #if UNITY_EDITOR
