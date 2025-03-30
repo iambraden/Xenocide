@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("Boss")]
     public GameObject boss;
     private bool isBossActive = false;
-    private int spawnBossScore = 1200; // Initial score required to spawn the first boss
+    private int spawnBossScore = 2000; // Initial score required to spawn the first boss
     private int nextBossScoreIncrement = 2000; // Incremental score for the second boss
 
     private float bossSpawnCooldown = 5f; // Time to wait before resuming enemy spawning
@@ -42,8 +42,9 @@ public class GameManager : MonoBehaviour
     public TMPro.TextMeshProUGUI[] upgradeButtonTexts; // Text components for the buttons
     private PlayerAbilities playerAbilities; // Reference to PlayerAbilities
     private bool isUpgradeActive = false;
-    private int nextUpgradeScore = 1000; // Score threshold for the next upgrade
+    private int nextUpgradeScore = 500; // Score threshold for the next upgrade
     private HashSet<string> selectedAbilities = new HashSet<string>(); // Track selected abilities
+    private bool ifDead = false; // Track if the player is dead
 
     void Start(){
         SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
@@ -87,10 +88,10 @@ public class GameManager : MonoBehaviour
         }
 
         // Check if the player has reached the score threshold for an upgrade
-        if (!isUpgradeActive && currentScore >= nextUpgradeScore)
+        if (!isUpgradeActive && currentScore >= nextUpgradeScore && !ifDead)
         {
             StartCoroutine(ShowUpgradePrompt());
-            nextUpgradeScore += 1000; // Increment the threshold for the next upgrade
+            nextUpgradeScore += nextUpgradeScore + 500; // Increment the threshold for the next upgrade
         }
     }
 
@@ -213,7 +214,7 @@ public class GameManager : MonoBehaviour
     {
         // Stop gameplay
         canSpawnEnemies = false;
-        
+        ifDead = true;
         // Show game over screen
         if(gameOverScreen != null) {
             gameOverScreen.Setup(currentScore);
@@ -240,6 +241,8 @@ public class GameManager : MonoBehaviour
     private IEnumerator ShowUpgradePrompt()
     {
         isUpgradeActive = true;
+
+        SoundManager.PlaySound(SoundType.PowerUp, 3f);
 
         Time.timeScale = 0f;
 

@@ -130,11 +130,11 @@ public class PlayerController : MonoBehaviour
     }
 
     public void IncreaseMoveSpeed(){
-        moveSpeed += moveSpeed * 0.3f;
+        moveSpeed += moveSpeed * 0.2f;
     }
 
     public void IncreaseFireRate(){
-        bulletCooldown -= bulletCooldown * 0.3f;
+        bulletCooldown -= bulletCooldown * 0.2f;
     }
 
     public void setTwinShot(){
@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
     {
         Bullet bullet = bulletPrefab.GetComponent<Bullet>();
         if (bullet != null){
-            bullet.speed += bullet.speed * 0.3f;
+            bullet.speed += bullet.speed * 0.2f;
             Debug.Log("Bullet speed increased to: " + bullet.speed);
         }
         else{
