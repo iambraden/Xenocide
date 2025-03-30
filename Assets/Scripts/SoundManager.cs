@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum SoundType{
-    MenuMusic,
+    MenuMusic, // In GameManager.cs
     GameMusic, // In GameManager.cs
     BossMusic, // In GameManager.cs
     PlayerShoot, //In playerController.cs

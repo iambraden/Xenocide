@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("Boss")]
     public GameObject boss;
     private bool isBossActive = false;
-    private int spawnBossScore = 3100; // Initial score required to spawn the first boss
+    private int spawnBossScore = 1200; // Initial score required to spawn the first boss
     private int nextBossScoreIncrement = 2000; // Incremental score for the second boss
 
     private float bossSpawnCooldown = 5f; // Time to wait before resuming enemy spawning
@@ -84,9 +84,6 @@ public class GameManager : MonoBehaviour
             float adjustedWaveInterval = isBossActive ? waveInterval * bossActiveSpawnAdjustment : waveInterval;
             waveTimer = adjustedWaveInterval; // Reset wave timer
         }
-
-        //TODO: Forced boss spawn for now
-        if (Input.GetKeyDown(KeyCode.B)) SpawnBoss();
 
         // Check if the player has reached the score threshold for an upgrade
         if (!isUpgradeActive && currentScore >= nextUpgradeScore)
@@ -169,7 +166,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public IEnumerator SpawnBoss(){
+    public IEnumerator SpawnBossCoroutine(){
         // Stop enemy spawning temporarily
         isBossActive = true;
         canSpawnEnemies = false; // Disable enemy spawning for 5 seconds
@@ -185,18 +182,19 @@ public class GameManager : MonoBehaviour
         newBoss.transform.SetParent(GameObject.Find("Enemies").transform);
     }
 
-    public IEnumerator OnBossDefeated()
+    public IEnumerator OnBossDefeatedCoroutine()
     {
-        isBossActive = false; // Reset the boss active flag
-
         SoundManager.FadeOutMusic(1f);
         yield return new WaitForSeconds(1f);
-       SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
-
+        SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
         //update score requirement, double increment for next boss spawn
+        Debug.Log($"Current boss spawn score: {spawnBossScore}");
         spawnBossScore = currentScore + nextBossScoreIncrement;
+        Debug.Log($"New boss spawn score: {spawnBossScore}");
         nextBossScoreIncrement *= 2;
+        Debug.Log($"Next increment: {nextBossScoreIncrement}");
 
+        isBossActive = false; // Reset the boss active flag
         UpdateDifficulty();
     }
 
@@ -233,7 +231,7 @@ public class GameManager : MonoBehaviour
         inGameScore.text = "Score: " + currentScore.ToString();
         if(!isBossActive && currentScore >= spawnBossScore)
         {
-            StartCoroutine(SpawnBoss());
+            StartCoroutine(SpawnBossCoroutine());
         }
         
     }

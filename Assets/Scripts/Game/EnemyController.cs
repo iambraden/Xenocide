@@ -27,6 +27,9 @@ public class EnemyController : MonoBehaviour
     private float firetimer;
     private float minFireHeight = -3.0f;
 
+    [Header("Effects")]
+    public GameObject explosionPrefab;
+
     void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
@@ -85,12 +88,17 @@ public class EnemyController : MonoBehaviour
         if(other.CompareTag("Bullet"))
         {
             this.health--;
-            if(this.health <= 0)
+            if(this.health <= 0)    //play death sound, play death particle, increment score
             {
+                GameObject particle = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                particle.transform.SetParent(GameObject.Find("Particles").transform);
+                Destroy(particle, 1);
                 SoundManager.PlaySound(SoundType.EnemyDeath, 0.5f);
                 Destroy(gameObject);
                 gameManager.AddScore(100);
-            }else{
+            }
+            else
+            {
                 SoundManager.PlaySound(SoundType.EnemyHit, 0.5f);
             }
         }
@@ -98,7 +106,11 @@ public class EnemyController : MonoBehaviour
         //enemy collides with player, destroy enemy and player takes damage
         if(other.CompareTag("Player"))
         {
+            GameObject particle = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(particle, 1);
+            SoundManager.PlaySound(SoundType.EnemyDeath, 0.5f);
             Destroy(gameObject);
+            gameManager.AddScore(100);
             //TODO: Implement player health loss
         }
     }
