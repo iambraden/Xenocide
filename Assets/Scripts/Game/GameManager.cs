@@ -237,6 +237,11 @@ public class GameManager : MonoBehaviour
         }
         
     }
+    
+    //getter for score (need it for pause screen and game over)
+    public int getScore(){
+        return this.currentScore;
+    }
 
     private IEnumerator ShowUpgradePrompt()
     {

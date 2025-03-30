@@ -65,8 +65,10 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void Update(){
-        if(canShoot && Input.GetKey(KeyCode.Space) && Time.time> nextFireTime){
+    void Update()
+    {
+        // Shooting controls
+        if(canShoot && Input.GetKey(KeyCode.Space) && Time.time > nextFireTime){
             FireBullet();
             nextFireTime = Time.time + bulletCooldown;
         }
