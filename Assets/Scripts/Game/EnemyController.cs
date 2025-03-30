@@ -33,12 +33,26 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
+        HandleDifficulty();
         firetimer = Random.Range(fireTimerLow, fireTimerHigh);
         startPos = transform.position;
         if (Mathf.Abs(phaseOffset) < 0.0001f)
         {
             phaseOffset = Random.Range(0f, 2f * Mathf.PI); // Random phase offset for variation
         }
+    }
+
+    public void HandleDifficulty()
+    {
+        int difficulty = gameManager.difficulty;
+        if(difficulty == 0)
+        {
+            return;
+        }
+        
+        //increase stats based on difficulty
+        fireTimerLow *= Mathf.Pow(0.9f, difficulty);
+        fireTimerHigh *= Mathf.Pow(0.8f, difficulty);
     }
 
     void Update()

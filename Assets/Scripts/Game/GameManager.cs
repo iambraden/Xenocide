@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
         upgradePrompt.SetActive(false); // Ensure the upgrade prompt is hidden at the start
     }
 
-    void Update(){
+    void Update()
+    {
         // Enemy spawning is delayed for 5 seconds after the boss spawns
         if (isBossActive && !canSpawnEnemies)
         {
@@ -191,7 +192,7 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Current boss spawn score: {spawnBossScore}");
         spawnBossScore = currentScore + nextBossScoreIncrement;
         Debug.Log($"New boss spawn score: {spawnBossScore}");
-        nextBossScoreIncrement *= 2;
+        nextBossScoreIncrement Mathf.Min(5000f, nextBossScoreIncrement * 2);
         Debug.Log($"Next increment: {nextBossScoreIncrement}");
 
         isBossActive = false; // Reset the boss active flag
@@ -202,8 +203,8 @@ public class GameManager : MonoBehaviour
     {
         difficulty++;
         //enemy spawn increases
-        waveInterval *= 0.9f;
-        enemySpawnInterval *= 0.9f;
+        waveInterval *= 0.8f;
+        enemySpawnInterval *= 0.8f;
         duoWaveSpawnChance *= 1.2f;
         bossActiveSpawnAdjustment = Mathf.Max(1f, bossActiveSpawnAdjustment * 0.9f); //boss shouldn't increase spawn rate
     }

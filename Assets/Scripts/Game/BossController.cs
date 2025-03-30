@@ -42,13 +42,10 @@ public class BossController : MonoBehaviour
     {
         // Start the boss above the screen
         transform.position = new Vector2(transform.position.x, transform.position.y);
-
-        //Find game manager
         gameManager = FindFirstObjectByType<GameManager>();
 
-        //handle difficulty scaling
         HandleDifficulty();
-    
+
         // Find the player and disable their shooting
         playerController = FindFirstObjectByType<PlayerController>();
         playerController.canShoot = false; // Disable shooting
@@ -69,7 +66,7 @@ public class BossController : MonoBehaviour
         //increase stats based on difficulty
         health = Mathf.RoundToInt(health * Mathf.Pow(1.5f, difficulty));
         fireTimerCenterLow *= Mathf.Pow(0.9f, difficulty);
-        fireTimerCenterHigh *= Mathf.Pow(0.9f, difficulty);
+        fireTimerCenterHigh *= Mathf.Pow(0.8f, difficulty);
     }
 
     void Update()
