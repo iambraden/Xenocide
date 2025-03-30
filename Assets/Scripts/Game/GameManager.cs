@@ -192,7 +192,7 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Current boss spawn score: {spawnBossScore}");
         spawnBossScore = currentScore + nextBossScoreIncrement;
         Debug.Log($"New boss spawn score: {spawnBossScore}");
-        nextBossScoreIncrement Mathf.Min(5000f, nextBossScoreIncrement * 2);
+        nextBossScoreIncrement = Mathf.Min(5000, nextBossScoreIncrement * 2);
         Debug.Log($"Next increment: {nextBossScoreIncrement}");
 
         isBossActive = false; // Reset the boss active flag
