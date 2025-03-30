@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public bool isPaused;
+    public bool isTransitioning;
     public Animator fadeAnimator;
     public Image fadeImage; // image reference
     
@@ -15,19 +16,10 @@ public class PauseMenu : MonoBehaviour
     
     [Tooltip("Name of the game scene in build settings")]
     public string gameSceneName = "Game"; // scene name
-    
-    void Start()
-    {
-        pauseMenu.SetActive(false);
-        
-        // debug for fade
-        if (fadeAnimator == null)
-            Debug.LogWarning("Fade Animator not assigned in " + gameObject.name);
-    }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && !isTransitioning) // Prevent pausing during transitions
         {
             if(isPaused)
             {
@@ -61,6 +53,7 @@ public class PauseMenu : MonoBehaviour
     
     private IEnumerator RestartGameScene()
     {
+        isTransitioning = true;
         ResumeGame();
         
         if (fadeAnimator != null)
@@ -71,6 +64,7 @@ public class PauseMenu : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         
         SceneManager.LoadScene(gameSceneName);
+        isTransitioning = false;
     }
     
     public void GoToMainMenu()
@@ -80,8 +74,8 @@ public class PauseMenu : MonoBehaviour
     
     private IEnumerator LoadMainMenuScene()
     {
-        // resume the game (unfreeze time)
-        ResumeGame();
+        isTransitioning = true;
+        ResumeGame(); // resume the game (unfreeze time)
         
         // trigger fade animation
         if (fadeAnimator != null)
@@ -94,10 +88,12 @@ public class PauseMenu : MonoBehaviour
         
         // load the main menu scene
         SceneManager.LoadScene(mainMenuSceneName);
+        isTransitioning = false;
     }
     
     public void QuitGame()
     {
+        isTransitioning = true;
         Time.timeScale = 1f;
         
         // trigger fade before quitting
@@ -117,5 +113,6 @@ public class PauseMenu : MonoBehaviour
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
+        isTransitioning = false;
     }
 }
