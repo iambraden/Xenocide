@@ -6,9 +6,9 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public int maxHealth = 3;
     public int damage = 1;
-
     private HealthDisplay healthDisplay; //Reference to Health Display
     private GameManager gameManager;
+    private bool isInvincible = false;
 
     void Start(){
         health = maxHealth;
@@ -24,6 +24,9 @@ public class PlayerHealth : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
+
+        if (isInvincible) return; // Ignore collisions if invincible
+
         // bullets damage player, game lost when health = 0
         if (other.CompareTag("EnemyBullet") || other.CompareTag("Enemy")){
             SoundManager.PlaySound(SoundType.PlayerHit, 3f);
@@ -67,5 +70,13 @@ public class PlayerHealth : MonoBehaviour
             healthDisplay.maxHealth = this.maxHealth;
             healthDisplay.UpdateHeartDisplay();
         }
+    }
+    
+    public void StartDashInvincibility(){
+        isInvincible = true;
+    }
+
+    public void EndDashInvincibility(){
+        isInvincible = false;
     }
 }

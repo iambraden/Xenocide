@@ -116,14 +116,21 @@ public class PlayerController : MonoBehaviour
         canDash = false;
         canShoot = false;
 
+        GetComponent<PlayerHealth>().StartDashInvincibility();
+
         moveSpeed = originalSpeed * dashSpeedMultiplier;
         SoundManager.PlaySound(SoundType.Dash, 0.5f);
         yield return new WaitForSeconds(dashDuration);
+
+        GetComponent<PlayerHealth>().EndDashInvincibility();
+
         moveSpeed = originalSpeed;
         canShoot = true;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
+
+
 
     public void setCanDash(){
         canDash = true;
