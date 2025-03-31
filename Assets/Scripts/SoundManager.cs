@@ -24,22 +24,43 @@ public class SoundManager : MonoBehaviour {
     private static SoundManager instance;
     private AudioSource audioSource;
     private Coroutine fadeRoutine;
+    
+    // master volume property
+    private static float _masterVolume = 1f;
+    public static float MasterVolume {
+        get { return _masterVolume; }
+        set { 
+            _masterVolume = Mathf.Clamp01(value);
+            PlayerPrefs.SetFloat("MasterVolume", _masterVolume);
+            if (instance != null && instance.audioSource != null) {
+                instance.audioSource.volume = _masterVolume;
+            }
+        }
+    }
 
     private void Awake() {
         instance = this;
+        
+        // load saved volume setting
+        if (PlayerPrefs.HasKey("MasterVolume")) {
+            _masterVolume = PlayerPrefs.GetFloat("MasterVolume");
+        }
     }
 
     private void Start() {
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = _masterVolume;
     }
 
     public static void PlaySound(SoundType sound, float volume = 1) {
-        instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume);
+        // apply master volume
+        instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume * _masterVolume);
     }
 
     public static void StopMusic() {
         instance.audioSource.Stop();
     }
+    
     public static void FadeOutMusic(float fadeDuration) {
         if (instance.fadeRoutine != null) {
             instance.StopCoroutine(instance.fadeRoutine);
@@ -56,6 +77,6 @@ public class SoundManager : MonoBehaviour {
         }
         
         audioSource.Stop();
-        audioSource.volume = startVolume;
+        audioSource.volume = _masterVolume;
     }
 }
