@@ -17,17 +17,22 @@ public class PauseMenu : MonoBehaviour
     [Tooltip("Name of the game scene in build settings")]
     public string gameSceneName = "Game"; // scene name
 
+    void start()
+    {
+
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape) && !isTransitioning) // Prevent pausing during transitions
         {
-            if(isPaused)
-            {
+            GameManager gameManager = FindFirstObjectByType<GameManager>();
+            if(!gameManager.ifDead){
+                if(isPaused){
                 ResumeGame();
-            }
-            else
-            {
+                }else{
                 PauseGame();
+                }
             }
         }
     }
@@ -41,8 +46,11 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        GameManager gameManager = FindFirstObjectByType<GameManager>();
         pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
+        if (gameManager != null && !gameManager.isUpgradeActive){
+            Time.timeScale = 1f;
+        }
         isPaused = false;
     }
     

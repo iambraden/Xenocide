@@ -41,10 +41,10 @@ public class GameManager : MonoBehaviour
     public Button[] upgradeButtons; // Array of the 3 upgrade buttons
     public TMPro.TextMeshProUGUI[] upgradeButtonTexts; // Text components for the buttons
     private PlayerAbilities playerAbilities; // Reference to PlayerAbilities
-    private bool isUpgradeActive = false;
+    public bool isUpgradeActive = false;
     private int nextUpgradeScore = 500; // Score threshold for the next upgrade
     private HashSet<string> selectedAbilities = new HashSet<string>(); // Track selected abilities
-    private bool ifDead = false; // Track if the player is dead
+    public bool ifDead = false; // Track if the player is dead
 
     void Start(){
         SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
