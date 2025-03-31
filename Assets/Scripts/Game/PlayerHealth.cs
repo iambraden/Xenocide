@@ -55,6 +55,9 @@ public class PlayerHealth : MonoBehaviour
         }
         
         health -= amount;
+        
+        // Activate screen shake
+        CameraShake.Shake();
 
         // Play damage flash effect
         if (!isFlashing && playerSprite != null) {

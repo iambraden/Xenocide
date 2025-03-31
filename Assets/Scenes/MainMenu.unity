@@ -2853,10 +2853,10 @@ RectTransform:
   - {fileID: 1060813985}
   - {fileID: 193201370}
   - {fileID: 151567423}
-  - {fileID: 742475642}
   - {fileID: 454311162}
   - {fileID: 91231711}
   - {fileID: 1876890110}
+  - {fileID: 742475642}
   - {fileID: 1028800071}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
