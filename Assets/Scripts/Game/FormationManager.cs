@@ -16,7 +16,6 @@ public class FormationManager : MonoBehaviour
 
     [Header("Spawn Settings")]
     public float spawnChance = 0.5f; // Spawn rate
-
     private bool isMovingDown = true;
     private bool movingRight = true;
     private Vector2 targetPosition;
@@ -113,5 +112,12 @@ public class FormationManager : MonoBehaviour
             rows++;
             columns++;
         }
+    }
+
+    public void ResetDifficulty(){
+        horizontalSpeed = 2f;
+        spawnChance = 0.5f;
+        rows = 3;
+        columns = 5;
     }
 }

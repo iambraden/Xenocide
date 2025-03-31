@@ -91,7 +91,12 @@ public class GameManager : MonoBehaviour
         if (!isUpgradeActive && currentScore >= nextUpgradeScore && !ifDead)
         {
             StartCoroutine(ShowUpgradePrompt());
-            nextUpgradeScore += 1500;
+            if(difficulty < 5){
+                nextUpgradeScore += 1500;
+            }else{
+                nextUpgradeScore += (difficulty - 3) * 1500;
+            }
+            
             
         }
     }
@@ -227,6 +232,7 @@ public class GameManager : MonoBehaviour
         // Stop gameplay
         canSpawnEnemies = false;
         ifDead = true;
+        formationPrefab.ResetDifficulty();
         // Show game over screen
         if(gameOverScreen != null) {
             gameOverScreen.Setup(currentScore);
