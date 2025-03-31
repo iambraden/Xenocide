@@ -14,7 +14,8 @@ public enum SoundType{
     Hover, // In ButtonSound.cs
     Click,// In ButtonSound.cs
     Dash, // In playerController.cs
-    PowerUp // In GameManager.cs
+    PowerUp, // In GameManager.cs
+    ForceFieldCharge // In PlayerController.cs
 }
 
 [RequireComponent(typeof(AudioSource))]

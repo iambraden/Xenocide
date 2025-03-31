@@ -48,7 +48,6 @@ public class BossController : MonoBehaviour
 
         // Find the player and disable their shooting
         playerController = FindFirstObjectByType<PlayerController>();
-        playerController.canShoot = false; // Disable shooting
 
         startPosition = new Vector2(transform.position.x, 3.5f);
         StartCoroutine(MoveBossDownCoroutine());
@@ -144,7 +143,7 @@ public class BossController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         //player bullets damage enemy, destroyed when health = 0
-        if(other.CompareTag("Bullet"))
+        if(other.CompareTag("Bullet") && !isMovingDown)
         {
             this.health--;
             if (this.health <= 0 && !isDying)   //play death sound, play death particle, increment score
@@ -171,7 +170,6 @@ public class BossController : MonoBehaviour
             );
             yield return null;
         }
-        playerController.canShoot = true; // Enable shooting
         isMovingDown = false;
         turnTimer = Random.Range(turnTimerLow, turnTimerHigh); //Enable turning
         firetimerCenter = Random.Range(fireTimerCenterLow, fireTimerCenterHigh); //Enable firing

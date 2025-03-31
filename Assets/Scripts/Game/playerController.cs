@@ -29,8 +29,14 @@ public class PlayerController : MonoBehaviour
     public float dashDuration = 0.2f;      
     public float dashCooldown = 1f;       
     private bool canDash = false;
-    private float originalSpeed;  
+    private float originalSpeed;
 
+    [Header("Force Field ")]
+    public GameObject forceFieldPrefab;
+    private bool forceFieldUnlocked = false;
+    private bool isForceFieldActive = false;
+    public float forceFieldCooldown = 30f;
+    
     void Start(){
         originalSpeed = moveSpeed;
     }
@@ -132,10 +138,39 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
-
-
     public void setCanDash(){
         canDash = true;
+    }
+
+     public void UnlockForceField(){
+        forceFieldUnlocked = true;
+        ActivateForceField();
+    }
+
+    void ActivateForceField(){
+        if(isForceFieldActive || !forceFieldUnlocked) return;
+        SoundManager.PlaySound(SoundType.ForceFieldCharge);
+        forceFieldPrefab.SetActive(true);
+        isForceFieldActive = true;
+    }
+
+    IEnumerator ForceFieldCooldown(){
+        Debug.Log("Force Field cooldown started.");
+        yield return new WaitForSeconds(forceFieldCooldown);
+        Debug.Log("Force Field cooldown ended.");
+        if(forceFieldUnlocked) ActivateForceField();
+    }
+
+    public bool IsForceFieldActive(){
+        return isForceFieldActive;
+    }
+
+    public void DeactivateForceField(){
+        if(isForceFieldActive){
+            isForceFieldActive = false;
+            forceFieldPrefab.SetActive(false);
+            StartCoroutine(ForceFieldCooldown());
+        }
     }
 
     public void IncreaseMoveSpeed(){

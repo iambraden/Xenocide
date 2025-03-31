@@ -48,6 +48,9 @@ public class PlayerAbilities : MonoBehaviour
         case "+Fire Rate":
             playerController.IncreaseFireRate();
             break;
+        case "Force Field (30s cooldown)":
+            playerController.UnlockForceField();
+            break;
         }
     }
 }

@@ -40,6 +40,12 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(int amount){
+
+        PlayerController playerController = GetComponent<PlayerController>();
+        if(playerController != null && playerController.IsForceFieldActive()){
+            playerController.DeactivateForceField();
+            return;
+        }
         health -= amount;
 
         // Force UI to update

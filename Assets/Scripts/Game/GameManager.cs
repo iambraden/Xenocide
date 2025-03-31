@@ -24,9 +24,8 @@ public class GameManager : MonoBehaviour
     [Header("Boss")]
     public GameObject boss;
     private bool isBossActive = false;
-    private int spawnBossScore = 2000; // Initial score required to spawn the first boss
+    private int spawnBossScore = 2100; // Initial score required to spawn the first boss
     private int nextBossScoreIncrement = 2000; // Incremental score for the second boss
-
     private float bossSpawnCooldown = 5f; // Time to wait before resuming enemy spawning
 
     [Header("Game Over")]
@@ -91,7 +90,8 @@ public class GameManager : MonoBehaviour
         if (!isUpgradeActive && currentScore >= nextUpgradeScore && !ifDead)
         {
             StartCoroutine(ShowUpgradePrompt());
-            nextUpgradeScore += nextUpgradeScore + 500; // Increment the threshold for the next upgrade
+            nextUpgradeScore += 1500;
+            
         }
     }
 
@@ -207,6 +207,7 @@ public class GameManager : MonoBehaviour
         waveInterval *= 0.8f;
         enemySpawnInterval *= 0.8f;
         duoWaveSpawnChance *= 1.2f;
+        formationPrefab.IncreaseFormationDifficulty(difficulty);
         bossActiveSpawnAdjustment = Mathf.Max(1f, bossActiveSpawnAdjustment * 0.9f); //boss shouldn't increase spawn rate
     }
 
@@ -219,10 +220,6 @@ public class GameManager : MonoBehaviour
         if(gameOverScreen != null) {
             gameOverScreen.Setup(currentScore);
         }
-        
-        // Optional: Play game over sound
-        // SoundManager.StopMusic();
-        // EXAMPLE: SoundManager.PlaySound(SoundType.GameOver, 1f);
         
         Debug.Log("Game Over - Player died with score: " + currentScore);
     }
@@ -299,7 +296,7 @@ public class GameManager : MonoBehaviour
         playerAbilities.ActivateAbility(ability);
 
         // If the selected ability is TwinShot or Dash, remove
-        if (ability == "Twinshot" || ability == "Dash (Left Shift)")
+        if (ability == "Twinshot" || ability == "Dash (Left Shift)" || ability == "Force Field (30s cooldown)")
         {
             selectedAbilities.Add(ability); // Add to the set of  removed abilities
         }

@@ -104,4 +104,14 @@ public class FormationManager : MonoBehaviour
             transform.Translate(Vector2.down * 0.5f);
         }
     }
+
+    public void IncreaseFormationDifficulty(int difficultyLevel){
+        horizontalSpeed += 0.25f;
+        spawnChance += 0.05f;
+
+        if(difficultyLevel % 2 == 0 && difficultyLevel < 7){
+            rows++;
+            columns++;
+        }
+    }
 }
