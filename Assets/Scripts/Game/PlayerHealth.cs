@@ -9,12 +9,21 @@ public class PlayerHealth : MonoBehaviour
     private HealthDisplay healthDisplay; //Reference to Health Display
     private GameManager gameManager;
     private bool isInvincible = false;
+    
+    // Flash effect variables
+    private SpriteRenderer playerSprite;
+    private bool isFlashing = false;
+    [Header("Damage Visual")]
+    public float flashDuration = 0.1f;
+    public int flashCount = 3;
+    public Color flashColor = Color.red;
 
     void Start(){
         health = maxHealth;
         // Find the health display once at start
         healthDisplay = FindFirstObjectByType<HealthDisplay>();
         gameManager = FindFirstObjectByType<GameManager>();
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     void Update(){
@@ -24,7 +33,6 @@ public class PlayerHealth : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-
         if (isInvincible) return; // Ignore collisions if invincible
 
         // bullets damage player, game lost when health = 0
@@ -40,13 +48,18 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(int amount){
-
         PlayerController playerController = GetComponent<PlayerController>();
         if(playerController != null && playerController.IsForceFieldActive()){
             playerController.DeactivateForceField();
             return;
         }
+        
         health -= amount;
+
+        // Play damage flash effect
+        if (!isFlashing && playerSprite != null) {
+            StartCoroutine(FlashEffect());
+        }
 
         // Force UI to update
         if (healthDisplay != null){
@@ -64,6 +77,23 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("Player destroyed - Game Over!");
             Destroy(gameObject);
         }
+    }
+
+    private IEnumerator FlashEffect() {
+        isFlashing = true;
+        Color originalColor = playerSprite.color;
+        
+        for (int i = 0; i < flashCount; i++) {
+            // Change to flash color
+            playerSprite.color = flashColor;
+            yield return new WaitForSeconds(flashDuration);
+            
+            // Change back to original
+            playerSprite.color = originalColor;
+            yield return new WaitForSeconds(flashDuration);
+        }
+        
+        isFlashing = false;
     }
 
     public void HealPlayer(){
