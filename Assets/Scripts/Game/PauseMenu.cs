@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
             if(!gameManager.ifDead){
                 if(isPaused){
                 ResumeGame();
-                }else{
+                }else if(!gameManager.isUpgradeActive){
                 PauseGame();
                 }
             }
@@ -62,7 +62,9 @@ public class PauseMenu : MonoBehaviour
     private IEnumerator RestartGameScene()
     {
         isTransitioning = true;
-        ResumeGame();
+        pauseMenu.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1f;  // Force time scale to 1 (avoids scene change errors)
         
         if (fadeAnimator != null)
             fadeAnimator.SetTrigger("Fade");
@@ -83,7 +85,9 @@ public class PauseMenu : MonoBehaviour
     private IEnumerator LoadMainMenuScene()
     {
         isTransitioning = true;
-        ResumeGame(); // resume the game (unfreeze time)
+        pauseMenu.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1f;  // Force time scale to 1 (avoids scene change errors)
         
         // trigger fade animation
         if (fadeAnimator != null)
