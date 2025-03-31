@@ -189,6 +189,9 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // activate camera shake for boss entrance
+        CameraShake.ShakeWithDuration(3.5f, 0.5f);
+
         // start boss music
         SoundManager.FadeOutMusic(1f);
         yield return new WaitForSeconds(1f);

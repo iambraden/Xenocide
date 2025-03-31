@@ -28,10 +28,16 @@ public class CameraShake : MonoBehaviour
             Destroy(gameObject);
     }
 
-    // shake camera based on duration and strength parameters
+    // default camera shake
     public static void Shake()
     {
         Instance.OnShake(Instance.defaultDuration, Instance.defaultStrength);
+    }
+
+    // custom shake (for boss spawn, etc.)
+    public static void ShakeWithDuration(float duration, float strength)
+    {
+        Instance.OnShake(duration, strength);
     }
 
     private void OnShake(float duration, float strength)
