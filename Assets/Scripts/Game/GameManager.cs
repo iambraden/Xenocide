@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Boss")]
     public GameObject boss;
+    public GameObject warningSprite;
     private bool isBossActive = false;
     private int spawnBossScore = 2100; // Initial score required to spawn the first boss
     private int nextBossScoreIncrement = 2000; // Incremental score for the second boss
@@ -171,7 +172,17 @@ public class GameManager : MonoBehaviour
     public IEnumerator SpawnBossCoroutine(){
         // Stop enemy spawning temporarily
         isBossActive = true;
-        canSpawnEnemies = false; // Disable enemy spawning for 5 seconds
+        canSpawnEnemies = false;
+
+        SoundManager.PlaySound(SoundType.Warning);
+        if (warningSprite != null){
+            for (int i = 0; i < 4; i++){
+                warningSprite.SetActive(true); // Enable the warning sprite
+                yield return new WaitForSeconds(0.35f); 
+                warningSprite.SetActive(false); // Disable the warning sprite
+                yield return new WaitForSeconds(0.35f);
+            }
+        }
 
         // start boss music
         SoundManager.FadeOutMusic(1f);

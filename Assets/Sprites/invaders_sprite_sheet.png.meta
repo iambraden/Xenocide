@@ -1261,9 +1261,9 @@ TextureImporter:
       name: invaders_sprite_sheet_44
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
-        width: 62
+        x: 34
+        y: 32
+        width: 78
         height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

@@ -15,7 +15,8 @@ public enum SoundType{
     Click,// In ButtonSound.cs
     Dash, // In playerController.cs
     PowerUp, // In GameManager.cs
-    ForceFieldCharge // In PlayerController.cs
+    ForceFieldCharge, // In PlayerController.cs
+    Warning, // In GameManager.cs
 }
 
 [RequireComponent(typeof(AudioSource))]
