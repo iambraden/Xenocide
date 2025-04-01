@@ -18,6 +18,10 @@ public class PlayerHealth : MonoBehaviour
     public int flashCount = 3;
     public Color flashColor = Color.red;
 
+    [Header("Death Effects")]
+    [SerializeField] private GameObject playerExplosionPrefab;
+    [SerializeField] private float explosionAnimationDuration = 1.5f;
+
     void Start(){
         health = maxHealth;
         // Find the health display once at start
@@ -71,15 +75,76 @@ public class PlayerHealth : MonoBehaviour
         }
 
         if (health <= 0){
-            Debug.Log("PLAYER DEAD");
-            // Game Over Screen
-            if (gameManager != null){
-                gameManager.OnPlayerDeath();
-            }
-
-            Debug.Log("Player destroyed - Game Over!");
-            Destroy(gameObject);
+            // start death sequence
+            StartCoroutine(PlayerDeathSequence());
         }
+    }
+
+    private IEnumerator PlayerDeathSequence()
+    {
+        // disable the player's controls
+        PlayerController playerController = GetComponent<PlayerController>();
+        if (playerController != null)
+        {
+            playerController.enabled = false;
+            if (playerController.playerRigidbody != null)
+            {
+                playerController.playerRigidbody.linearVelocity = Vector2.zero;
+            }
+        }
+        
+        // freeze the game
+        Time.timeScale = 0;
+
+        // hide player sprite
+        if (playerSprite != null)
+        {
+            playerSprite.enabled = false;
+        }
+        
+        if (playerExplosionPrefab != null)
+        {
+            // create explosion animation at player's last position
+            GameObject explosionObj = Instantiate(playerExplosionPrefab, transform.position, Quaternion.identity);
+            explosionObj.SetActive(true);
+            
+            // grab animator
+            Animator animator = explosionObj.GetComponent<Animator>();
+            if (animator != null)
+            {
+                // animate in unscaled time so the animation plays during game freeze
+                animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+                
+                // play explosion sound (set it to enemydeath for now since there's no player sound)
+                SoundManager.PlaySound(SoundType.EnemyDeath, 1.0f);
+                
+                // wait for animation to be done
+                yield return new WaitForSecondsRealtime(explosionAnimationDuration);
+                
+                // destroy explosion gameobject
+                Destroy(explosionObj);
+            }
+            else
+            {
+                Debug.LogWarning("no animator component");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("prefab isn't assigned/recognized");
+        }
+        
+        // reset time scale to 1 (avoids scene change bugs)
+        Time.timeScale = 1;
+
+        // show game over screen
+        if (gameManager != null)
+        {
+            gameManager.OnPlayerDeath();
+        }
+        
+        // destroy the player object
+        Destroy(gameObject);
     }
 
     private IEnumerator FlashEffect() {

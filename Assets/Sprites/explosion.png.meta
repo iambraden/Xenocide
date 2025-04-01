@@ -503,7 +503,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pngegg_0
+      name: playerexplosion_0
       rect:
         serializedVersion: 2
         x: 51
@@ -525,7 +525,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_1
+      name: playerexplosion_1
       rect:
         serializedVersion: 2
         x: 176
@@ -547,7 +547,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_2
+      name: playerexplosion_2
       rect:
         serializedVersion: 2
         x: 299
@@ -569,7 +569,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_3
+      name: playerexplosion_3
       rect:
         serializedVersion: 2
         x: 424
@@ -591,7 +591,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_4
+      name: playerexplosion_4
       rect:
         serializedVersion: 2
         x: 549
@@ -613,7 +613,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_5
+      name: playerexplosion_5
       rect:
         serializedVersion: 2
         x: 25
@@ -635,11 +635,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_6
+      name: playerexplosion_6
       rect:
         serializedVersion: 2
         x: 152
-        y: 407
+        y: 408
         width: 92
         height: 95
       alignment: 0
@@ -657,7 +657,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_7
+      name: playerexplosion_7
       rect:
         serializedVersion: 2
         x: 279
@@ -679,10 +679,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_9
+      name: playerexplosion_8
       rect:
         serializedVersion: 2
-        x: 406
+        x: 407
         y: 402
         width: 104
         height: 105
@@ -701,7 +701,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_10
+      name: playerexplosion_9
       rect:
         serializedVersion: 2
         x: 534
@@ -723,11 +723,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_14
+      name: playerexplosion_10
       rect:
         serializedVersion: 2
         x: 10
-        y: 267
+        y: 268
         width: 114
         height: 115
       alignment: 0
@@ -745,7 +745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_16
+      name: playerexplosion_11
       rect:
         serializedVersion: 2
         x: 137
@@ -767,7 +767,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_18
+      name: playerexplosion_12
       rect:
         serializedVersion: 2
         x: 268
@@ -789,7 +789,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_20
+      name: playerexplosion_13
       rect:
         serializedVersion: 2
         x: 397
@@ -811,7 +811,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_31
+      name: playerexplosion_14
       rect:
         serializedVersion: 2
         x: 529
@@ -833,7 +833,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_87
+      name: playerexplosion_15
       rect:
         serializedVersion: 2
         x: 15
@@ -855,7 +855,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_91
+      name: playerexplosion_16
       rect:
         serializedVersion: 2
         x: 148
@@ -877,7 +877,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_99
+      name: playerexplosion_19
       rect:
         serializedVersion: 2
         x: 540
@@ -899,7 +899,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_105
+      name: playerexplosion_17
       rect:
         serializedVersion: 2
         x: 284
@@ -921,7 +921,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_106
+      name: playerexplosion_18
       rect:
         serializedVersion: 2
         x: 417
@@ -943,7 +943,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_127
+      name: playerexplosion_20
       rect:
         serializedVersion: 2
         x: 35
@@ -965,7 +965,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_128
+      name: playerexplosion_21
       rect:
         serializedVersion: 2
         x: 167
@@ -987,7 +987,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_129
+      name: playerexplosion_22
       rect:
         serializedVersion: 2
         x: 293
@@ -1009,7 +1009,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngegg_130
+      name: playerexplosion_23
       rect:
         serializedVersion: 2
         x: 427
@@ -1044,16 +1044,35 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pngegg_0: -1171790437229086565
-      pngegg_1: -1169675433603995751
-      pngegg_10: -496953528924953034
+      playerexplosion_0: -1171790437229086565
+      playerexplosion_1: -1169675433603995751
+      playerexplosion_10: 7576120263111014131
+      playerexplosion_11: -6501886829429134658
+      playerexplosion_12: -4300076310961011675
+      playerexplosion_13: 1730983621356533856
+      playerexplosion_14: -8219907284036127800
+      playerexplosion_15: 6549527653581519019
+      playerexplosion_16: -7253613303036874516
+      playerexplosion_17: 7624063697218142838
+      playerexplosion_18: -3778419254640161363
+      playerexplosion_19: -6759218648939322431
+      playerexplosion_2: -6196730701274677480
+      playerexplosion_20: 8516921078485232330
+      playerexplosion_21: -468325587452956762
+      playerexplosion_22: 2236656793926066754
+      playerexplosion_23: -6461718029245351532
+      playerexplosion_3: 960099310682468794
+      playerexplosion_4: 7612028094638372450
+      playerexplosion_5: -3320128755632564503
+      playerexplosion_6: -3505401684911033210
+      playerexplosion_7: 7146570984753549674
+      playerexplosion_8: -5106862008032299496
+      playerexplosion_9: -496953528924953034
       pngegg_100: -2820777803167935932
       pngegg_101: -6731968005168923946
       pngegg_102: 7431416077855255115
       pngegg_103: 9033266775938293352
       pngegg_104: 4356601531691724954
-      pngegg_105: 7624063697218142838
-      pngegg_106: -3778419254640161363
       pngegg_107: 5270825891091794708
       pngegg_108: 9093286054400857576
       pngegg_109: -2231394585121198375
@@ -1076,19 +1095,10 @@ TextureImporter:
       pngegg_124: -8297228576614956414
       pngegg_125: -1042998870606873140
       pngegg_126: -1368006459395361405
-      pngegg_127: 8516921078485232330
-      pngegg_128: -468325587452956762
-      pngegg_129: 2236656793926066754
       pngegg_13: -7616015095909938833
-      pngegg_130: -6461718029245351532
-      pngegg_14: 7576120263111014131
       pngegg_15: -1555190450370771860
-      pngegg_16: -6501886829429134658
       pngegg_17: 321054512355665328
-      pngegg_18: -4300076310961011675
       pngegg_19: 8905121229971597864
-      pngegg_2: -6196730701274677480
-      pngegg_20: 1730983621356533856
       pngegg_21: -6216370126743783557
       pngegg_22: 9162833894702555884
       pngegg_23: -147253176775605631
@@ -1098,9 +1108,7 @@ TextureImporter:
       pngegg_27: 8148515491014098506
       pngegg_28: 4758563281971633695
       pngegg_29: 3043816223756324580
-      pngegg_3: 960099310682468794
       pngegg_30: -6871470631679073968
-      pngegg_31: -8219907284036127800
       pngegg_32: 6881717509685726718
       pngegg_33: -4420633497330017549
       pngegg_34: -3972128903428955522
@@ -1109,7 +1117,6 @@ TextureImporter:
       pngegg_37: 546691089419615404
       pngegg_38: -1751050129067777775
       pngegg_39: 2422839703356544964
-      pngegg_4: 7612028094638372450
       pngegg_40: 8741385681975227438
       pngegg_41: -8631357938515219887
       pngegg_42: -2462184561480300316
@@ -1120,7 +1127,6 @@ TextureImporter:
       pngegg_47: -8003142646107435891
       pngegg_48: 7008755553654339186
       pngegg_49: 7281311781356278713
-      pngegg_5: -3320128755632564503
       pngegg_50: -2542016783989358397
       pngegg_51: -6423907702789537314
       pngegg_52: 5410322729119105585
@@ -1131,7 +1137,6 @@ TextureImporter:
       pngegg_57: -1278253572160770158
       pngegg_58: -2113459361170712299
       pngegg_59: -6403897875858267515
-      pngegg_6: -3505401684911033210
       pngegg_60: -4225842317010676314
       pngegg_61: 8772267387588123702
       pngegg_62: -4160684991587910779
@@ -1142,7 +1147,6 @@ TextureImporter:
       pngegg_67: 164773275080934776
       pngegg_68: 7336753159152932130
       pngegg_69: 682279129458174820
-      pngegg_7: 7146570984753549674
       pngegg_70: 4913010022321968254
       pngegg_71: 1485537497507448051
       pngegg_72: -358241873299839780
@@ -1161,12 +1165,9 @@ TextureImporter:
       pngegg_84: 5028784941690937102
       pngegg_85: 5805060111783926918
       pngegg_86: 7879518371132202031
-      pngegg_87: 6549527653581519019
       pngegg_88: 8716137987556542842
       pngegg_89: -5808691062082045667
-      pngegg_9: -5106862008032299496
       pngegg_90: 4147943169942197171
-      pngegg_91: -7253613303036874516
       pngegg_92: 2769936985818841264
       pngegg_93: 4653149792692711840
       pngegg_94: 8040255158841697705
@@ -1174,7 +1175,6 @@ TextureImporter:
       pngegg_96: 1999134995987756076
       pngegg_97: -6788577959264705177
       pngegg_98: -7660942204994885745
-      pngegg_99: -6759218648939322431
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
