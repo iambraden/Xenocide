@@ -206,6 +206,11 @@ public class BossController : MonoBehaviour
         // Notify the GameManager that the boss is defeated
         yield return StartCoroutine(gameManager.OnBossDefeatedCoroutine());
 
+        //one last explosion
+        GameObject particle = Instantiate(explosionPrefab, (Vector2)transform.position, Quaternion.identity);
+        particle.transform.SetParent(GameObject.Find("Particles").transform);
+        Destroy(particle, 1);
+        SoundManager.PlaySound(SoundType.EnemyDeath, 2.0f);
         // Destroy the boss object
         Destroy(gameObject);
     }
