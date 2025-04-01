@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private bool canDash = false;
     private float originalSpeed;
 
-    [Header("Force Field ")]
+    [Header("Force Field")]
     public GameObject forceFieldPrefab;
     private bool forceFieldUnlocked = false;
     private bool isForceFieldActive = false;
@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour
     public void UpgradeForceField()
     {
         //decreases forcefield cooldown
-        forceFieldCooldown = Mathf.Max(forceFieldCooldown -= 4, 1);
+        forceFieldCooldown = Mathf.Max(forceFieldCooldown -= 5, 15);
         //Debug.Log($"Force Field cooldown decreased to: {forceFieldCooldown} seconds.");
     }
 

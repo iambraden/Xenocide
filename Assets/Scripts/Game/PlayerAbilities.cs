@@ -37,9 +37,11 @@ public class PlayerAbilities : MonoBehaviour
         {
             case "Dash (Left Shift)":
                 playerController.setCanDash();
+                Abilities.Remove("Dash (Left Shift)");
                 break;
             case "Twinshot":
                 playerController.setTwinShot();
+                Abilities.Remove("Twinshot");
                 break;
             case "Heal + Health Increase (Max 5)":
                 playerHealth.HealPlayer();
@@ -58,11 +60,15 @@ public class PlayerAbilities : MonoBehaviour
                 if (!Abilities.Contains("Force Field Upgrade"))
                 {
                     Abilities.Add("Force Field Upgrade");
-                    //Debug.Log("Added Force Field Upgrade to abilities.");
                 }
+                Abilities.Remove("Force Field (30s cooldown)");
                 break;
             case "Force Field Upgrade":
                 playerController.UpgradeForceField();
+                if (playerController.forceFieldCooldown <= 15)
+                {
+                    Abilities.Remove("Force Field Upgrade");
+                }
                 break;
         }
     }
