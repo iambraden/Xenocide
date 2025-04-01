@@ -39,10 +39,6 @@ public class FormationManager : MonoBehaviour
                 if (Random.value > spawnChance) continue;
 
                 GameObject randomPrefab = GetRandomEnemyPrefab();
-                if (randomPrefab == null){
-                    Debug.LogError("No enemy prefab");
-                    continue;
-                }
 
                 // Calculate grid position with center offset
                 float xOffset = (col - (columns - 1) / 2f) * xSpacing;
@@ -63,10 +59,6 @@ public class FormationManager : MonoBehaviour
 
     // Random enemy prefab from array
     GameObject GetRandomEnemyPrefab(){
-        if (enemyPrefabs == null || enemyPrefabs.Length == 0){
-            Debug.LogError("No enemy prefab");
-            return null;
-        }
         return enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
     }
 

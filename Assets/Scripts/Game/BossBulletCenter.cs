@@ -10,20 +10,16 @@ public class BossBulletCenter : MonoBehaviour
     {
         Destroy(gameObject, lifetime);
     }
-
-    // Update is called once per frame
     void Update()
     {
         Move();
     }
-
-
     void Move()
     {
         transform.Translate(Vector2.down * speed * Time.deltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) // Player bullets can destroy enemy bullets
     {
         if (other.CompareTag("Player"))
         {

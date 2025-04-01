@@ -51,10 +51,6 @@ public class GameManager : MonoBehaviour
         waveTimer = waveInterval; // Start first wave after full interval
 
         playerAbilities = FindFirstObjectByType<PlayerAbilities>();
-        if (playerAbilities == null)
-        {
-            Debug.LogError("PlayerAbilities component not found in the scene.");
-        }
 
         upgradePrompt.SetActive(false); // Ensure the upgrade prompt is hidden at the start
     }
@@ -209,11 +205,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
         //update score requirement, double increment for next boss spawn
-        Debug.Log($"Current boss spawn score: {spawnBossScore}");
         spawnBossScore = currentScore + nextBossScoreIncrement;
-        Debug.Log($"New boss spawn score: {spawnBossScore}");
         nextBossScoreIncrement = Mathf.Min(5000, nextBossScoreIncrement * 2);
-        Debug.Log($"Next increment: {nextBossScoreIncrement}");
 
         isBossActive = false; // Reset the boss active flag
         UpdateDifficulty();
@@ -236,12 +229,12 @@ public class GameManager : MonoBehaviour
         canSpawnEnemies = false;
         ifDead = true;
         formationPrefab.ResetDifficulty();
+        PlayerController playerController = FindFirstObjectByType<PlayerController>();
+        playerController.ResetBulletSpeed();
         // Show game over screen
         if(gameOverScreen != null) {
             gameOverScreen.Setup(currentScore);
         }
-        
-        Debug.Log("Game Over - Player died with score: " + currentScore);
     }
 
     public void AddScore(int amount)

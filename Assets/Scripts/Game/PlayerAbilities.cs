@@ -17,15 +17,7 @@ public class PlayerAbilities : MonoBehaviour
     void Start()
     {
         playerController = GetComponent<PlayerController>();
-        if (playerController == null)
-        {
-            Debug.LogError("PlayerController component not found.");
-        }
         playerHealth = GetComponent<PlayerHealth>();
-        if (playerHealth == null)
-        {
-            Debug.LogError("PlayerHealth component not found.");
-        }
     }
 
     public void ActivateAbility(string ability){

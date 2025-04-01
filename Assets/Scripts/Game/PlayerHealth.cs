@@ -124,14 +124,6 @@ public class PlayerHealth : MonoBehaviour
                 // destroy explosion gameobject
                 Destroy(explosionObj);
             }
-            else
-            {
-                Debug.LogWarning("no animator component");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("prefab isn't assigned/recognized");
         }
         
         // reset time scale to 1 (avoids scene change bugs)

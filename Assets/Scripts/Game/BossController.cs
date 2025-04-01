@@ -59,7 +59,6 @@ public class BossController : MonoBehaviour
     public void HandleDifficulty()
     {
         int difficulty = gameManager.difficulty;
-        Debug.Log($"[HandleDifficulty] Difficulty: {difficulty}");
         if(difficulty == 0)
         {
             return;
@@ -85,7 +84,6 @@ public class BossController : MonoBehaviour
             {
                 firetimerCenter = Random.Range(fireTimerCenterLow, fireTimerCenterHigh);
                 FireBulletCenter();
-                //TODO: put a different timer on side bullets
                 FireBulletSide();
             }
     }
@@ -203,7 +201,6 @@ public class BossController : MonoBehaviour
         isDying = true;
         yield return StartCoroutine(BossDyingCoroutine()); // Run the BossDyingCoroutine
 
-        // Increment the score
         gameManager.AddScore(500);
 
         // Notify the GameManager that the boss is defeated

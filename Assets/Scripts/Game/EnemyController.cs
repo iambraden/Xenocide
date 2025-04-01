@@ -102,7 +102,7 @@ public class EnemyController : MonoBehaviour
         if(other.CompareTag("Bullet"))
         {
             this.health--;
-            if(this.health <= 0)    //play death sound, play death particle, increment score
+            if(this.health <= 0) //play death sound, play death particle, increment score
             {
                 GameObject particle = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 particle.transform.SetParent(GameObject.Find("Particles").transform);
@@ -125,7 +125,6 @@ public class EnemyController : MonoBehaviour
             SoundManager.PlaySound(SoundType.EnemyDeath, 0.5f);
             Destroy(gameObject);
             gameManager.AddScore(100);
-            //TODO: Implement player health loss
         }
     }
 

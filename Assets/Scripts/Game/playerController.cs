@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     public Sprite idleSprite;
     public Sprite leftSprite;
     public Sprite rightSprite;
+
     [Header("Dashing")]
     public float dashSpeedMultiplier = 3f;
     public float dashDuration = 0.2f;      
@@ -80,7 +81,6 @@ public class PlayerController : MonoBehaviour
         }
 
         if(Input.GetKeyDown(KeyCode.LeftShift)){
-            Debug.Log("Dash " + canDash);
             dash();
         }
     }
@@ -155,9 +155,7 @@ public class PlayerController : MonoBehaviour
     }
 
     IEnumerator ForceFieldCooldown(){
-        Debug.Log("Force Field cooldown started.");
         yield return new WaitForSeconds(forceFieldCooldown);
-        Debug.Log("Force Field cooldown ended.");
         if(forceFieldUnlocked) ActivateForceField();
     }
 
@@ -184,15 +182,13 @@ public class PlayerController : MonoBehaviour
     public void setTwinShot(){
         twinshot = true;
     }
-    public void IncreaseBulletSpeed()
-    {
+    public void IncreaseBulletSpeed(){
         Bullet bullet = bulletPrefab.GetComponent<Bullet>();
-        if (bullet != null){
-            bullet.speed += bullet.speed * 0.1f;
-            Debug.Log("Bullet speed increased to: " + bullet.speed);
-        }
-        else{
-            Debug.LogError("Bullet prefab does not have a Bullet component!");
-        }
+        bullet.speed += bullet.speed * 0.1f;  
+    }
+
+    public void ResetBulletSpeed(){
+        Bullet bullet = bulletPrefab.GetComponent<Bullet>();
+        bullet.speed = 10f;
     }
 }

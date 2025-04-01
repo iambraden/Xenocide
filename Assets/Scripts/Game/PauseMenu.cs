@@ -66,10 +66,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1f;  // Force time scale to 1 (avoids scene change errors)
         
-        if (fadeAnimator != null)
-            fadeAnimator.SetTrigger("Fade");
-        else
-            Debug.LogWarning("Fade animation skipped - animator not assigned");
+        fadeAnimator.SetTrigger("Fade");
         
         yield return new WaitForSecondsRealtime(1f);
         
@@ -90,11 +87,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;  // Force time scale to 1 (avoids scene change errors)
         
         // trigger fade animation
-        if (fadeAnimator != null)
-            fadeAnimator.SetTrigger("Fade");
-        else
-            Debug.LogWarning("Fade animation skipped - animator not assigned");
-        
+        fadeAnimator.SetTrigger("Fade");
+       
         // wait for animation to play
         yield return new WaitForSecondsRealtime(1f);
         
