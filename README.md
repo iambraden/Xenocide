@@ -49,13 +49,13 @@ Player loses if their ship health drops to zero.
 Score System:
 Player earns points for killing enemies.
 
-Game music:
-Menu music:
-https://www.youtube.com/watch?v=tg8JXajhnKM&list=PL170TfEhZz-_5GUY4IEn6tk8dVVCj3gLI&index=5
-Normal Battle music:
-https://www.youtube.com/watch?v=xMVFMg4BKAI
-Boss music: 
-https://www.youtube.com/watch?v=_wmT9U1X7Cw
+Game music:  
+Menu music:  
+https://www.youtube.com/watch?v=tg8JXajhnKM&list=PL170TfEhZz-_5GUY4IEn6tk8dVVCj3gLI&index=5  
+Normal Battle music:  
+https://www.youtube.com/watch?v=xMVFMg4BKAI  
+Boss music:  
+https://www.youtube.com/watch?v=_wmT9U1X7Cw  
 
 ALL OTHER game sounds are made by us using: 
 https://sfxr.me/ 
@@ -96,7 +96,26 @@ Speed
 Bullet Speed
 Fire Rate
 
+Contributions  
+iambraden:  
+Game backgrounds, game sprite control (animation), scene animation, scene control,  
+player movement, player attack, player abilities and UI,  
+progression (point-based progression leads to upgrades),  
+score UI, warning UI, grid enemy, sound and sound effects,  
+colliders, difficulty scaling, game balance, bug fixes  
+  
+JaxMHay:  
+Enemy spawning, enemy movement, enemy attacking, boss spawning, boss movement, boss attacking,  
+progression (point-based progression leads to boss battles),  
+object collisions (bullets, enemy, player), diffculty scaling, game balance,  
+enemy/boss death animations/particles, some sprite animation
+  
+JDoig4:  
+Options functionality, options UI, pause feature, game over functionality, health mechanic, health UI,  
+player death animation, visual damage feedback, screen shake
 
 https://youtu.be/8A_Yv8soWb8
 
 Video quality is low.
+
+https://idiotatlarge.itch.io/xenocide
