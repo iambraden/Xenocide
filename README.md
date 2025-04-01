@@ -51,11 +51,11 @@ Player earns points for killing enemies.
 
 Game music:
 Menu music:
-8-Bit Music | Video Game Music "8 Bit Nostalgia" - Royalty Free
+https://www.youtube.com/watch?v=tg8JXajhnKM&list=PL170TfEhZz-_5GUY4IEn6tk8dVVCj3gLI&index=5
 Normal Battle music:
-8Bit Boss Chiptune - Boss Theme - Sawsquarenoise · Free Copyright-Safe Music
+https://www.youtube.com/watch?v=xMVFMg4BKAI
 Boss music: 
-RedStone128 - The Final Battle (8-bit Epic)
+https://www.youtube.com/watch?v=_wmT9U1X7Cw
 
 ALL OTHER game sounds are made by us using: 
 https://sfxr.me/ 
