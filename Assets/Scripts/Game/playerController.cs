@@ -155,9 +155,9 @@ public class PlayerController : MonoBehaviour
     }
 
     IEnumerator ForceFieldCooldown(){
-        Debug.Log("Force Field cooldown started.");
+        //Debug.Log("Force Field cooldown started.");
         yield return new WaitForSeconds(forceFieldCooldown);
-        Debug.Log("Force Field cooldown ended.");
+        //Debug.Log("Force Field cooldown ended.");
         if(forceFieldUnlocked) ActivateForceField();
     }
 
@@ -171,6 +171,13 @@ public class PlayerController : MonoBehaviour
             forceFieldPrefab.SetActive(false);
             StartCoroutine(ForceFieldCooldown());
         }
+    }
+
+    public void UpgradeForceField()
+    {
+        //decreases forcefield cooldown
+        forceFieldCooldown = Mathf.Max(forceFieldCooldown -= 4, 1);
+        //Debug.Log($"Force Field cooldown decreased to: {forceFieldCooldown} seconds.");
     }
 
     public void IncreaseMoveSpeed(){
@@ -189,7 +196,7 @@ public class PlayerController : MonoBehaviour
         Bullet bullet = bulletPrefab.GetComponent<Bullet>();
         if (bullet != null){
             bullet.speed += bullet.speed * 0.1f;
-            Debug.Log("Bullet speed increased to: " + bullet.speed);
+            //Debug.Log("Bullet speed increased to: " + bullet.speed);
         }
         else{
             Debug.LogError("Bullet prefab does not have a Bullet component!");

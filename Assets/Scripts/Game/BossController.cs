@@ -59,7 +59,7 @@ public class BossController : MonoBehaviour
     public void HandleDifficulty()
     {
         int difficulty = gameManager.difficulty;
-        Debug.Log($"[HandleDifficulty] Difficulty: {difficulty}");
+        //Debug.Log($"[HandleDifficulty] Difficulty: {difficulty}");
         if(difficulty == 0)
         {
             return;

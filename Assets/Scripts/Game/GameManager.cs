@@ -209,11 +209,11 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         SoundManager.PlaySound(SoundType.GameMusic, 0.5f);
         //update score requirement, double increment for next boss spawn
-        Debug.Log($"Current boss spawn score: {spawnBossScore}");
+        //Debug.Log($"Current boss spawn score: {spawnBossScore}");
         spawnBossScore = currentScore + nextBossScoreIncrement;
-        Debug.Log($"New boss spawn score: {spawnBossScore}");
+        //Debug.Log($"New boss spawn score: {spawnBossScore}");
         nextBossScoreIncrement = Mathf.Min(5000, nextBossScoreIncrement * 2);
-        Debug.Log($"Next increment: {nextBossScoreIncrement}");
+        //Debug.Log($"Next increment: {nextBossScoreIncrement}");
 
         isBossActive = false; // Reset the boss active flag
         UpdateDifficulty();
@@ -271,8 +271,7 @@ public class GameManager : MonoBehaviour
         upgradePrompt.SetActive(true);
 
         // Randomly select 3 unique abilities
-        string[] abilities = playerAbilities.Abilities;
-        List<string> availableAbilities = new List<string>(abilities);
+        List<string> availableAbilities = new List<string>(playerAbilities.Abilities);
 
         // Remove already-selected abilities from the pool
         availableAbilities.RemoveAll(ability => selectedAbilities.Contains(ability));
