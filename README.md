@@ -2,18 +2,6 @@ Game Title:
 
 Xenocide
 
-Team Name:
-
-Roguelike Enjoyers
-
-Team Members:
-
-•Braden Collins (22565220)
-
-•Jaxon Hay (70608971)
-
-•Justin Doig (Student ID)
-
 Core Concept
 Briefly describe the game:
 
