@@ -223,8 +223,8 @@ public class GameManager : MonoBehaviour
     {
         difficulty++;
         //enemy spawn increases
-        waveInterval *= 0.8f;
-        enemySpawnInterval *= 0.8f;
+        waveInterval = Mathf.Max(waveInterval *= 0.8f, 1f);
+        enemySpawnInterval = Mathf.Max(enemySpawnInterval *= 0.8f, 0.25f);
         duoWaveSpawnChance *= 1.2f;
         formationPrefab.IncreaseFormationDifficulty(difficulty);
         bossActiveSpawnAdjustment = Mathf.Max(1f, bossActiveSpawnAdjustment * 0.9f); //boss shouldn't increase spawn rate
