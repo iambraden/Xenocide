@@ -49,6 +49,9 @@ public class BossController : MonoBehaviour
         // Find the player and disable their shooting
         playerController = FindFirstObjectByType<PlayerController>();
 
+        // Randomly determine the initial movement direction
+        movingRight = Random.value > 0.5f;
+
         startPosition = new Vector2(transform.position.x, 3.5f);
         StartCoroutine(MoveBossDownCoroutine());
     }

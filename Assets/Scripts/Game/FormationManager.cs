@@ -21,7 +21,11 @@ public class FormationManager : MonoBehaviour
     private Vector2 targetPosition;
 
     // New wave movement and formation
-    public void StartNewWave(){
+    public void StartNewWave()
+    {
+        // Randomly determine the initial movement direction
+        movingRight = Random.value > 0.5f;
+
         targetPosition = new Vector2(transform.position.x, 2.5f);
         GenerateFormation();
         StartCoroutine(MoveDownCoroutine());
